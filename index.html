@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Policy Repository — FOSTERLANG WP7</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ─── Header ─────────────────────────────────────────────────────────────── -->
+<header class="site-header">
+  <span class="logo">FOSTERLANG · WP7</span>
+  <h1>Language Policy Repository</h1>
+  <span class="meta-tag">AMU · Task Leader</span>
+  <span class="meta-tag">Silesian &amp; Wilamowian</span>
+  <span class="meta-tag">Ferguson-Tollefson Matrix</span>
+</header>
+
+<!-- ─── App Layout ──────────────────────────────────────────────────────────── -->
+<div class="app-layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <!-- View toggle -->
+    <section>
+      <span class="sidebar-label">View</span>
+      <div class="view-toggle">
+        <button class="view-btn active" data-view="matrix">Matrix</button>
+        <button class="view-btn" data-view="list">List</button>
+        <button class="view-btn" data-view="timeline">Timeline</button>
+      </div>
+    </section>
+
+    <!-- Search -->
+    <section>
+      <span class="sidebar-label">Search</span>
+      <input type="text" id="search-input" class="search-bar" placeholder="Search documents…">
+    </section>
+
+    <!-- Stats -->
+    <section>
+      <span class="sidebar-label">Visible items</span>
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="num" id="stat-total">—</div>
+          <div class="lbl">Total</div>
+        </div>
+        <div class="stat-box">
+          <div class="num" id="stat-szl" style="color:var(--szl)">—</div>
+          <div class="lbl">Silesian</div>
+        </div>
+        <div class="stat-box">
+          <div class="num" id="stat-wym" style="color:var(--wym)">—</div>
+          <div class="lbl">Wilamowian</div>
+        </div>
+        <div class="stat-box">
+          <div class="num" id="stat-shared" style="color:var(--shared)">—</div>
+          <div class="lbl">Shared</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Language filter -->
+    <section>
+      <span class="sidebar-label">Language</span>
+      <div class="filter-group">
+        <div class="filter-pill" data-filter="language" data-value="szl">
+          <span class="dot" style="background:var(--szl)"></span>
+          Silesian (SZL)
+        </div>
+        <div class="filter-pill" data-filter="language" data-value="wym">
+          <span class="dot" style="background:var(--wym)"></span>
+          Wilamowian (WYM)
+        </div>
+        <div class="filter-pill" data-filter="language" data-value="shared">
+          <span class="dot" style="background:var(--shared)"></span>
+          Shared instruments
+        </div>
+      </div>
+    </section>
+
+    <!-- Level filter -->
+    <section>
+      <span class="sidebar-label">FTM Level</span>
+      <div class="filter-group">
+        <div class="filter-pill" data-filter="level" data-value="MACRO">
+          <span class="dot" style="background:#f59e0b"></span>
+          MACRO (EU/state)
+        </div>
+        <div class="filter-pill" data-filter="level" data-value="MESO">
+          <span class="dot" style="background:#06b6d4"></span>
+          MESO (regional/institutional)
+        </div>
+        <div class="filter-pill" data-filter="level" data-value="MICRO">
+          <span class="dot" style="background:#ec4899"></span>
+          MICRO (community/individual)
+        </div>
+      </div>
+    </section>
+
+    <!-- Direction filter -->
+    <section>
+      <span class="sidebar-label">Direction</span>
+      <div class="filter-group">
+        <div class="filter-pill" data-filter="direction" data-value="TOP_DOWN">
+          <span class="dot" style="background:#ef4444"></span>
+          Top-Down ↓
+        </div>
+        <div class="filter-pill" data-filter="direction" data-value="BOTTOM_UP">
+          <span class="dot" style="background:#22c55e"></span>
+          Bottom-Up ↑
+        </div>
+      </div>
+    </section>
+
+    <!-- Status filter -->
+    <section>
+      <span class="sidebar-label">Status</span>
+      <div class="filter-group">
+        <div class="filter-pill" data-filter="status" data-value="vetoed">
+          <span class="dot" style="background:#ef4444"></span>Vetoed
+        </div>
+        <div class="filter-pill" data-filter="status" data-value="pending">
+          <span class="dot" style="background:#f97316"></span>Pending
+        </div>
+        <div class="filter-pill" data-filter="status" data-value="passed">
+          <span class="dot" style="background:#22c55e"></span>Passed
+        </div>
+        <div class="filter-pill" data-filter="status" data-value="binding_international">
+          <span class="dot" style="background:#10b981"></span>Binding (intl.)
+        </div>
+        <div class="filter-pill" data-filter="status" data-value="soft_law">
+          <span class="dot" style="background:#a78bfa"></span>Soft law
+        </div>
+        <div class="filter-pill" data-filter="status" data-value="processing">
+          <span class="dot" style="background:#eab308"></span>Processing
+        </div>
+        <div class="filter-pill" data-filter="status" data-value="ongoing">
+          <span class="dot" style="background:#3b82f6"></span>Ongoing
+        </div>
+        <div class="filter-pill" data-filter="status" data-value="published">
+          <span class="dot" style="background:#8b5cf6"></span>Published
+        </div>
+      </div>
+    </section>
+
+    <!-- FTM reference -->
+    <section>
+      <span class="sidebar-label">Framework</span>
+      <div style="font-size:.72rem;color:var(--text-muted);line-height:1.6;background:var(--surface2);border-radius:6px;padding:10px 12px;border:1px solid var(--border);">
+        <strong style="color:var(--accent)">Ferguson-Tollefson Matrix</strong><br>
+        Kan (2011); Kan &amp; Adamson (2016)<br><br>
+        Evaluates language policy at <strong>3 levels</strong> × <strong>2 directions</strong>:<br>
+        MACRO · MESO · MICRO<br>
+        Top-Down · Bottom-Up<br><br>
+        <span style="color:var(--text-muted);font-style:italic;">Part of FOSTERLANG WP7 — Effective Multilingualism Policies</span>
+      </div>
+    </section>
+
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Framework info banner -->
+    <div class="framework-banner">
+      <div style="flex:1">
+        <strong>Ferguson-Tollefson Matrix Analysis</strong> — Silesian &amp; Wilamowian Language Policies, Poland<br>
+        Data sources: Sejm, Senat, KPRP, RPO, CoE (FCNM · ECRML), EU law, OSCE soft law, Polish national press 2021–2026.<br>
+        <span style="font-size:.72rem;">Click any document card to view full details and access source links. Use sidebar filters to explore the matrix by language, level, direction, or status.</span>
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="legend">
+      <span class="legend-item"><span class="legend-dot" style="background:var(--szl)"></span>Silesian (SZL)</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--wym)"></span>Wilamowian (WYM)</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--shared)"></span>Shared</span>
+      <span class="legend-divider">|</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#dc2626"></span>Vetoed</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#15803d"></span>Passed</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#d97706"></span>Pending</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#0f766e"></span>Binding (intl.)</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#7c3aed"></span>Soft law</span>
+      <span class="legend-divider">|</span>
+      <span class="legend-item" style="font-weight:600;color:#d97706;background:#fef3c7;padding:2px 7px;border-radius:4px;border:1px solid #fcd34d;font-size:.65rem;">★ KEY EVENT</span>
+    </div>
+
+    <!-- ── Matrix View ──────────────────────────────────────────────────────── -->
+    <div id="matrix-view">
+      <div class="matrix-container" id="matrix-container">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- ── List View ────────────────────────────────────────────────────────── -->
+    <div id="list-view">
+      <div id="list-container">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- ── Timeline View ────────────────────────────────────────────────────── -->
+    <div id="timeline-view">
+      <div id="timeline-container">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ─── Modal ──────────────────────────────────────────────────────────────── -->
+<div id="modal-backdrop" class="modal-backdrop">
+  <div id="modal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-header">
+      <h3 id="modal-title"></h3>
+      <button id="modal-close-btn" class="modal-close" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <div id="modal-meta" class="modal-meta"></div>
+      <div id="modal-label-en" style="font-size:.8rem;color:var(--text-muted);margin-bottom:10px;font-style:italic;"></div>
+      <div id="modal-description" class="modal-description"></div>
+      <div id="modal-note" class="modal-note" style="display:none;"></div>
+      <div id="modal-links"></div>
+    </div>
+  </div>
+</div>
+
+<script src="data/ftm-data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,739 @@
+// Ferguson-Tollefson Matrix — Language Policy Data
+// FOSTERLANG WP7 | AMU Team | Silesian & Wilamowian
+// Generated from: wilamowski i śląski - LANGUAGE POLICY @ FOSTERLANG.docx
+//                 Language Policy documents - POLAND _ Fosterlang.docx
+
+const FTM_DATA = {
+  meta: {
+    title: "Language Policy Repository",
+    subtitle: "Ferguson-Tollefson Matrix Analysis",
+    project: "FOSTERLANG WP7",
+    team: "AMU (Poznań)",
+    taskLeader: "AMU",
+    references: [
+      "Kan, W. (2011). Language policy in Hong Kong. Working Papers in Educational Linguistics, 26(2).",
+      "Kan, W., & Adamson, B. (2016). Language education policies in schools. In Language Education Policy, Springer."
+    ],
+    levels: ["MACRO", "MESO", "MICRO"],
+    directions: ["TOP_DOWN", "BOTTOM_UP"],
+    statusLabels: {
+      passed:                  { label: "Passed",               color: "#15803d" },
+      vetoed:                  { label: "Vetoed",               color: "#dc2626" },
+      pending:                 { label: "Pending",              color: "#d97706" },
+      processing:              { label: "Processing",           color: "#b45309" },
+      ongoing:                 { label: "Ongoing",              color: "#1c5599" },
+      published:               { label: "Published",            color: "#6d28d9" },
+      procedural:              { label: "Procedural",           color: "#64748b" },
+      institutional_response:  { label: "Institutional resp.",  color: "#475569" },
+      passed_committee:        { label: "Passed committee",     color: "#166534" },
+      active:                  { label: "Active",               color: "#0369a1" },
+      historical:              { label: "Historical",           color: "#94a3b8" },
+      soft_law:                { label: "Soft law",             color: "#7c3aed" },
+      binding_international:   { label: "Binding (intl.)",      color: "#0f766e" }
+    }
+  },
+
+  // ─── SHARED INSTRUMENTS (apply to both SZL and WYM) ────────────────────────
+
+  shared: [
+    {
+      id: "shared_const_art35",
+      label: "Konstytucja RP, Art. 35 (1997)",
+      labelEN: "Constitution of Poland, Art. 35",
+      level: "MACRO", direction: "TOP_DOWN",
+      type: "Constitutional provision",
+      languages: ["szl", "wym"],
+      status: "binding_international",
+      date: "1997-04-02",
+      description: "Guarantees national and ethnic minorities the right to preserve and develop their language, customs, and culture.",
+      urls: [
+        { label: "ISAP (PDF)", href: "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19970780483/U/D19970483Lj.pdf" }
+      ],
+      tags: ["constitutional", "domestic_hard_law"]
+    },
+    {
+      id: "shared_ustawa_2005",
+      label: "Ustawa z 6 stycznia 2005 r. o mniejszościach",
+      labelEN: "Law of 6 Jan 2005 on National/Ethnic Minorities and Regional Language",
+      level: "MACRO", direction: "TOP_DOWN",
+      type: "National statute",
+      languages: ["szl", "wym"],
+      status: "passed",
+      date: "2005-01-06",
+      description: "Primary domestic legislation governing minority language recognition, rights, and use in public life and education.",
+      urls: [
+        { label: "ISAP", href: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20050170141" },
+        { label: "Dziennik Ustaw", href: "https://dziennikustaw.gov.pl/du/2005/s/17/141" },
+        { label: "PDF", href: "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20050170141/O/D20050141.pdf" }
+      ],
+      tags: ["national_statute", "domestic_hard_law", "primary_instrument"]
+    },
+    {
+      id: "shared_men_reg_2017",
+      label: "Rozporządzenie MEN 2017 (zm. 2024, 2025)",
+      labelEN: "MEN Regulation on Minority Language Education (2017, amended 2024 & 2025)",
+      level: "MACRO", direction: "TOP_DOWN",
+      type: "Ministerial regulation",
+      languages: ["szl", "wym"],
+      status: "ongoing",
+      date: "2017-08-18",
+      description: "Regulates conditions for maintaining national, ethnic and linguistic identity in schools. Amended in 2024 and 2025. Also operationalised at MICRO level in classrooms.",
+      urls: [
+        { label: "Akt podstawowy", href: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20170001655" },
+        { label: "PDF 2017", href: "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20170001655/O/D20171655.pdf" },
+        { label: "Tekst jednolity 2023", href: "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20230002301/O/D20232301.pdf" },
+        { label: "Zmiana 2024", href: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240000144" },
+        { label: "Zmiana 2025", href: "https://eli.gov.pl/eli/DU/2025/485" }
+      ],
+      microImplementation: true,
+      tags: ["education_regulation", "domestic_hard_law"]
+    },
+    {
+      id: "shared_ecrml",
+      label: "ECRML — 4 rundy monitoringu (2010–2023)",
+      labelEN: "European Charter for Regional or Minority Languages (4 monitoring rounds)",
+      level: "MACRO", direction: "TOP_DOWN",
+      type: "International treaty",
+      languages: ["szl", "wym"],
+      status: "binding_international",
+      date: "2009",
+      description: "Council of Europe treaty ratified by Poland. Expert Committee has conducted four monitoring rounds, producing detailed recommendations on Polish minority language policy.",
+      urls: [
+        { label: "CoE hub (all rounds)", href: "https://www.coe.int/en/web/european-charter-regional-or-minority-languages/reports-and-recommendations" },
+        { label: "Runda 1 – 2010 (eval.)", href: "https://www.coe.int/t/dg4/education/minlang/Report/E_Reports/PolandECRML2_en.pdf" },
+        { label: "Runda 2 – 2015 (eval.)", href: "https://rm.coe.int/16806d87b5" },
+        { label: "Runda 3 – 2019 (eval.)", href: "https://rm.coe.int/third-evaluation-report-on-poland-the-european-charter-for-regional-or/1680a4e7ee" },
+        { label: "Runda 4 – 2023 (eval.)", href: "https://rm.coe.int/polandecrml4-en/1680ac6470" }
+      ],
+      tags: ["international_treaty", "council_of_europe"]
+    },
+    {
+      id: "shared_fcnm",
+      label: "FCNM — 5 cykli monitoringu",
+      labelEN: "Framework Convention for Protection of National Minorities (5 monitoring cycles)",
+      level: "MACRO", direction: "TOP_DOWN",
+      type: "International treaty",
+      languages: ["szl", "wym"],
+      status: "binding_international",
+      date: "2001",
+      description: "Council of Europe Framework Convention ratified by Poland. Five monitoring cycles with ACFC advisory opinions covering minority language policy, including specific observations on Silesian and Wilamowian.",
+      urls: [
+        { label: "CoE Poland hub", href: "https://www.coe.int/en/web/minorities/poland" },
+        { label: "I cykl – ACFC Opinion", href: "https://rm.coe.int/1st-opinion-on-poland/16805e1cfb" },
+        { label: "II cykl – ACFC Opinion", href: "https://rm.coe.int/2nd-opinion-on-poland/16805ce536" },
+        { label: "III cykl – ACFC Opinion", href: "https://rm.coe.int/3rd-opinion-on-poland/16806ccf6d" },
+        { label: "IV cykl – ACFC Opinion", href: "https://rm.coe.int/4th-op-poland-en/1680993391" },
+        { label: "V cykl – State Report", href: "https://rm.coe.int/polandpr3-en-docx/1680981491" }
+      ],
+      tags: ["international_treaty", "council_of_europe"]
+    },
+    {
+      id: "shared_eu_charter",
+      label: "Karta Praw Podstawowych UE",
+      labelEN: "EU Charter of Fundamental Rights",
+      level: "MACRO", direction: "TOP_DOWN",
+      type: "Supranational instrument",
+      languages: ["szl", "wym"],
+      status: "binding_international",
+      date: "2009",
+      description: "Binding EU instrument prohibiting discrimination based on language (Art. 21) and enshrining respect for cultural, religious and linguistic diversity (Art. 22).",
+      urls: [
+        { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/PDF/?uri=CELEX:12012P/TXT" }
+      ],
+      tags: ["eu_law", "supranational"]
+    },
+    {
+      id: "shared_osce_hague",
+      label: "OBWE – Hague Recommendations (1996)",
+      labelEN: "OSCE Hague Recommendations on Education Rights of National Minorities",
+      level: "MACRO", direction: "TOP_DOWN",
+      type: "Soft law",
+      languages: ["szl", "wym"],
+      status: "soft_law",
+      date: "1996",
+      description: "Non-binding OSCE recommendations referenced in Polish minority language advocacy and parliamentary debates.",
+      urls: [
+        { label: "OSCE PDF", href: "https://www.osce.org/files/f/documents/e/2/32180.pdf" }
+      ],
+      tags: ["osce", "soft_law"]
+    },
+    {
+      id: "shared_osce_oslo",
+      label: "OBWE – Oslo Recommendations (1998)",
+      labelEN: "OSCE Oslo Recommendations on Linguistic Rights of National Minorities",
+      level: "MACRO", direction: "TOP_DOWN",
+      type: "Soft law",
+      languages: ["szl", "wym"],
+      status: "soft_law",
+      date: "1998",
+      description: "Non-binding OSCE recommendations on linguistic rights, frequently cited in advocacy for minority language recognition.",
+      urls: [
+        { label: "OSCE", href: "https://www.osce.org/hcnm/oslo-recommendations" }
+      ],
+      tags: ["osce", "soft_law"]
+    },
+    {
+      id: "shared_un_declaration",
+      label: "ONZ – Deklaracja Praw Mniejszości (1992)",
+      labelEN: "UN Declaration on Rights of Persons Belonging to National or Ethnic Minorities",
+      level: "MACRO", direction: "TOP_DOWN",
+      type: "Soft law",
+      languages: ["szl", "wym"],
+      status: "soft_law",
+      date: "1992",
+      urls: [
+        { label: "OHCHR", href: "https://www.ohchr.org/en/instruments-mechanisms/instruments/declaration-rights-persons-belonging-national-or-ethnic" }
+      ],
+      tags: ["un", "soft_law"]
+    },
+    {
+      id: "shared_rpo_letter_2021",
+      label: "RPO – list do Premiera (Ślązacy i Wilamowianie, 29.01.2021)",
+      labelEN: "Commissioner for Human Rights – letter to PM on Silesian and Wilamowian issues",
+      level: "MESO", direction: "BOTTOM_UP",
+      type: "Ombudsman intervention",
+      languages: ["szl", "wym"],
+      status: "historical",
+      date: "2021-01-29",
+      description: "Ombudsman formally reminded the Prime Minister of unresolved minority rights issues affecting both Silesian and Wilamowian communities. Followed by MSWiA response (8 March 2021).",
+      urls: [
+        { label: "BIP RPO (web)", href: "https://bip.brpo.gov.pl/pl/content/rpo-przypomina-premierowi-o-problemach-slazakow-i-wilamowian" },
+        { label: "Wystąpienie (PDF)", href: "https://bip.brpo.gov.pl/sites/default/files/Wyst%C4%85pienie%20do%20PRM%20%C5%9Al%C4%85zacy%20i%20Wilamowianie%2C%2029.01.2021.pdf" },
+        { label: "Odpowiedź MSWiA (PDF)", href: "https://bip.brpo.gov.pl/sites/default/files/Odpowiedz_MSWiA_8.03.2021.pdf" }
+      ],
+      bidirectional: true,
+      note: "RPO is a MESO institutional actor exerting upward (BOTTOM_UP) pressure on the executive.",
+      tags: ["ombudsman", "advocacy", "joint_instrument"]
+    },
+    {
+      id: "shared_rpo_report_2023",
+      label: "RPO – Raport dot. mniejszości 2020–2022 (pub. 2023)",
+      labelEN: "RPO Minority Rights Report 2020–2022",
+      level: "MESO", direction: "BOTTOM_UP",
+      type: "Ombudsman report",
+      languages: ["szl", "wym"],
+      status: "published",
+      date: "2023-01-01",
+      description: "Comprehensive ombudsman report documenting unresolved minority rights issues in Poland 2020–2022, covering both Silesian and Wilamowian cases.",
+      urls: [
+        { label: "PDF", href: "https://bip.brpo.gov.pl/sites/default/files/2023-01/Raport_RPO_mniejszosci_narodowe_etniczne_2020-2022_styczen2023.pdf" }
+      ],
+      bidirectional: true,
+      tags: ["ombudsman", "systematic_advocacy", "joint_instrument"]
+    }
+  ],
+
+  // ─── SILESIAN (SZL) ─────────────────────────────────────────────────────────
+
+  silesian: {
+    code: "szl",
+    name: "Silesian",
+    namePL: "Język Śląski",
+    color: "#2563eb",
+    items: [
+      // MACRO / TOP-DOWN — Legislative
+      {
+        id: "szl_sejm_233",
+        label: "Sejm – druk nr 233",
+        labelEN: "Sejm Bill Print 233 (original Silesian bill)",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Legislative print",
+        status: "passed_committee",
+        date: "2023",
+        description: "Original Sejm bill seeking to recognise Silesian as a regional language under the 2005 Minorities Act.",
+        urls: [
+          { label: "PDF", href: "https://orka.sejm.gov.pl/Druki10ka.nsf/0/9EA33728D8043716C1258AD80034B898/$File/233.pdf" },
+          { label: "Przebieg", href: "https://www.sejm.gov.pl/sejm10.nsf/PrzebiegProc.xsp?nr=233" }
+        ],
+        tags: ["legislative", "sejm", "szl_primary"]
+      },
+      {
+        id: "szl_sejm_289",
+        label: "Sejm – druk nr 289",
+        labelEN: "Sejm Bill Print 289",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Legislative print",
+        status: "passed",
+        date: "2024",
+        urls: [
+          { label: "PDF", href: "https://orka.sejm.gov.pl/Druki10ka.nsf/0/289E1202A5EB53E3C1258B01003AF819/%24File/289.pdf" }
+        ],
+        tags: ["legislative", "sejm"]
+      },
+      {
+        id: "szl_sejm_committee_apr2024",
+        label: "Biuletyn komisji sejmowej (9.04.2024)",
+        labelEN: "Sejm Committee Bulletin, 9 April 2024",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Committee record",
+        status: "procedural",
+        date: "2024-04-09",
+        urls: [
+          { label: "Biuletyn", href: "https://sejm.gov.pl/Sejm10.nsf/biuletyn.xsp?documentId=F7D0A27A50944AE7C1258B070048C585" }
+        ],
+        tags: ["committee", "sejm", "procedural"]
+      },
+      {
+        id: "szl_senat_druk81",
+        label: "Senat – druki 81 / 81A / 81Z + uchwała",
+        labelEN: "Senate Prints 81, 81A, 81Z + Resolution",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Senate print + resolution",
+        status: "passed",
+        date: "2024",
+        description: "Senate passed the Silesian recognition bill. Print 81A contains the committee report; 81Z the legislative summary; separate resolution confirms Senate support.",
+        urls: [
+          { label: "Druk 81", href: "https://www.senat.gov.pl/download/gfx/senat/pl/senatdruki/13202/druk/081.pdf" },
+          { label: "Druk 81A", href: "https://www.senat.gov.pl/download/gfx/senat/pl/senatdruki/13210/druk/081a.pdf" },
+          { label: "Druk 81Z", href: "https://www.senat.gov.pl/download/gfx/senat/pl/senatdruki/13213/druk/081z.pdf" },
+          { label: "Opinia BL", href: "https://www.senat.gov.pl/download/gfx/senat/pl/senatekspertyzy/7046/plik/081o.pdf" },
+          { label: "Mat. porównawczy", href: "https://www.senat.gov.pl/download/gfx/senat/pl/senatekspertyzy/7049/plik/081m.pdf" },
+          { label: "Uchwała", href: "https://www.senat.gov.pl/download/gfx/senat/pl/senatuchwaly/5220/plik/081uch.pdf" },
+          { label: "Posiedzenie", href: "https://www.senat.gov.pl/prace/posiedzenia/przebieg%2C612%2C1.html" },
+          { label: "Wypowiedzi", href: "https://www.senat.gov.pl/prace/posiedzenia/przebieg%2C612%2C1%2Cprzemowienia.html" }
+        ],
+        tags: ["senate", "legislative"]
+      },
+      {
+        id: "szl_veto_duda_2024",
+        label: "Weto Prezydenta Dudy (29.05.2024)",
+        labelEN: "Presidential Veto – President Duda (29 May 2024)",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Executive veto",
+        status: "vetoed",
+        date: "2024-05-29",
+        description: "President Andrzej Duda vetoed the law recognising Silesian as a regional language. Expert commentary described the justification as 'offensive'. This triggered the post-veto re-processing in the Sejm.",
+        urls: [
+          { label: "Prezydent.pl (archiwum Dudy)", href: "https://www.prezydent.pl/kancelaria/archiwum/andrzej-duda/prawo/zawetowane/weto-do-nowelizacji-ustawy-o-mniejszosciach-narodowych-i-etnicznych-oraz-jezyku-regionalnym%2C86756" },
+          { label: "Uzasadnienie (PDF)", href: "https://www.prezydent.pl/storage/file/core_files/2024/5/29/7f599ba96c47c37b94407946601c1089/Weto%20nowelizacji%20ustawy%20o%20mniejszo%C5%9Bci%20narodowych%20i%20etnicznych%20oraz%20o%20j%C4%99zyku%20regionalnym.pdf" }
+        ],
+        significance: "KEY EVENT",
+        tags: ["veto", "executive", "blocked"]
+      },
+      {
+        id: "szl_sejm_1346",
+        label: "Sejm – druk nr 1346 (ponowne rozpatrzenie, 9.01.2026)",
+        labelEN: "Sejm Bill Print 1346 – post-veto re-processing (9 Jan 2026)",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Legislative print",
+        status: "passed",
+        date: "2026-01-09",
+        description: "Sejm re-passed the Silesian language recognition bill following Duda's veto. Referred to Senate.",
+        urls: [
+          { label: "PDF", href: "https://orka.sejm.gov.pl/Druki10ka.nsf/0/B2EC676185FF770FC1258CA5003B61D5/%24File/1346.pdf" },
+          { label: "Przebieg", href: "https://www.sejm.gov.pl/Sejm10.nsf/PrzebiegProc.xsp?nr=1346" },
+          { label: "Druk 1346-003", href: "https://orka.sejm.gov.pl/Druki10ka.nsf/0/066B6CC86F47BB3AC1258CBB00411D57/%24File/1346-003.pdf" }
+        ],
+        tags: ["legislative", "sejm", "post_veto"]
+      },
+      {
+        id: "szl_senat_598",
+        label: "Senat – druk 598 (ponowne rozpatrzenie, 21.01.2026)",
+        labelEN: "Senate Print 598 – post-veto processing (21 Jan 2026)",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Senate print",
+        status: "passed",
+        date: "2026-01-21",
+        description: "Senate approved the re-submitted Silesian language bill on 21 January 2026. Now awaits presidential signature from President Nawrocki.",
+        urls: [
+          { label: "Tematy posiedzenia", href: "https://www.senat.gov.pl/prace/posiedzenia/tematy%2C650%2C1.html" },
+          { label: "Opinia BL", href: "https://www.senat.gov.pl/gfx/senat/pl/senatekspertyzy/7759/plik/598o.pdf" },
+          { label: "Mat. porównawczy", href: "https://www.senat.gov.pl/download/gfx/senat/pl/senatekspertyzy/7763/plik/598m.pdf" },
+          { label: "Stenogram komisji", href: "https://www.senat.gov.pl/download/gfx/senat/pl/senatkomisjeposiedzenia/11006/stenogram/028ew_4egz.pdf" }
+        ],
+        tags: ["senate", "post_veto"]
+      },
+      {
+        id: "szl_veto_threat_nawrocki_2026",
+        label: "Sygnał weta – Prezydent Nawrocki (luty 2026)",
+        labelEN: "Veto threat – President Nawrocki (February 2026)",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Executive decision (pending)",
+        status: "pending",
+        date: "2026-02",
+        description: "President Nawrocki has signalled potential veto of the re-passed bill, mirroring his earlier veto of the Wilamowian recognition bill (Oct 2025). Decision awaited as of March 2026.",
+        urls: [
+          { label: "Dziennik Zachodni (5.02.2026)", href: "https://dziennikzachodni.pl/weto-prezydenta-w-sprawie-ustawy-o-jezyku-slaskim-jasne-jak-slonce-radni-z-katowic-probuja-jednak-przekonac-karola-nawrockiego/ar/c1p2-28680827" }
+        ],
+        significance: "KEY EVENT",
+        tags: ["veto", "executive", "pending"]
+      },
+      // MESO / TOP-DOWN — Regional media (public broadcasters)
+      {
+        id: "szl_tvp_katowice_senate_jan2026",
+        label: "TVP Katowice – Senat uznał język śląski (21.01.2026)",
+        labelEN: "TVP Katowice – Senate recognised Silesian (21 Jan 2026)",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Regional public broadcast",
+        status: "published",
+        date: "2026-01-21",
+        urls: [
+          { label: "TVP Katowice", href: "https://katowice.tvp.pl/91169517/senat-uznal-jezyk-slaski-za-regionalny" },
+          { label: "TVP Katowice – komisje (21.01)", href: "https://katowice.tvp.pl/91157266/senackie-komisje-poparly-ustawe-uznajaca-jezyk-slaski-za-regionalny" },
+          { label: "TVP Info (21.01)", href: "https://www.tvp.info/91168604/senat-poparl-ustawe-uznajaca-slaski-za-jezyk-regionalny-jezyk-slaski-zostal-oficjalnie-jezykiem-regionalnym" }
+        ],
+        tags: ["media", "regional", "public_broadcaster"]
+      },
+      {
+        id: "szl_dziennik_zachodni_2026",
+        label: "Dziennik Zachodni – seria (01–02.2026)",
+        labelEN: "Dziennik Zachodni – series Jan–Feb 2026",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Regional newspaper",
+        status: "published",
+        date: "2026-01",
+        urls: [
+          { label: "DZ (29.01.2026)", href: "https://dziennikzachodni.pl/weto-w-sprawie-jezyka-slaskiego-polityk-pis-karol-nawrocki-zrobi-to-samo-co-z-wilamowskim-ale-mam-swoj-projekt/ar/c1p2-28699421" },
+          { label: "DZ (5.02.2026)", href: "https://dziennikzachodni.pl/weto-prezydenta-w-sprawie-ustawy-o-jezyku-slaskim-jasne-jak-slonce-radni-z-katowic-probuja-jednak-przekonac-karola-nawrockiego/ar/c1p2-28680827" },
+          { label: "DZ – apel (6.02.2026)", href: "https://dziennikzachodni.pl/prezydencie-nawrocki-pora-podpisac-ustawe-o-jezyku-slaskim-i-przerwac-ten-ciagnacy-sie-20-lat-spor/ar/c1p2-28701025" }
+        ],
+        tags: ["media", "regional_press"]
+      },
+      {
+        id: "szl_slazag",
+        label: "Ślązag – relacje (2024–2026)",
+        labelEN: "Ślązag – coverage 2024–2026",
+        level: "MESO", direction: "BOTTOM_UP",
+        type: "Silesian-identity media",
+        status: "ongoing",
+        date: "2024",
+        urls: [
+          { label: "Przegłosowanie w Sejmie (9.01.2026)", href: "https://www.slazag.pl/jezyk-slaski-ponownie-przeglosowany-w-sejmie" },
+          { label: "Weto i co dalej z WYM", href: "https://www.slazag.pl/prezydent-zawetowal-ustawe-o-jezyku-wilamowskim-dlaczego-i-co-dalej-z-jezykiem-slaskim" },
+          { label: "List do prezydenta (30.01.2026)", href: "https://www.slazag.pl/nie-lynkej-sie-slonski-godki-eurodeputowany-lukasz-kohut-napisal-do-prezydenta-karola-nawrockiego" }
+        ],
+        tags: ["media", "silesian_identity", "advocacy_media"]
+      },
+      {
+        id: "szl_pap_media",
+        label: "PAP – relacje (maj 2024)",
+        labelEN: "PAP – reports (May 2024)",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "National news agency",
+        status: "published",
+        date: "2024-05",
+        urls: [
+          { label: "PAP – weto (29.05.2024)", href: "https://www.pap.pl/aktualnosci/slaski-nie-bedzie-jezykiem-regionalnym-prezydent-wetuje-ustawe" },
+          { label: "PAP Samorząd (30.05.2024)", href: "https://samorzad.pap.pl/kategoria/aktualnosci/prezydent-zawetowal-ustawe-uznajaca-jezyk-slaski-za-regionalny" },
+          { label: "PAP – konferencja (31.05.2024)", href: "https://www.pap.pl/aktualnosci/prezydenckie-weto-w-sprawie-jezyka-slaskiego-rzad-odpowie-finansowym-wsparciem" },
+          { label: "PAP – ekspercka krytyka (29.05.2024)", href: "https://www.pap.pl/aktualnosci/ekspertka-uzasadnienie-prezydenckiego-weta-jest-ublizajace" }
+        ],
+        tags: ["media", "national_agency"]
+      },
+      {
+        id: "szl_media_national_2024",
+        label: "Media ogólnopolskie – weto 2024",
+        labelEN: "National media – veto coverage May 2024",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "National media",
+        status: "published",
+        date: "2024-05",
+        urls: [
+          { label: "Prawo.pl – Senat + weto", href: "https://www.prawo.pl/samorzad/jezyk-slaski-jezykiem-regionalnym%2C536688.html" },
+          { label: "Legalis – weto proceduralne (25.06.2024)", href: "https://legalis.pl/nowelizacja-ustawy-o-mniejszosciach-narodowych-i-etnicznych-oraz-jezyku-regionalnym/" },
+          { label: "Prawo.pl – status 2026 (12.01.2026)", href: "https://www.prawo.pl/samorzad/jezyk-slaski-jezykiem-regionalnym%2C536688.html" },
+          { label: "wKatowicach.eu (22.01.2026)", href: "https://www.wkatowicach.eu/informacje/w-katowicach/Slaski-jezykiem-regionalnym-Decyzja-nalezy-do-prezydenta-Karola-Nawrockiego/idn%3A11282" },
+          { label: "Nauka w Polsce – 30.01.2026", href: "https://naukawpolsce.pl/aktualnosci/news%2C111447%2Cjezykoznawczyni-na-swiecie-istnieje-ok-7-tys-jezykow-tak-trudno-nam-uznac" }
+        ],
+        tags: ["media", "national_press", "legal_analysis"]
+      },
+      // MESO / BOTTOM-UP — Expert advocacy, think tanks
+      {
+        id: "szl_klub_jagiellonski",
+        label: "Klub Jagielloński – komentarz (14.05.2024)",
+        labelEN: "Klub Jagielloński – commentary before veto (14 May 2024)",
+        level: "MESO", direction: "BOTTOM_UP",
+        type: "Think-tank advocacy",
+        status: "published",
+        date: "2024-05-14",
+        urls: [
+          { label: "Artykuł", href: "https://klubjagiellonski.pl/2024/05/14/slaski-jezyk-regionalny-polsce-nie-zaszkodzi-a-slaskowi-moze-pomoze/" }
+        ],
+        tags: ["think_tank", "advocacy", "expert"]
+      },
+      {
+        id: "szl_polityka_blog",
+        label: "Polityka (blog) – komentarz po wecie (30.05.2024)",
+        labelEN: "Polityka blog – commentary post-veto",
+        level: "MESO", direction: "BOTTOM_UP",
+        type: "Opinion media",
+        status: "published",
+        date: "2024-05-30",
+        urls: [
+          { label: "Polityka blog", href: "https://blog.polityka.pl/dziadul/2024/05/30/weto-ganba-soron-a-niy-prezydent/" },
+          { label: "Polityka – spory wokół śląskości", href: "https://www.polityka.pl/tygodnikpolityka/spoleczenstwo/2108537%2C1%2Cdyzurny-wrog-jak-wladza-odgrzewa-spor-o-slaskosc-i-slask.read" }
+        ],
+        tags: ["opinion_media", "advocacy"]
+      },
+      // MICRO / BOTTOM-UP — Civil society, activists
+      {
+        id: "szl_kohut_letter",
+        label: "Łukasz Kohut (MEP) – list do Prezydenta Nawrockiego (30.01.2026)",
+        labelEN: "MEP Łukasz Kohut – letter to President Nawrocki (30 Jan 2026)",
+        level: "MICRO", direction: "BOTTOM_UP",
+        type: "Individual advocacy (elected representative as community voice)",
+        status: "active",
+        date: "2026-01-30",
+        description: "Silesian MEP Łukasz Kohut wrote an open letter to President Nawrocki urging him to sign the Silesian language bill. Written in Silesian ('Nie lynkej się ślońskij godki').",
+        urls: [
+          { label: "Ślązag", href: "https://www.slazag.pl/nie-lynkej-sie-slonski-godki-eurodeputowany-lukasz-kohut-napisal-do-prezydenta-karola-nawrockiego" }
+        ],
+        tags: ["civil_society", "advocacy", "grassroots"]
+      },
+      {
+        id: "szl_katowice_council",
+        label: "Radni z Katowic – presja na prezydenta (luty 2026)",
+        labelEN: "Katowice city councillors – pressure campaign on president (Feb 2026)",
+        level: "MICRO", direction: "BOTTOM_UP",
+        type: "Local government advocacy",
+        status: "active",
+        date: "2026-02",
+        urls: [
+          { label: "Dziennik Zachodni (5.02.2026)", href: "https://dziennikzachodni.pl/weto-prezydenta-w-sprawie-ustawy-o-jezyku-slaskim-jasne-jak-slonce-radni-z-katowic-probuja-jednak-przekonac-karola-nawrockiego/ar/c1p2-28680827" }
+        ],
+        tags: ["local_government", "advocacy", "grassroots"]
+      }
+    ],
+
+    // Key events timeline for SZL
+    timeline: [
+      { date: "2023",       event: "Druk 233 złożony w Sejmie",              status: "passed_committee" },
+      { date: "2024-04-09", event: "Posiedzenie komisji sejmowej",            status: "procedural"       },
+      { date: "2024-05-14", event: "Klub Jagielloński: komentarz ekspercki",  status: "published"        },
+      { date: "2024-05-29", event: "WETO – Prezydent Duda",                   status: "vetoed"           },
+      { date: "2024-05-30", event: "Media: krytyka uzasadnienia weta",        status: "published"        },
+      { date: "2026-01-09", event: "Sejm re-uchwala ustawę (druk 1346)",     status: "passed"           },
+      { date: "2026-01-21", event: "Senat zatwierdza (druk 598)",             status: "passed"           },
+      { date: "2026-01-30", event: "Kohut pisze do Nawrockiego",              status: "active"           },
+      { date: "2026-02",    event: "Sygnał weta – Nawrocki",                  status: "pending"          }
+    ]
+  },
+
+  // ─── WILAMOWIAN (WYM) ────────────────────────────────────────────────────────
+
+  wilamowian: {
+    code: "wym",
+    name: "Wilamowian",
+    namePL: "Język Wilamowski",
+    color: "#7c3aed",
+    items: [
+      // MACRO / TOP-DOWN — Legislative
+      {
+        id: "wym_sejm_321",
+        label: "Sejm – druk nr 321 (ustawa + uzasadnienie)",
+        labelEN: "Sejm Bill Print 321 – Wilamowian recognition bill",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Legislative print",
+        status: "passed",
+        date: "2024",
+        description: "Sejm bill proposing recognition of Wilamowian (Wymysiöeryś) as a regional language under the 2005 Minorities Act.",
+        urls: [
+          { label: "Druk 321", href: "https://www.sejm.gov.pl/Sejm10.nsf/druk.xsp?nr=321" },
+          { label: "PDF (ustawa + uzasadnienie)", href: "https://orka.sejm.gov.pl/Druki10ka.nsf/0/18FE1AC965A2C788C1258B0900339C0F/$File/321-ustawa%20i%20uzasadnienie.docx" },
+          { label: "Przebieg legislacyjny", href: "https://orka.sejm.gov.pl/proc10.nsf/ustawy/321_u.htm" },
+          { label: "Przebieg (Sejm)", href: "https://www.sejm.gov.pl/Sejm10.nsf/PrzebiegProc.xsp?nr=321" }
+        ],
+        tags: ["legislative", "sejm", "wym_primary"]
+      },
+      {
+        id: "wym_sejm_posiedzenie40",
+        label: "Sejm – Posiedzenie 40, stenogram (wypowiedzi 103–112)",
+        labelEN: "Sejm Session 40 – stenogram and speeches",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Parliamentary debate record",
+        status: "procedural",
+        date: "2024",
+        description: "Parliamentary speeches and full stenogram from Session 40 where the Wilamowian bill was debated.",
+        urls: [
+          { label: "Stenogram (PDF)", href: "https://orka2.sejm.gov.pl/StenoInter10.nsf/0/B8AF8AF874B385F6C1258D0200800E9B/$File/40_c_ksiazka_bis.pdf" },
+          { label: "Wypowiedź 103", href: "https://www.sejm.gov.pl/sejm10.nsf/wypowiedz.xsp?dzien=3&posiedzenie=40&view=1&wyp=103" },
+          { label: "Wypowiedź 104", href: "https://www.sejm.gov.pl/Sejm10.nsf/wypowiedz.xsp?dzien=3&posiedzenie=40&view=1&wyp=104" },
+          { label: "Wypowiedź 105", href: "https://www.sejm.gov.pl/Sejm10.nsf/wypowiedz.xsp?dzien=3&posiedzenie=40&view=1&wyp=105" },
+          { label: "Wypowiedź 109", href: "https://www.sejm.gov.pl/sejm10.nsf/wypowiedz.xsp?dzien=3&posiedzenie=40&view=1&wyp=109" },
+          { label: "Wypowiedź 112", href: "https://www.sejm.gov.pl/sejm10.nsf/wypowiedz.xsp?dzien=3&posiedzenie=40&view=1&wyp=112" }
+        ],
+        tags: ["parliamentary_debate", "sejm"]
+      },
+      {
+        id: "wym_sejm_committee_ix",
+        label: "Sejm IX – biuletyn komisji (2021)",
+        labelEN: "Sejm IX – Committee Bulletin (2021)",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Committee record",
+        status: "procedural",
+        date: "2021-05-17",
+        urls: [
+          { label: "Biuletyn IX kadencja", href: "https://www.sejm.gov.pl/sejm9.nsf/biuletyn.xsp?documentId=61B118F2CD9D971BC12586E6003FED11" },
+          { label: "Prace komisji 2021", href: "https://www.sejm.gov.pl/sejm9.nsf/prace_komisji_info.xsp?data=2021-05-17" }
+        ],
+        tags: ["committee", "sejm", "historical"]
+      },
+      {
+        id: "wym_senat_druk081",
+        label: "Senat – druki 081 / opinia / materiał porównawczy",
+        labelEN: "Senate Prints 081 + legislative opinion + comparative material",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Senate print",
+        status: "passed",
+        date: "2024",
+        urls: [
+          { label: "Przebieg komisji", href: "https://www.senat.gov.pl/prace/komisje-senackie/przebieg%2C11006%2C1.html" },
+          { label: "Opinia BL (081)", href: "https://www.senat.gov.pl/download/gfx/senat/pl/senatekspertyzy/7046/plik/081o.pdf" },
+          { label: "Mat. porównawczy (081)", href: "https://www.senat.gov.pl/download/gfx/senat/pl/senatekspertyzy/7049/plik/081m.pdf" },
+          { label: "Stenogram komisji", href: "https://www.senat.gov.pl/download/gfx/senat/pl/senatkomisjeposiedzenia/11006/stenogram/028ew_4egz.pdf" },
+          { label: "Opinia (451)", href: "https://www.senat.gov.pl/gfx/senat/pl/senatekspertyzy/7556/plik/451o.pdf" },
+          { label: "Mat. porównawczy (451)", href: "https://www.senat.gov.pl/gfx/senat/pl/senatekspertyzy/7547/plik/451m.pdf" },
+          { label: "Tematy posiedzenia", href: "https://www.senat.gov.pl/prace/posiedzenia/tematy%2C612%2C1.html" }
+        ],
+        tags: ["senate", "legislative"]
+      },
+      {
+        id: "wym_veto_nawrocki_oct2025",
+        label: "WETO – Prezydent Nawrocki (październik 2025)",
+        labelEN: "Presidential Veto – President Nawrocki (October 2025)",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Executive veto",
+        status: "vetoed",
+        date: "2025-10",
+        description: "President Nawrocki vetoed the Wilamowian language recognition bill in October 2025. This triggered post-veto legislative processing (druk 1553, 1848) and created an immediate parallel with the Silesian bill's fate.",
+        urls: [
+          { label: "Prezydent.pl – weto", href: "https://www.prezydent.pl/prawo/ustawy-zawetowane/weto-do-nowelizacji-ustawy-o-mniejszosciach-narodowych-i-etnicznych-oraz-o-jezyku-regionalnym%2C108735" },
+          { label: "Uzasadnienie (PDF)", href: "https://www.prezydent.pl/storage/file/core_files/2025/10/16/0f69a96101c794fbe1e8845fefc59ab6/Wniosek%20Prezydenta%20RP.pdf" },
+          { label: "Pismo do Marszałka Sejmu (PDF)", href: "https://www.prezydent.pl/storage/file/core_files/2025/10/16/2e6886e270d15f936d2267336060b20b/Pismo%20do%20Marsza%C5%82ka%20Sejmu.pdf" }
+        ],
+        significance: "KEY EVENT",
+        tags: ["veto", "executive", "blocked"]
+      },
+      {
+        id: "wym_sejm_postveto",
+        label: "Sejm – druki 1553 / 1553-A / 1848 (po wecie)",
+        labelEN: "Sejm Prints 1553 / 1553-A / 1848 – post-veto processing",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Legislative print",
+        status: "processing",
+        date: "2025-10",
+        urls: [
+          { label: "Druk 1553", href: "https://www.sejm.gov.pl/sejm10.nsf/druk.xsp?nr=1553" },
+          { label: "Druk 1553-A", href: "https://www.sejm.gov.pl/sejm10.nsf/druk.xsp?nr=1553-A" },
+          { label: "Druk 1553 (PDF)", href: "https://orka.sejm.gov.pl/Druki10ka.nsf/0/873AE5DBFCE20445C1258CD50028B897/$File/1553.pdf" },
+          { label: "Druk 1848 (PDF)", href: "https://orka.sejm.gov.pl/Druki10ka.nsf/0/F076D872DABA0523C1258D26002FB1FF/$File/1848.pdf" }
+        ],
+        tags: ["legislative", "sejm", "post_veto"]
+      },
+      {
+        id: "wym_mswia_response",
+        label: "MSWiA – odpowiedź na wystąpienie RPO (8.03.2021)",
+        labelEN: "Ministry of Interior – response to RPO intervention (8 Mar 2021)",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Government response",
+        status: "institutional_response",
+        date: "2021-03-08",
+        urls: [
+          { label: "PDF", href: "https://bip.brpo.gov.pl/sites/default/files/Odpowiedz_MSWiA_8.03.2021.pdf" }
+        ],
+        tags: ["government_response", "institutional"]
+      },
+      // MESO / TOP-DOWN — Media coverage
+      {
+        id: "wym_media_national_veto",
+        label: "Media ogólnopolskie – weto Nawrockiego (październik 2025)",
+        labelEN: "National media – Nawrocki veto coverage (Oct 2025)",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "National media",
+        status: "published",
+        date: "2025-10",
+        urls: [
+          { label: "PAP – weto Nawrockiego", href: "https://www.pap.pl/aktualnosci/weto-prezydenta-nawrocki-zdecydowal-w-sprawie-ustawy-o-mniejszosciach-narodowych-i" },
+          { label: "TVN24 – weto", href: "https://tvn24.pl/polska/prezydent-karol-nawrocki-zawetowal-nowelizacje-ustawy-o-mniejszosciach-narodowych-st8703745" },
+          { label: "TVN24 – kontekst językowy", href: "https://tvn24.pl/polska/weto-prezydenta-jezyk-wilamowski-czym-jest-ile-osob-go-uzywa-st8704176" },
+          { label: "Bankier.pl", href: "https://www.bankier.pl/wiadomosc/Nowela-ustawy-o-mniejszosciach-narodowych-i-etnicznych-do-kosza-Jest-prezydenckie-weto-9025988.html" },
+          { label: "Onet", href: "https://wiadomosci.onet.pl/kraj/weto-karol-nawrockiego-kancelaria-prezydenta-zamiescila-komunikat/s1lemtt" },
+          { label: "WP Wiadomości", href: "https://wiadomosci.wp.pl/weto-prezydent-zdecydowal-ws-ustawy-o-mniejszosciach-7211552887499744a" },
+          { label: "Business Insider PL", href: "https://businessinsider.com.pl/wiadomosci/karol-nawrocki-blokuje-nowelizacje-potrzebna-obiektywna-weryfikacja/85pczsy" },
+          { label: "Wyborcza", href: "https://wyborcza.pl/7%2C75968%2C32333145%2Cweto-prezydenta-nawrockiego-w-sprawie-jezyka-wilamowskiego.html" }
+        ],
+        tags: ["media", "national_press", "national_broadcaster"]
+      },
+      {
+        id: "wym_tvp3_katowice",
+        label: "TVP3 Katowice – materiał regionalny (2025)",
+        labelEN: "TVP3 Katowice – regional coverage of Wilamowian veto",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Regional public broadcast",
+        status: "published",
+        date: "2025-10",
+        urls: [
+          { label: "TVP3 Katowice", href: "https://katowice.tvp.pl/89520270/jezyk-wilamowski-nie-bedzie-jezykiem-regionalnym-jest-weto-prezydenta" }
+        ],
+        tags: ["media", "regional", "public_broadcaster"]
+      },
+      {
+        id: "wym_expert_media",
+        label: "Media eksperckie – Prof. Olko, O-jezyku.pl",
+        labelEN: "Expert media – Prof. Olko (Nauka w Polsce), O-jezyku.pl",
+        level: "MESO", direction: "BOTTOM_UP",
+        type: "Expert commentary",
+        status: "published",
+        date: "2025",
+        description: "Expert linguists provide commentary on the Wilamowian case, linking recognition to broader language endangerment discourse.",
+        urls: [
+          { label: "Nauka w Polsce – Prof. Olko", href: "https://naukawpolsce.pl/aktualnosci/news%2C109699%2Cprof-olko-uznanie-jezyka-wilamowskiego-za-regionalny-byloby-przelomem.html" },
+          { label: "O-jezyku.pl – spór o uznanie", href: "https://www.o-jezyku.pl/2025/10/21/jezyk-wilamowski-czyli-spor-o-uznanie/" }
+        ],
+        tags: ["expert_commentary", "linguistic_advocacy"]
+      },
+      {
+        id: "wym_polskie_radio",
+        label: "Polskie Radio 24 – prace w Sejmie (2024)",
+        labelEN: "Polskie Radio 24 – Sejm work on new regional language",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "National public radio",
+        status: "published",
+        date: "2024",
+        urls: [
+          { label: "Polskie Radio 24", href: "https://polskieradio24.pl/artykul/3555717%2Cbedzie-nowy-jezyk-regionalny-w-sejmie-trwaja-prace" }
+        ],
+        tags: ["media", "public_radio"]
+      },
+      {
+        id: "wym_dgp_senate",
+        label: "Dziennik Gazeta Prawna – Senat za językiem wilamowskim",
+        labelEN: "Dziennik Gazeta Prawna – Senate supports Wilamowian",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "National newspaper",
+        status: "published",
+        date: "2024",
+        urls: [
+          { label: "DGP", href: "https://www.gazetaprawna.pl/wiadomosci/kraj/artykuly/9895678%2Cjezyk-wilamowski-bedzie-nowym-jezykiem-regionalnym-senat-poparl-zmian.html" }
+        ],
+        tags: ["media", "national_press"]
+      },
+      // MICRO / BOTTOM-UP — Community
+      {
+        id: "wym_community_petition",
+        label: "Mieszkańcy Wilamowic – petycja o uznanie języka",
+        labelEN: "Residents of Wilamowice – petition for language recognition",
+        level: "MICRO", direction: "BOTTOM_UP",
+        type: "Community petition",
+        status: "active",
+        date: "2024",
+        description: "The Wilamowian-speaking community in Wilamowice (approx. 50–100 fluent speakers) has actively campaigned for official recognition of their language.",
+        urls: [
+          { label: "Portal Samorządowy – petycja", href: "https://www.portalsamorzadowy.pl/komunikacja-spoleczna/mieszkancy-wilamowic-chca-by-ich-jezyk-uznano-za-regionalny%2C84985.html" },
+          { label: "Portal Samorządowy – RPO i mniejszości", href: "https://www.portalsamorzadowy.pl/komunikacja-spoleczna/rpo-te-mniejszosci-etniczne-wciaz-nie-doczekaly-sie-swoich-praw%2C251079.html" }
+        ],
+        tags: ["community", "petition", "grassroots"]
+      }
+    ],
+
+    timeline: [
+      { date: "2021-01-29", event: "RPO: list do Premiera (SZL + WYM)",      status: "historical"   },
+      { date: "2021-03-08", event: "MSWiA: odpowiedź na RPO",                status: "institutional_response" },
+      { date: "2021-05-17", event: "Komisja sejmowa (IX kadencja)",           status: "procedural"   },
+      { date: "2024",       event: "Druk 321 złożony w Sejmie",              status: "passed"       },
+      { date: "2024",       event: "Senat zatwierdza (druk 081)",             status: "passed"       },
+      { date: "2025-10",    event: "WETO – Prezydent Nawrocki",               status: "vetoed"       },
+      { date: "2025-10",    event: "Druki 1553/1848 – ponowne procedowanie", status: "processing"   }
+    ]
+  }
+};
