@@ -32,6 +32,11 @@ function getAllItems() {
     items.push({ ...item, _lang: 'wym', _langLabel: 'Wilamowian' });
   });
 
+  // Ukrainian items
+  FTM_DATA.ukrainian.items.forEach(item => {
+    items.push({ ...item, _lang: 'ukr', _langLabel: 'Ukrainian' });
+  });
+
   return items;
 }
 
@@ -139,7 +144,7 @@ function makeDocCard(item) {
   header.appendChild(label);
 
   const badge = makeEl('span', { className: `lang-badge ${item._lang}` });
-  badge.textContent = item._lang === 'shared' ? 'BOTH' : item._lang.toUpperCase();
+  badge.textContent = item._lang === 'shared' ? 'SHARED' : item._lang.toUpperCase();
   header.appendChild(badge);
 
   card.appendChild(header);
@@ -213,7 +218,7 @@ function renderList() {
 
     tr.innerHTML = `
       <td style="font-weight:600;">${item.label}</td>
-      <td><span class="lang-badge ${item._lang}">${item._lang === 'shared' ? 'BOTH' : item._lang.toUpperCase()}</span></td>
+      <td><span class="lang-badge ${item._lang}">${item._lang === 'shared' ? 'SHARED' : item._lang.toUpperCase()}</span></td>
       <td>${item.level}</td>
       <td style="color:${item.direction === 'TOP_DOWN' ? '#fca5a5' : '#86efac'};font-size:.75rem;">${item.direction.replace('_', '-')}</td>
       <td style="color:var(--text-muted);">${item.type}</td>
@@ -236,7 +241,8 @@ function renderTimeline() {
 
   const langs = [
     { key: 'szl', label: 'Silesian (Język Śląski)', color: 'var(--szl)', data: FTM_DATA.silesian.timeline },
-    { key: 'wym', label: 'Wilamowian (Język Wilamowski)', color: 'var(--wym)', data: FTM_DATA.wilamowian.timeline }
+    { key: 'wym', label: 'Wilamowian (Język Wilamowski)', color: 'var(--wym)', data: FTM_DATA.wilamowian.timeline },
+    { key: 'ukr', label: 'Ukrainian (Język Ukraiński)', color: 'var(--ukr)', data: FTM_DATA.ukrainian.timeline }
   ];
 
   // Add shared timeline items (RPO interventions)
@@ -389,6 +395,7 @@ function updateStats() {
   document.getElementById('stat-total').textContent = filtered.length;
   document.getElementById('stat-szl').textContent = filtered.filter(i => i._lang === 'szl').length;
   document.getElementById('stat-wym').textContent = filtered.filter(i => i._lang === 'wym').length;
+  document.getElementById('stat-ukr').textContent = filtered.filter(i => i._lang === 'ukr').length;
   document.getElementById('stat-shared').textContent = filtered.filter(i => i._lang === 'shared').length;
 }
 
@@ -397,9 +404,9 @@ function updateStats() {
 function render() {
   updateStats();
 
-  document.getElementById('matrix-view').style.display = state.view === 'matrix' ? '' : 'none';
-  document.getElementById('list-view').style.display    = state.view === 'list'   ? '' : 'none';
-  document.getElementById('timeline-view').style.display = state.view === 'timeline' ? '' : 'none';
+  document.getElementById('matrix-view').style.display = state.view === 'matrix' ? 'block' : 'none';
+  document.getElementById('list-view').style.display    = state.view === 'list'   ? 'block' : 'none';
+  document.getElementById('timeline-view').style.display = state.view === 'timeline' ? 'block' : 'none';
 
   if (state.view === 'matrix')   renderMatrix();
   if (state.view === 'list')     renderList();

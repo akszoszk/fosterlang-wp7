@@ -31,6 +31,9 @@
   --shared:     #0f766e;
   --shared-light: #14b8a6;
   --shared-bg:  #f0fdfa;
+  --ukr:        #dc2626;
+  --ukr-light:  #f87171;
+  --ukr-bg:     #fef2f2;
 
   /* Status colors */
   --status-passed:   #15803d;
@@ -338,6 +341,7 @@ a  { color: inherit; text-decoration: none; }
 }
 .doc-card.lang-szl::before  { background: var(--szl); }
 .doc-card.lang-wym::before  { background: var(--wym); }
+.doc-card.lang-ukr::before  { background: var(--ukr); }
 .doc-card.lang-shared::before { background: var(--shared); }
 
 .doc-card:hover {
@@ -373,6 +377,7 @@ a  { color: inherit; text-decoration: none; }
 .lang-badge.szl    { background: var(--szl-bg);    color: var(--szl);    border: 1px solid #bfdbfe; }
 .lang-badge.wym    { background: var(--wym-bg);    color: var(--wym);    border: 1px solid #ddd6fe; }
 .lang-badge.shared { background: var(--shared-bg); color: var(--shared); border: 1px solid #99f6e4; }
+.lang-badge.ukr    { background: var(--ukr-bg);    color: var(--ukr);    border: 1px solid #fecaca; }
 
 .doc-card .card-type {
   font-size: .68rem;

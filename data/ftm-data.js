@@ -1,5 +1,5 @@
 // Ferguson-Tollefson Matrix — Language Policy Data
-// FOSTERLANG WP7 | AMU Team | Silesian & Wilamowian
+// FOSTERLANG WP7 | AMU Team | Silesian & Wilamowian & Ukrainian
 // Generated from: wilamowski i śląski - LANGUAGE POLICY @ FOSTERLANG.docx
 //                 Language Policy documents - POLAND _ Fosterlang.docx
 
@@ -74,7 +74,7 @@ const FTM_DATA = {
       labelEN: "MEN Regulation on Minority Language Education (2017, amended 2024 & 2025)",
       level: "MACRO", direction: "TOP_DOWN",
       type: "Ministerial regulation",
-      languages: ["szl", "wym"],
+      languages: ["szl", "wym", "ukr"],
       status: "ongoing",
       date: "2017-08-18",
       description: "Regulates conditions for maintaining national, ethnic and linguistic identity in schools. Amended in 2024 and 2025. Also operationalised at MICRO level in classrooms.",
@@ -133,7 +133,7 @@ const FTM_DATA = {
       labelEN: "EU Charter of Fundamental Rights",
       level: "MACRO", direction: "TOP_DOWN",
       type: "Supranational instrument",
-      languages: ["szl", "wym"],
+      languages: ["szl", "wym", "ukr"],
       status: "binding_international",
       date: "2009",
       description: "Binding EU instrument prohibiting discrimination based on language (Art. 21) and enshrining respect for cultural, religious and linguistic diversity (Art. 22).",
@@ -148,7 +148,7 @@ const FTM_DATA = {
       labelEN: "OSCE Hague Recommendations on Education Rights of National Minorities",
       level: "MACRO", direction: "TOP_DOWN",
       type: "Soft law",
-      languages: ["szl", "wym"],
+      languages: ["szl", "wym", "ukr"],
       status: "soft_law",
       date: "1996",
       description: "Non-binding OSCE recommendations referenced in Polish minority language advocacy and parliamentary debates.",
@@ -163,7 +163,7 @@ const FTM_DATA = {
       labelEN: "OSCE Oslo Recommendations on Linguistic Rights of National Minorities",
       level: "MACRO", direction: "TOP_DOWN",
       type: "Soft law",
-      languages: ["szl", "wym"],
+      languages: ["szl", "wym", "ukr"],
       status: "soft_law",
       date: "1998",
       description: "Non-binding OSCE recommendations on linguistic rights, frequently cited in advocacy for minority language recognition.",
@@ -178,7 +178,7 @@ const FTM_DATA = {
       labelEN: "UN Declaration on Rights of Persons Belonging to National or Ethnic Minorities",
       level: "MACRO", direction: "TOP_DOWN",
       type: "Soft law",
-      languages: ["szl", "wym"],
+      languages: ["szl", "wym", "ukr"],
       status: "soft_law",
       date: "1992",
       urls: [
@@ -734,6 +734,219 @@ const FTM_DATA = {
       { date: "2024",       event: "Senat zatwierdza (druk 081)",             status: "passed"       },
       { date: "2025-10",    event: "WETO – Prezydent Nawrocki",               status: "vetoed"       },
       { date: "2025-10",    event: "Druki 1553/1848 – ponowne procedowanie", status: "processing"   }
+    ]
+  },
+
+  // ─── UKRAINIAN (UKR) ─────────────────────────────────────────────────────────
+
+  ukrainian: {
+    code: "ukr",
+    name: "Ukrainian",
+    namePL: "Język Ukraiński (ochrona tymczasowa)",
+    color: "#dc2626",
+    items: [
+      // MACRO / TOP-DOWN — National legislation
+      {
+        id: "ukr_ustawa_2022",
+        label: "Ustawa z 12 marca 2022 r. o pomocy obywatelom Ukrainy (Dz.U. 2022 poz. 583)",
+        labelEN: "Act of 12 March 2022 on Assistance to Citizens of Ukraine",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "National statute (special law)",
+        status: "ongoing",
+        date: "2022-03-12",
+        description: "Special law providing temporary protection for Ukrainian refugees. Key provisions: legal stay extended to 4 March 2026, free public education regardless of Polish language proficiency, additional Polish language classes, tuition-free university studies, recognition of prior education.",
+        urls: [
+          { label: "ISAP", href: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20220000583" },
+          { label: "ELI (Dz.U. 2022 poz. 583)", href: "https://eli.gov.pl/eli/DU/2022/583/ogl" }
+        ],
+        significance: "KEY EVENT",
+        tags: ["national_statute", "domestic_hard_law", "ukraine_special_law", "refugee_protection"]
+      },
+      {
+        id: "ukr_men_reg_2017_foreigners",
+        label: "Rozporządzenie MEN z 23 sierpnia 2017 r. (kształcenie cudzoziemców)",
+        labelEN: "MEN Regulation on Education of Non-Polish Citizens (2017)",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Ministerial regulation",
+        status: "ongoing",
+        date: "2017-08-23",
+        description: "Regulates conditions for educating persons who are not Polish citizens, including access to public schools, additional Polish language classes, and adapted curricula.",
+        urls: [
+          { label: "ISAP (akt podstawowy)", href: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20170001627" },
+          { label: "Tekst jednolity 2023 (PDF)", href: "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20230002737/O/D20232737.pdf" }
+        ],
+        tags: ["education_regulation", "domestic_hard_law", "foreigners"]
+      },
+      {
+        id: "ukr_ustawa_ochrona_2003",
+        label: "Ustawa z 13 czerwca 2003 r. o udzielaniu cudzoziemcom ochrony na terytorium RP",
+        labelEN: "Act on Granting Protection to Foreigners in Poland (2003)",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "National statute",
+        status: "ongoing",
+        date: "2003-06-13",
+        description: "Framework legislation governing the granting of refugee status, subsidiary protection, and temporary protection to foreigners on Polish territory.",
+        urls: [
+          { label: "ISAP", href: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20031281176" }
+        ],
+        tags: ["national_statute", "domestic_hard_law", "international_protection"]
+      },
+      {
+        id: "ukr_ustawa_cudzoziemcy_2013",
+        label: "Ustawa z 12 grudnia 2013 r. o cudzoziemcach",
+        labelEN: "Act on Foreigners (2013)",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "National statute",
+        status: "ongoing",
+        date: "2013-12-12",
+        description: "General legislation on the entry, stay, and departure of foreigners in Poland. Provides the legal basis for residence permits and other migration-related procedures.",
+        urls: [
+          { label: "ISAP", href: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20131650" }
+        ],
+        tags: ["national_statute", "domestic_hard_law", "migration"]
+      },
+      // MACRO / TOP-DOWN — EU directives
+      {
+        id: "ukr_eu_decision_2022_382",
+        label: "Decyzja wykonawcza Rady (UE) 2022/382 (ochrona tymczasowa – Ukraina)",
+        labelEN: "Council Implementing Decision (EU) 2022/382 – Temporary Protection for Ukraine",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "EU implementing decision",
+        status: "binding_international",
+        date: "2022-03-04",
+        description: "EU Council decision activating the Temporary Protection Directive (2001/55/EC) for persons fleeing Ukraine following the Russian invasion of 24 February 2022.",
+        urls: [
+          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32022D0382" }
+        ],
+        significance: "KEY EVENT",
+        tags: ["eu_law", "binding_international", "temporary_protection"]
+      },
+      {
+        id: "ukr_eu_directive_2001_55",
+        label: "Dyrektywa 2001/55/WE (ochrona tymczasowa)",
+        labelEN: "Directive 2001/55/EC – Temporary Protection",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "EU directive",
+        status: "binding_international",
+        date: "2001-07-20",
+        description: "EU directive establishing minimum standards for giving temporary protection in the event of a mass influx of displaced persons. First activated in March 2022 for Ukraine.",
+        urls: [
+          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32001L0055" }
+        ],
+        tags: ["eu_law", "binding_international", "temporary_protection"]
+      },
+      {
+        id: "ukr_eu_directive_2011_95",
+        label: "Dyrektywa 2011/95/UE (kwalifikacyjna)",
+        labelEN: "Directive 2011/95/EU – Qualification Directive",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "EU directive",
+        status: "binding_international",
+        date: "2011-12-13",
+        description: "Standards for the qualification of third-country nationals or stateless persons as beneficiaries of international protection, and the content of protection granted.",
+        urls: [
+          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32011L0095" }
+        ],
+        tags: ["eu_law", "binding_international", "asylum"]
+      },
+      {
+        id: "ukr_eu_directive_2013_32",
+        label: "Dyrektywa 2013/32/UE (procedury azylowe)",
+        labelEN: "Directive 2013/32/EU – Asylum Procedures",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "EU directive",
+        status: "binding_international",
+        date: "2013-06-26",
+        description: "Common procedures for granting and withdrawing international protection in the EU.",
+        urls: [
+          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32013L0032" }
+        ],
+        tags: ["eu_law", "binding_international", "asylum"]
+      },
+      {
+        id: "ukr_eu_directive_2013_33",
+        label: "Dyrektywa 2013/33/UE (warunki przyjmowania)",
+        labelEN: "Directive 2013/33/EU – Reception Conditions",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "EU directive",
+        status: "binding_international",
+        date: "2013-06-26",
+        description: "Standards for the reception of applicants for international protection in EU Member States.",
+        urls: [
+          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32013L0033" }
+        ],
+        tags: ["eu_law", "binding_international", "reception_conditions"]
+      },
+      // MESO / TOP-DOWN — Government implementation
+      {
+        id: "ukr_gov_higher_ed",
+        label: "Gov.pl – rozwiązania dot. szkolnictwa wyższego i nauki (Ukraina)",
+        labelEN: "Gov.pl – Higher Education Solutions for Ukrainian Citizens",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Government information",
+        status: "published",
+        date: "2022",
+        description: "Official government information on higher education and research solutions for Ukrainian citizens under the special law.",
+        urls: [
+          { label: "Gov.pl (UW Warmińsko-Mazurski)", href: "https://www.gov.pl/web/uw-warminsko-mazurski/rozwiazania-w-zakresie-szkolnictwa-wyzszego-i-nauki-zawarte-w-ustawie-o-pomocy-obywatelom-ukrainy" }
+        ],
+        tags: ["government_info", "higher_education", "implementation"]
+      },
+      {
+        id: "ukr_uw_extension",
+        label: "UW Warmińsko-Mazurski – przedłużenie przepisów ustawy",
+        labelEN: "Voivodeship Office – Extension of Ukraine Act Provisions",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Regional government information",
+        status: "published",
+        date: "2025",
+        description: "Information from the Warmian-Masurian Voivodeship Office on the extension of provisions of the Act on Assistance to Citizens of Ukraine.",
+        urls: [
+          { label: "Migrant Poznań (EN)", href: "https://migrant.poznan.uw.gov.pl/en/komunikaty/extension-provisions-act-assistance-citizens-ukraine-connection-armed-conflict-countrywe" }
+        ],
+        tags: ["regional_government", "implementation", "extension"]
+      },
+      {
+        id: "ukr_local_info",
+        label: "Informacja o ustawie – samorząd lokalny (Jeżowe OPS)",
+        labelEN: "Local Government Information on Ukraine Act",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Local government information",
+        status: "published",
+        date: "2022",
+        description: "Local social assistance center information about the Special Law on Assistance to Citizens of Ukraine.",
+        urls: [
+          { label: "Jeżowe OPS", href: "https://jezowe.naszops.pl/n%2Cinformacja-o-ustawie-z-dnia-12-marca-2022-r-o-pomocy-obywatelom-ukrainy-w-zwiazku-z-konfliktem-zbrojnym-na-terytorium-tego-kraju" }
+        ],
+        tags: ["local_government", "information", "implementation"]
+      },
+      // MESO / BOTTOM-UP — Legal analysis
+      {
+        id: "ukr_lexplorers_education",
+        label: "Lexplorers – dostępność obywateli Ukrainy do edukacji",
+        labelEN: "Lexplorers – Access of Ukrainian Citizens to Education",
+        level: "MESO", direction: "BOTTOM_UP",
+        type: "Legal analysis",
+        status: "published",
+        date: "2022",
+        description: "Legal analysis of Ukrainian citizens' access to the healthcare system and children's education under Polish law, including the special law provisions.",
+        urls: [
+          { label: "Lexplorers.pl", href: "https://lexplorers.pl/dostepnosc-obywateli-ukrainy-do-systemu-ochrony-zdrowia-oraz-edukacji-dzieci/" }
+        ],
+        tags: ["legal_analysis", "education", "healthcare", "advocacy"]
+      }
+    ],
+
+    timeline: [
+      { date: "2001-07-20", event: "Dyrektywa 2001/55/WE – ochrona tymczasowa (UE)",          status: "binding_international" },
+      { date: "2003-06-13", event: "Ustawa o udzielaniu ochrony na terytorium RP",             status: "ongoing"               },
+      { date: "2013-12-12", event: "Ustawa o cudzoziemcach",                                    status: "ongoing"               },
+      { date: "2017-08-23", event: "Rozporządzenie MEN o kształceniu cudzoziemców",             status: "ongoing"               },
+      { date: "2022-02-24", event: "Inwazja Rosji na Ukrainę",                                  status: "historical"            },
+      { date: "2022-03-04", event: "Decyzja UE 2022/382 – aktywacja ochrony tymczasowej",      status: "binding_international" },
+      { date: "2022-03-12", event: "Ustawa specjalna o pomocy obywatelom Ukrainy",              status: "ongoing"               },
+      { date: "2025",       event: "Nowelizacja – przedłużenie do 4 marca 2026",                status: "ongoing"               },
+      { date: "2026-03-04", event: "Wygaśnięcie obecnego przedłużenia",                         status: "pending"               }
     ]
   }
 };
