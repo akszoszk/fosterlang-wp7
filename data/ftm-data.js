@@ -47,7 +47,8 @@ const FTM_DATA = {
       date: "1997-04-02",
       description: "Guarantees national and ethnic minorities the right to preserve and develop their language, customs, and culture.",
       urls: [
-        { label: "ISAP (PDF)", href: "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19970780483/U/D19970483Lj.pdf" }
+        { label: "ISAP (PDF)", href: "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19970780483/U/D19970483Lj.pdf" },
+        { label: "🇬🇧 Constitution (EN) – Sejm", href: "https://www.sejm.gov.pl/prawo/konst/angielski/kon1.htm" }
       ],
       tags: ["constitutional", "domestic_hard_law"]
     },
@@ -64,7 +65,8 @@ const FTM_DATA = {
       urls: [
         { label: "ISAP", href: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20050170141" },
         { label: "Dziennik Ustaw", href: "https://dziennikustaw.gov.pl/du/2005/s/17/141" },
-        { label: "PDF", href: "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20050170141/O/D20050141.pdf" }
+        { label: "PDF", href: "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20050170141/O/D20050141.pdf" },
+        { label: "🇬🇧 English translation (gov.pl)", href: "https://www.gov.pl/attachment/cc664f23-0f5c-4e38-b6cd-31a4d68242fc" }
       ],
       tags: ["national_statute", "domestic_hard_law", "primary_instrument"]
     },
@@ -123,7 +125,8 @@ const FTM_DATA = {
         { label: "II cykl – ACFC Opinion", href: "https://rm.coe.int/2nd-opinion-on-poland/16805ce536" },
         { label: "III cykl – ACFC Opinion", href: "https://rm.coe.int/3rd-opinion-on-poland/16806ccf6d" },
         { label: "IV cykl – ACFC Opinion", href: "https://rm.coe.int/4th-op-poland-en/1680993391" },
-        { label: "V cykl – State Report", href: "https://rm.coe.int/polandpr3-en-docx/1680981491" }
+        { label: "V cykl – State Report", href: "https://rm.coe.int/polandpr3-en-docx/1680981491" },
+        { label: "🇬🇧 Pro Loquela Silesiana – report to ACFC (EN)", href: "https://wachtyrz.eu/4th-visit-of-the-advisory-committee-on-the-fcnm-to-poland-pls-report/" }
       ],
       tags: ["international_treaty", "council_of_europe"]
     },
@@ -138,7 +141,8 @@ const FTM_DATA = {
       date: "2009",
       description: "Binding EU instrument prohibiting discrimination based on language (Art. 21) and enshrining respect for cultural, religious and linguistic diversity (Art. 22).",
       urls: [
-        { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/PDF/?uri=CELEX:12012P/TXT" }
+        { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/PDF/?uri=CELEX:12012P/TXT" },
+        { label: "🇬🇧 EUR-Lex (EN)", href: "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:12012P/TXT" }
       ],
       tags: ["eu_law", "supranational"]
     },
@@ -305,7 +309,8 @@ const FTM_DATA = {
         description: "President Andrzej Duda vetoed the law recognising Silesian as a regional language. Expert commentary described the justification as 'offensive'. This triggered the post-veto re-processing in the Sejm.",
         urls: [
           { label: "Prezydent.pl (archiwum Dudy)", href: "https://www.prezydent.pl/kancelaria/archiwum/andrzej-duda/prawo/zawetowane/weto-do-nowelizacji-ustawy-o-mniejszosciach-narodowych-i-etnicznych-oraz-jezyku-regionalnym%2C86756" },
-          { label: "Uzasadnienie (PDF)", href: "https://www.prezydent.pl/storage/file/core_files/2024/5/29/7f599ba96c47c37b94407946601c1089/Weto%20nowelizacji%20ustawy%20o%20mniejszo%C5%9Bci%20narodowych%20i%20etnicznych%20oraz%20o%20j%C4%99zyku%20regionalnym.pdf" }
+          { label: "Uzasadnienie (PDF)", href: "https://www.prezydent.pl/storage/file/core_files/2024/5/29/7f599ba96c47c37b94407946601c1089/Weto%20nowelizacji%20ustawy%20o%20mniejszo%C5%9Bci%20narodowych%20i%20etnicznych%20oraz%20o%20j%C4%99zyku%20regionalnym.pdf" },
+          { label: "🇬🇧 Notes from Poland (EN)", href: "https://notesfrompoland.com/2024/05/29/president-vetoes-law-recognising-silesian-as-regional-language-in-poland/" }
         ],
         significance: "KEY EVENT",
         tags: ["veto", "executive", "blocked"]
@@ -322,7 +327,8 @@ const FTM_DATA = {
         urls: [
           { label: "PDF", href: "https://orka.sejm.gov.pl/Druki10ka.nsf/0/B2EC676185FF770FC1258CA5003B61D5/%24File/1346.pdf" },
           { label: "Przebieg", href: "https://www.sejm.gov.pl/Sejm10.nsf/PrzebiegProc.xsp?nr=1346" },
-          { label: "Druk 1346-003", href: "https://orka.sejm.gov.pl/Druki10ka.nsf/0/066B6CC86F47BB3AC1258CBB00411D57/%24File/1346-003.pdf" }
+          { label: "Druk 1346-003", href: "https://orka.sejm.gov.pl/Druki10ka.nsf/0/066B6CC86F47BB3AC1258CBB00411D57/%24File/1346-003.pdf" },
+          { label: "🇬🇧 Notes from Poland (EN)", href: "https://notesfrompoland.com/2026/01/10/law-recognising-silesian-as-regional-language-in-poland-approved-by-parliament/" }
         ],
         tags: ["legislative", "sejm", "post_veto"]
       },
@@ -353,7 +359,8 @@ const FTM_DATA = {
         date: "2026-02",
         description: "President Nawrocki has signalled potential veto of the re-passed bill, mirroring his earlier veto of the Wilamowian recognition bill (Oct 2025). Decision awaited as of March 2026.",
         urls: [
-          { label: "Dziennik Zachodni (5.02.2026)", href: "https://dziennikzachodni.pl/weto-prezydenta-w-sprawie-ustawy-o-jezyku-slaskim-jasne-jak-slonce-radni-z-katowic-probuja-jednak-przekonac-karola-nawrockiego/ar/c1p2-28680827" }
+          { label: "Dziennik Zachodni (5.02.2026)", href: "https://dziennikzachodni.pl/weto-prezydenta-w-sprawie-ustawy-o-jezyku-slaskim-jasne-jak-slonce-radni-z-katowic-probuja-jednak-przekonac-karola-nawrockiego/ar/c1p2-28680827" },
+          { label: "🇬🇧 Notes from Poland – veto (EN)", href: "https://notesfrompoland.com/2026/02/13/polish-president-vetoes-law-recognising-silesian-as-regional-language-in-poland/" }
         ],
         significance: "KEY EVENT",
         tags: ["veto", "executive", "pending"]
@@ -394,7 +401,7 @@ const FTM_DATA = {
         label: "Ślązag – relacje (2024–2026)",
         labelEN: "Ślązag – coverage 2024–2026",
         level: "MESO", direction: "BOTTOM_UP",
-        type: "Silesian-identity media",
+        type: "Silesian-identity media (PL/SZL)",
         status: "ongoing",
         date: "2024",
         urls: [
@@ -439,6 +446,20 @@ const FTM_DATA = {
       },
       // MESO / BOTTOM-UP — Expert advocacy, think tanks
       {
+        id: "szl_ep_resolution_2022",
+        label: "Parlament Europejski – rezolucja ws. uznania śląskiego (2022)",
+        labelEN: "European Parliament – motion on Silesian language recognition (2022)",
+        level: "MESO", direction: "BOTTOM_UP",
+        type: "International parliamentary advocacy",
+        status: "published",
+        date: "2022",
+        description: "Motion for a resolution in the European Parliament on the recognition of Silesian as a language, highlighting the situation of Silesian speakers in Poland.",
+        urls: [
+          { label: "🇬🇧 EP Motion (EN)", href: "https://www.europarl.europa.eu/doceo/document/B-9-2022-0086_EN.html" }
+        ],
+        tags: ["european_parliament", "advocacy", "international"]
+      },
+      {
         id: "szl_klub_jagiellonski",
         label: "Klub Jagielloński – komentarz (14.05.2024)",
         labelEN: "Klub Jagielloński – commentary before veto (14 May 2024)",
@@ -476,7 +497,10 @@ const FTM_DATA = {
         date: "2026-01-30",
         description: "Silesian MEP Łukasz Kohut wrote an open letter to President Nawrocki urging him to sign the Silesian language bill. Written in Silesian ('Nie lynkej się ślońskij godki').",
         urls: [
-          { label: "Ślązag", href: "https://www.slazag.pl/nie-lynkej-sie-slonski-godki-eurodeputowany-lukasz-kohut-napisal-do-prezydenta-karola-nawrockiego" }
+          { label: "Ślązag (PL/SZL)", href: "https://www.slazag.pl/nie-lynkej-sie-slonski-godki-eurodeputowany-lukasz-kohut-napisal-do-prezydenta-karola-nawrockiego" },
+          { label: "🗣️ szl.wikipedia – Ślůnsko godka (SZL)", href: "https://szl.wikipedia.org/wiki/%C5%9Al%C5%AFnsko_godka" },
+          { label: "🇬🇧 Silesian Language Corpus (EN)", href: "https://silling.org/information-about-the-silesian-language-corpus-in-english/" },
+          { label: "🇬🇧 RAS – Silesian Autonomy Movement (EN)", href: "https://autonomia.pl/en/home/" }
         ],
         tags: ["civil_society", "advocacy", "grassroots"]
       },
@@ -599,7 +623,8 @@ const FTM_DATA = {
         urls: [
           { label: "Prezydent.pl – weto", href: "https://www.prezydent.pl/prawo/ustawy-zawetowane/weto-do-nowelizacji-ustawy-o-mniejszosciach-narodowych-i-etnicznych-oraz-o-jezyku-regionalnym%2C108735" },
           { label: "Uzasadnienie (PDF)", href: "https://www.prezydent.pl/storage/file/core_files/2025/10/16/0f69a96101c794fbe1e8845fefc59ab6/Wniosek%20Prezydenta%20RP.pdf" },
-          { label: "Pismo do Marszałka Sejmu (PDF)", href: "https://www.prezydent.pl/storage/file/core_files/2025/10/16/2e6886e270d15f936d2267336060b20b/Pismo%20do%20Marsza%C5%82ka%20Sejmu.pdf" }
+          { label: "Pismo do Marszałka Sejmu (PDF)", href: "https://www.prezydent.pl/storage/file/core_files/2025/10/16/2e6886e270d15f936d2267336060b20b/Pismo%20do%20Marsza%C5%82ka%20Sejmu.pdf" },
+          { label: "🇬🇧 Notes from Poland – veto (EN)", href: "https://notesfrompoland.com/2025/10/17/president-vetoes-bill-recognising-language-spoken-in-small-polish-town/" }
         ],
         significance: "KEY EVENT",
         tags: ["veto", "executive", "blocked"]
@@ -678,7 +703,12 @@ const FTM_DATA = {
         description: "Expert linguists provide commentary on the Wilamowian case, linking recognition to broader language endangerment discourse.",
         urls: [
           { label: "Nauka w Polsce – Prof. Olko", href: "https://naukawpolsce.pl/aktualnosci/news%2C109699%2Cprof-olko-uznanie-jezyka-wilamowskiego-za-regionalny-byloby-przelomem.html" },
-          { label: "O-jezyku.pl – spór o uznanie", href: "https://www.o-jezyku.pl/2025/10/21/jezyk-wilamowski-czyli-spor-o-uznanie/" }
+          { label: "O-jezyku.pl – spór o uznanie", href: "https://www.o-jezyku.pl/2025/10/21/jezyk-wilamowski-czyli-spor-o-uznanie/" },
+          { label: "🇬🇧 UW Revitalization Project (EN)", href: "http://www.revitalization.al.uw.edu.pl/eng/Wymysorys/63/71/language-revitalization-in-wilamowice--a-new" },
+          { label: "🇬🇧 Grammar of Wymysorys (EN PDF – Duke Univ.)", href: "https://slaviccenters.duke.edu/sites/slaviccenters.duke.edu/files/media_items_files/wymysorys-grammar.original.pdf" },
+          { label: "🇬🇧 Awakening Wymysiöeryś (Cambridge, EN)", href: "https://www.cambridge.org/core/journals/european-review/article/awakening-the-language-and-speakers-community-of-wymysioerys/344D725FB56D4E46AF76E2A7DB66CAD9" },
+          { label: "🇬🇧 UNESCO Atlas – Wymysorys (EN)", href: "https://en.wal.unesco.org/countries/poland/languages/wymysorys" },
+          { label: "🇬🇧 Linguapax – Wymysorys overview (EN PDF)", href: "https://linguapax.org/wp-content/uploads/2015/03/Wymysorys-language.pdf" }
         ],
         tags: ["expert_commentary", "linguistic_advocacy"]
       },
@@ -720,7 +750,11 @@ const FTM_DATA = {
         description: "The Wilamowian-speaking community in Wilamowice (approx. 50–100 fluent speakers) has actively campaigned for official recognition of their language.",
         urls: [
           { label: "Portal Samorządowy – petycja", href: "https://www.portalsamorzadowy.pl/komunikacja-spoleczna/mieszkancy-wilamowic-chca-by-ich-jezyk-uznano-za-regionalny%2C84985.html" },
-          { label: "Portal Samorządowy – RPO i mniejszości", href: "https://www.portalsamorzadowy.pl/komunikacja-spoleczna/rpo-te-mniejszosci-etniczne-wciaz-nie-doczekaly-sie-swoich-praw%2C251079.html" }
+          { label: "Portal Samorządowy – RPO i mniejszości", href: "https://www.portalsamorzadowy.pl/komunikacja-spoleczna/rpo-te-mniejszosci-etniczne-wciaz-nie-doczekaly-sie-swoich-praw%2C251079.html" },
+          { label: "🇬🇧 Wikitongues – Tymoteusz Król (EN)", href: "https://wikitongues.org/fellows/tioma-fum-dokter/" },
+          { label: "🇬🇧 EEA Grants – Museum of Wilamovian Culture (EN)", href: "https://eeagrants.org/archive/2014-2021/projects/PL-CULTURE-0053" },
+          { label: "🇬🇧 Safeguarding Language – Wilamowice (EN, eog.gov.pl)", href: "https://www.eog.gov.pl/en/site/news/safeguarding-language-and-heritage-the-wilamowice-story/" },
+          { label: "🇬🇧 Wikitongues – Celebrating Wymysorys (EN)", href: "https://medium.com/wikitongues/celebrating-wymysorys-revitalizing-a-language-and-identity-in-southern-poland-48d565ee7a3e" }
         ],
         tags: ["community", "petition", "grassroots"]
       }
@@ -757,7 +791,13 @@ const FTM_DATA = {
         description: "Special law providing temporary protection for Ukrainian refugees. Key provisions: legal stay extended to 4 March 2026, free public education regardless of Polish language proficiency, additional Polish language classes, tuition-free university studies, recognition of prior education.",
         urls: [
           { label: "ISAP", href: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20220000583" },
-          { label: "ELI (Dz.U. 2022 poz. 583)", href: "https://eli.gov.pl/eli/DU/2022/583/ogl" }
+          { label: "ELI (Dz.U. 2022 poz. 583)", href: "https://eli.gov.pl/eli/DU/2022/583/ogl" },
+          { label: "🇬🇧 English translation (gov.pl PDF)", href: "https://www.gov.pl/attachment/fd791ffb-c02b-4e99-b710-e8ed3a9a821b" },
+          { label: "🇬🇧 Refworld (EN)", href: "https://www.refworld.org/legal/legislation/natlegbod/2022/en/147320" },
+          { label: "🇬🇧 Interwencja Prawna (EN)", href: "https://ukraina.interwencjaprawna.pl/the-act-on-assistance-for-ukrainian-citizens/" },
+          { label: "🇺🇦 Interwencja Prawna (UKR)", href: "https://ukraina.interwencjaprawna.pl/%d0%b7%d0%b0%d0%ba%d0%be%d0%bd-%d0%bf%d1%80%d0%be-%d0%b4%d0%be%d0%bf%d0%be%d0%bc%d0%be%d0%b3%d1%83-%d0%b3%d1%80%d0%be%d0%bc%d0%b0%d0%b4%d1%8f%d0%bd%d0%b0%d0%bc-%d1%83%d0%ba%d1%80%d0%b0%d1%97%d0%bd/" },
+          { label: "🇺🇦 Gov.pl portal (UKR)", href: "https://www.gov.pl/web/ua" },
+          { label: "🇬🇧 Gov.pl (EN) – MSWiA", href: "https://www.gov.pl/web/mswia-en/the-act-on-assistance-to-citizens-of-ukraine-in-connection-with-armed-conflict-on-the-territory-of-that-country-signed-by-the-president" }
         ],
         significance: "KEY EVENT",
         tags: ["national_statute", "domestic_hard_law", "ukraine_special_law", "refugee_protection"]
@@ -787,7 +827,8 @@ const FTM_DATA = {
         date: "2003-06-13",
         description: "Framework legislation governing the granting of refugee status, subsidiary protection, and temporary protection to foreigners on Polish territory.",
         urls: [
-          { label: "ISAP", href: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20031281176" }
+          { label: "ISAP", href: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20031281176" },
+          { label: "🇬🇧 Refworld (EN)", href: "https://www.refworld.org/legal/legislation/natlegbod/2003/en/123490" }
         ],
         tags: ["national_statute", "domestic_hard_law", "international_protection"]
       },
@@ -801,7 +842,9 @@ const FTM_DATA = {
         date: "2013-12-12",
         description: "General legislation on the entry, stay, and departure of foreigners in Poland. Provides the legal basis for residence permits and other migration-related procedures.",
         urls: [
-          { label: "ISAP", href: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20131650" }
+          { label: "ISAP", href: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20131650" },
+          { label: "🇬🇧 Full text (EN PDF)", href: "https://cudzoziemiecwpolsce.pl/wp-content/uploads/2014/10/ACT-of-12-December-2013-on-foreigners-in-English.pdf" },
+          { label: "🇬🇧 Refworld (EN)", href: "https://www.refworld.org/docid/54c0b9384.html" }
         ],
         tags: ["national_statute", "domestic_hard_law", "migration"]
       },
@@ -816,7 +859,8 @@ const FTM_DATA = {
         date: "2022-03-04",
         description: "EU Council decision activating the Temporary Protection Directive (2001/55/EC) for persons fleeing Ukraine following the Russian invasion of 24 February 2022.",
         urls: [
-          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32022D0382" }
+          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32022D0382" },
+          { label: "🇬🇧 EUR-Lex (EN)", href: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022D0382" }
         ],
         significance: "KEY EVENT",
         tags: ["eu_law", "binding_international", "temporary_protection"]
@@ -831,7 +875,8 @@ const FTM_DATA = {
         date: "2001-07-20",
         description: "EU directive establishing minimum standards for giving temporary protection in the event of a mass influx of displaced persons. First activated in March 2022 for Ukraine.",
         urls: [
-          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32001L0055" }
+          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32001L0055" },
+          { label: "🇬🇧 EUR-Lex (EN)", href: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32001L0055" }
         ],
         tags: ["eu_law", "binding_international", "temporary_protection"]
       },
@@ -845,7 +890,8 @@ const FTM_DATA = {
         date: "2011-12-13",
         description: "Standards for the qualification of third-country nationals or stateless persons as beneficiaries of international protection, and the content of protection granted.",
         urls: [
-          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32011L0095" }
+          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32011L0095" },
+          { label: "🇬🇧 EUR-Lex (EN)", href: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0095" }
         ],
         tags: ["eu_law", "binding_international", "asylum"]
       },
@@ -859,7 +905,8 @@ const FTM_DATA = {
         date: "2013-06-26",
         description: "Common procedures for granting and withdrawing international protection in the EU.",
         urls: [
-          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32013L0032" }
+          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32013L0032" },
+          { label: "🇬🇧 EUR-Lex (EN)", href: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0032" }
         ],
         tags: ["eu_law", "binding_international", "asylum"]
       },
@@ -873,7 +920,8 @@ const FTM_DATA = {
         date: "2013-06-26",
         description: "Standards for the reception of applicants for international protection in EU Member States.",
         urls: [
-          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32013L0033" }
+          { label: "EUR-Lex (PL)", href: "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32013L0033" },
+          { label: "🇬🇧 EUR-Lex (EN)", href: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0033" }
         ],
         tags: ["eu_law", "binding_international", "reception_conditions"]
       },
@@ -888,7 +936,9 @@ const FTM_DATA = {
         date: "2022",
         description: "Official government information on higher education and research solutions for Ukrainian citizens under the special law.",
         urls: [
-          { label: "Gov.pl (UW Warmińsko-Mazurski)", href: "https://www.gov.pl/web/uw-warminsko-mazurski/rozwiazania-w-zakresie-szkolnictwa-wyzszego-i-nauki-zawarte-w-ustawie-o-pomocy-obywatelom-ukrainy" }
+          { label: "Gov.pl (UW Warmińsko-Mazurski)", href: "https://www.gov.pl/web/uw-warminsko-mazurski/rozwiazania-w-zakresie-szkolnictwa-wyzszego-i-nauki-zawarte-w-ustawie-o-pomocy-obywatelom-ukrainy" },
+          { label: "🇬🇧 Gov.pl – Help for Ukrainian citizens (EN)", href: "https://www.gov.pl/web/eu/help-for-ukrainian-citizens" },
+          { label: "🇺🇦 Gov.pl – портал для громадян України (UKR)", href: "https://www.gov.pl/web/ua" }
         ],
         tags: ["government_info", "higher_education", "implementation"]
       },
@@ -902,7 +952,9 @@ const FTM_DATA = {
         date: "2025",
         description: "Information from the Warmian-Masurian Voivodeship Office on the extension of provisions of the Act on Assistance to Citizens of Ukraine.",
         urls: [
-          { label: "Migrant Poznań (EN)", href: "https://migrant.poznan.uw.gov.pl/en/komunikaty/extension-provisions-act-assistance-citizens-ukraine-connection-armed-conflict-countrywe" }
+          { label: "Migrant Poznań (EN)", href: "https://migrant.poznan.uw.gov.pl/en/komunikaty/extension-provisions-act-assistance-citizens-ukraine-connection-armed-conflict-countrywe" },
+          { label: "🇬🇧 UNHCR Poland – Temporary protection (EN)", href: "https://help.unhcr.org/poland/information-for-new-arrivals-from-ukraine/" },
+          { label: "🇺🇦 UNHCR Poland – Тимчасовий захист (UKR)", href: "https://help.unhcr.org/poland/uk/" }
         ],
         tags: ["regional_government", "implementation", "extension"]
       },
