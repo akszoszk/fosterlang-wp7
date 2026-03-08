@@ -1,58 +1,212 @@
-// ─── State ───────────────────────────────────────────────────────────────────
+﻿const UI_LANG_STORAGE_KEY = 'ftm-ui-lang';
+
+const UI_TEXT = {
+  en: {
+    docTitle: 'Language Policy Repository — FOSTERLANG WP7',
+    siteTitle: 'Language Policy Repository',
+    headerTeam: 'AMU · Task Leader',
+    headerLanguages: 'Silesian & Wilamowian & Ukrainian',
+    headerMatrix: 'Ferguson-Tollefson Matrix',
+    uiLangAria: 'Interface language',
+    viewLabel: 'View',
+    viewMatrix: 'Matrix',
+    viewList: 'List',
+    viewTimeline: 'Timeline',
+    searchLabel: 'Search',
+    searchPlaceholder: 'Search documents...',
+    statsLabel: 'Visible items',
+    statTotal: 'Total',
+    statSilesian: 'Silesian',
+    statWilamowian: 'Wilamowian',
+    statUkrainian: 'Ukrainian',
+    statShared: 'Shared',
+    languageLabel: 'Language',
+    languageSilesian: 'Silesian (SZL)',
+    languageWilamowian: 'Wilamowian (WYM)',
+    languageUkrainian: 'Ukrainian (UKR)',
+    languageShared: 'Shared instruments',
+    levelLabel: 'FTM Level',
+    levelMacro: 'MACRO (EU/state)',
+    levelMeso: 'MESO (regional/institutional)',
+    levelMicro: 'MICRO (community/individual)',
+    directionLabel: 'Direction',
+    directionTopDown: 'Top-Down ↓',
+    directionBottomUp: 'Bottom-Up ↑',
+    statusLabel: 'Status',
+    frameworkLabel: 'Framework',
+    frameworkBody:
+      `<strong style="color:var(--accent)">Ferguson-Tollefson Matrix</strong><br>
+       Kan (2011); Kan &amp; Adamson (2016)<br><br>
+       Evaluates language policy at <strong>3 levels</strong> × <strong>2 directions</strong>:<br>
+       MACRO · MESO · MICRO<br>
+       Top-Down · Bottom-Up<br><br>
+       <span style="color:var(--text-muted);font-style:italic;">Part of FOSTERLANG WP7 — Effective Multilingualism Policies</span>`,
+    bannerBody:
+      `<strong>Ferguson-Tollefson Matrix Analysis</strong> — Silesian, Wilamowian &amp; Ukrainian Language Policies, Poland<br>
+       Data sources: Sejm, Senat, KPRP, RPO, CoE (FCNM · ECRML), EU law, OSCE soft law, Polish national press 2021–2026.<br>
+       <span style="font-size:.72rem;">Click any document card to view full details and access source links. Use sidebar filters to explore the matrix by language, level, direction, or status.</span>`,
+    legendSilesian: 'Silesian (SZL)',
+    legendWilamowian: 'Wilamowian (WYM)',
+    legendUkrainian: 'Ukrainian (UKR)',
+    legendShared: 'Shared',
+    legendKeyEvent: '★ KEY EVENT',
+    noItems: 'No items match filters',
+    noItemsCurrent: 'No items match the current filters.',
+    tableLabel: 'Label',
+    tableLanguage: 'Language',
+    tableLevel: 'Level',
+    tableDirection: 'Direction',
+    tableType: 'Type',
+    tableStatus: 'Status',
+    tableDate: 'Date',
+    timelineShared: 'Shared events (Silesian + Wilamowian)',
+    modalSources: 'Source documents',
+    modalClose: 'Close',
+    modalMicroNote:
+      'Note: This instrument also operates at the MICRO level, where its provisions are implemented directly in schools and classrooms.',
+    langShared: 'Shared',
+    langSilesian: 'Silesian',
+    langWilamowian: 'Wilamowian',
+    langUkrainian: 'Ukrainian',
+    badgeShared: 'SHARED',
+    statusLabels: {},
+  },
+  wym: {
+    docTitle: 'Archiv d Śpröchpolitik — FOSTERLANG WP7',
+    siteTitle: 'Archiv d Śpröchpolitik',
+    headerTeam: 'AMU · Task Leader',
+    headerLanguages: 'Ślůnski, Wymysiöeryś yn Ukraiński',
+    headerMatrix: 'Ferguson-Tollefson Matrix',
+    uiLangAria: 'Śpröch d yntyrfejs',
+    viewLabel: 'Aojssicht',
+    viewMatrix: 'Matrix',
+    viewList: 'Lista',
+    viewTimeline: 'Timeline',
+    searchLabel: 'Zihia',
+    searchPlaceholder: 'Zihia dokumenta...',
+    statsLabel: 'Sichtboare itema',
+    statTotal: 'Total',
+    statSilesian: 'Ślůnski',
+    statWilamowian: 'Wymysiöeryś',
+    statUkrainian: 'Ukraiński',
+    statShared: 'Gywynłich',
+    languageLabel: 'Śpröch',
+    languageSilesian: 'Ślůnski (SZL)',
+    languageWilamowian: 'Wymysiöeryś (WYM)',
+    languageUkrainian: 'Ukraiński (UKR)',
+    languageShared: 'Gywynłiche instrumenta',
+    levelLabel: 'Niveau FTM',
+    levelMacro: 'MACRO (EU/końtry)',
+    levelMeso: 'MESO (regional/institucjonal)',
+    levelMicro: 'MICRO (gymyjn/yndywidual)',
+    directionLabel: 'Richtung',
+    directionTopDown: 'Top-Down ↓',
+    directionBottomUp: 'Bottom-Up ↑',
+    statusLabel: 'Status',
+    frameworkLabel: 'Framework',
+    frameworkBody:
+      `<strong style="color:var(--accent)">Ferguson-Tollefson Matrix</strong><br>
+       Kan (2011); Kan &amp; Adamson (2016)<br><br>
+       Analizyrt śpröchpolitik uf <strong>3 niwōa</strong> × <strong>2 richtunga</strong>:<br>
+       MACRO · MESO · MICRO<br>
+       Top-Down · Bottom-Up<br><br>
+       <span style="color:var(--text-muted);font-style:italic;">To je część FOSTERLANG WP7 — Effective Multilingualism Policies</span>`,
+    bannerBody:
+      `<strong>Analiza d Ferguson-Tollefson Matrix</strong> — śpröchpolitika fu Ślůnski, Wymysiöeryś yn Ukraiński, Polska<br>
+       Kwaoła: Sejm, Senat, KPRP, RPO, CoE (FCNM · ECRML), EU law, OSCE soft law, polnische press 2021–2026.<br>
+       <span style="font-size:.72rem;">Klik uf dokument-karta, u zyjn detale yn kwaoła. Nüz filtrow, u obejrzyć matrix bez śpröch, niveau, richtung abo status.</span>`,
+    legendSilesian: 'Ślůnski (SZL)',
+    legendWilamowian: 'Wymysiöeryś (WYM)',
+    legendUkrainian: 'Ukraiński (UKR)',
+    legendShared: 'Gywynłich',
+    legendKeyEvent: '★ KEY GYŠICHT',
+    noItems: 'No itema pasyn do filtrów',
+    noItemsCurrent: 'No itema pasyn do aktyw filtrów.',
+    tableLabel: 'Label',
+    tableLanguage: 'Śpröch',
+    tableLevel: 'Niveau',
+    tableDirection: 'Richtung',
+    tableType: 'Typ',
+    tableStatus: 'Status',
+    tableDate: 'Dato',
+    timelineShared: 'Gywynłiche gyšichta (Ślůnski + Wymysiöeryś)',
+    modalSources: 'Kwaoł dokumenta',
+    modalClose: 'Zamknij',
+    modalMicroNote:
+      'Nołt: Yś instrument działt tyż na MICRO-niwō, kaj śyn przepisa realizieryn bezpośrednio w szkołach yn klasach.',
+    langShared: 'Gywynłich',
+    langSilesian: 'Ślůnski',
+    langWilamowian: 'Wymysiöeryś',
+    langUkrainian: 'Ukraiński',
+    badgeShared: 'GYW.',
+    statusLabels: {
+      soft_law: 'Łynt racht',
+      active: 'Aktiv',
+      historical: 'Historyś',
+    },
+  },
+};
 
 const state = {
-  view: 'matrix',         // 'matrix' | 'list' | 'timeline'
+  view: 'matrix',
+  uiLang: localStorage.getItem(UI_LANG_STORAGE_KEY) === 'wym' ? 'wym' : 'en',
   filters: {
-    language: 'all',      // 'all' | 'szl' | 'wym' | 'shared'
-    level: 'all',         // 'all' | 'MACRO' | 'MESO' | 'MICRO'
-    direction: 'all',     // 'all' | 'TOP_DOWN' | 'BOTTOM_UP'
-    status: 'all',        // 'all' | any status key
+    language: 'all',
+    level: 'all',
+    direction: 'all',
+    status: 'all',
   },
   search: '',
   activeCard: null,
 };
 
-// ─── Data helpers ─────────────────────────────────────────────────────────────
+function t(key) {
+  return UI_TEXT[state.uiLang]?.[key] ?? UI_TEXT.en[key] ?? key;
+}
+
+function getStatusStyle(status) {
+  const base = FTM_DATA.meta.statusLabels[status];
+  if (!base) return { label: status, color: '#6b7280' };
+  return {
+    ...base,
+    label: UI_TEXT[state.uiLang].statusLabels?.[status] || base.label,
+  };
+}
+
+function getLanguageLabel(lang) {
+  if (lang === 'shared') return t('langShared');
+  if (lang === 'szl') return t('langSilesian');
+  if (lang === 'wym') return t('langWilamowian');
+  if (lang === 'ukr') return t('langUkrainian');
+  return lang;
+}
+
+function getBadgeLabel(lang) {
+  return lang === 'shared' ? t('badgeShared') : lang.toUpperCase();
+}
+
+function getDirectionLabel(direction) {
+  return direction === 'TOP_DOWN' ? t('directionTopDown') : t('directionBottomUp');
+}
 
 function getAllItems() {
   const items = [];
-
-  // Shared instruments
-  FTM_DATA.shared.forEach(item => {
-    items.push({ ...item, _lang: 'shared', _langLabel: 'Shared' });
-  });
-
-  // Silesian items
-  FTM_DATA.silesian.items.forEach(item => {
-    items.push({ ...item, _lang: 'szl', _langLabel: 'Silesian' });
-  });
-
-  // Wilamowian items
-  FTM_DATA.wilamowian.items.forEach(item => {
-    items.push({ ...item, _lang: 'wym', _langLabel: 'Wilamowian' });
-  });
-
-  // Ukrainian items
-  FTM_DATA.ukrainian.items.forEach(item => {
-    items.push({ ...item, _lang: 'ukr', _langLabel: 'Ukrainian' });
-  });
-
+  FTM_DATA.shared.forEach(item => items.push({ ...item, _lang: 'shared' }));
+  FTM_DATA.silesian.items.forEach(item => items.push({ ...item, _lang: 'szl' }));
+  FTM_DATA.wilamowian.items.forEach(item => items.push({ ...item, _lang: 'wym' }));
+  FTM_DATA.ukrainian.items.forEach(item => items.push({ ...item, _lang: 'ukr' }));
   return items;
 }
 
 function applyFilters(items) {
   return items.filter(item => {
-    // Language filter
     if (state.filters.language !== 'all') {
       if (state.filters.language === 'shared') {
         if (item._lang !== 'shared') return false;
-      } else {
-        // For szl/wym, include shared items that mention that language
-        if (item._lang === 'shared') {
-          if (!item.languages || !item.languages.includes(state.filters.language)) return false;
-        } else {
-          if (item._lang !== state.filters.language) return false;
-        }
+      } else if (item._lang === 'shared') {
+        if (!item.languages || !item.languages.includes(state.filters.language)) return false;
+      } else if (item._lang !== state.filters.language) {
+        return false;
       }
     }
 
@@ -62,8 +216,14 @@ function applyFilters(items) {
 
     if (state.search) {
       const q = state.search.toLowerCase();
-      const searchable = [item.label, item.labelEN, item.type, item.description, item._langLabel]
-        .filter(Boolean).join(' ').toLowerCase();
+      const searchable = [
+        item.label,
+        item.labelEN,
+        item.type,
+        item.description,
+        getLanguageLabel(item._lang),
+      ].filter(Boolean).join(' ').toLowerCase();
+
       if (!searchable.includes(q)) return false;
     }
 
@@ -71,35 +231,155 @@ function applyFilters(items) {
   });
 }
 
-function getStatusStyle(status) {
-  const s = FTM_DATA.meta.statusLabels[status];
-  if (!s) return { label: status, color: '#6b7280' };
-  return s;
+function setPillLabel(filter, value, text, color) {
+  const pill = document.querySelector(`.filter-pill[data-filter="${filter}"][data-value="${value}"]`);
+  if (!pill) return;
+  pill.innerHTML = `<span class="dot" style="background:${color}"></span>${text}`;
 }
 
-// ─── Render: Matrix ───────────────────────────────────────────────────────────
+function ensureLanguageToggle() {
+  if (document.getElementById('ui-lang-toggle')) return;
+
+  const header = document.querySelector('.site-header');
+  const firstMeta = header.querySelector('.meta-tag');
+  const toggle = makeEl('div', { className: 'ui-lang-toggle', id: 'ui-lang-toggle' });
+  toggle.setAttribute('role', 'group');
+
+  [
+    { code: 'en', label: 'EN' },
+    { code: 'wym', label: 'WYM' },
+  ].forEach(({ code, label }) => {
+    const btn = makeEl('button', { className: 'ui-lang-btn', type: 'button' });
+    btn.dataset.uiLang = code;
+    btn.textContent = label;
+    btn.addEventListener('click', () => {
+      state.uiLang = code;
+      localStorage.setItem(UI_LANG_STORAGE_KEY, code);
+      updateStaticText();
+      render();
+    });
+    toggle.appendChild(btn);
+  });
+
+  header.insertBefore(toggle, firstMeta || null);
+}
+
+function updateLanguageToggle() {
+  const toggle = document.getElementById('ui-lang-toggle');
+  if (!toggle) return;
+  toggle.setAttribute('aria-label', t('uiLangAria'));
+  toggle.querySelectorAll('.ui-lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.uiLang === state.uiLang);
+  });
+}
+
+function updateStaticText() {
+  document.documentElement.lang = state.uiLang === 'wym' ? 'wym' : 'en';
+  document.title = t('docTitle');
+
+  const title = document.querySelector('.site-header h1');
+  if (title) title.textContent = t('siteTitle');
+
+  const metaTags = document.querySelectorAll('.site-header .meta-tag');
+  if (metaTags[0]) metaTags[0].textContent = t('headerTeam');
+  if (metaTags[1]) metaTags[1].textContent = t('headerLanguages');
+  if (metaTags[2]) metaTags[2].textContent = t('headerMatrix');
+
+  const sidebarLabels = document.querySelectorAll('.sidebar .sidebar-label');
+  if (sidebarLabels[0]) sidebarLabels[0].textContent = t('viewLabel');
+  if (sidebarLabels[1]) sidebarLabels[1].textContent = t('searchLabel');
+  if (sidebarLabels[2]) sidebarLabels[2].textContent = t('statsLabel');
+  if (sidebarLabels[3]) sidebarLabels[3].textContent = t('languageLabel');
+  if (sidebarLabels[4]) sidebarLabels[4].textContent = t('levelLabel');
+  if (sidebarLabels[5]) sidebarLabels[5].textContent = t('directionLabel');
+  if (sidebarLabels[6]) sidebarLabels[6].textContent = t('statusLabel');
+  if (sidebarLabels[7]) sidebarLabels[7].textContent = t('frameworkLabel');
+
+  document.querySelector('[data-view="matrix"]').textContent = t('viewMatrix');
+  document.querySelector('[data-view="list"]').textContent = t('viewList');
+  document.querySelector('[data-view="timeline"]').textContent = t('viewTimeline');
+
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) searchInput.placeholder = t('searchPlaceholder');
+
+  document.querySelector('#stat-total + .lbl').textContent = t('statTotal');
+  document.querySelector('#stat-szl + .lbl').textContent = t('statSilesian');
+  document.querySelector('#stat-wym + .lbl').textContent = t('statWilamowian');
+  document.querySelector('#stat-ukr + .lbl').textContent = t('statUkrainian');
+  document.querySelector('#stat-shared + .lbl').textContent = t('statShared');
+
+  setPillLabel('language', 'szl', t('languageSilesian'), 'var(--szl)');
+  setPillLabel('language', 'wym', t('languageWilamowian'), 'var(--wym)');
+  setPillLabel('language', 'ukr', t('languageUkrainian'), 'var(--ukr)');
+  setPillLabel('language', 'shared', t('languageShared'), 'var(--shared)');
+
+  setPillLabel('level', 'MACRO', t('levelMacro'), '#f59e0b');
+  setPillLabel('level', 'MESO', t('levelMeso'), '#06b6d4');
+  setPillLabel('level', 'MICRO', t('levelMicro'), '#ec4899');
+
+  setPillLabel('direction', 'TOP_DOWN', t('directionTopDown'), '#ef4444');
+  setPillLabel('direction', 'BOTTOM_UP', t('directionBottomUp'), '#22c55e');
+
+  setPillLabel('status', 'vetoed', getStatusStyle('vetoed').label, '#ef4444');
+  setPillLabel('status', 'pending', getStatusStyle('pending').label, '#f97316');
+  setPillLabel('status', 'passed', getStatusStyle('passed').label, '#22c55e');
+  setPillLabel('status', 'binding_international', getStatusStyle('binding_international').label, '#10b981');
+  setPillLabel('status', 'soft_law', getStatusStyle('soft_law').label, '#a78bfa');
+  setPillLabel('status', 'processing', getStatusStyle('processing').label, '#eab308');
+  setPillLabel('status', 'ongoing', getStatusStyle('ongoing').label, '#3b82f6');
+  setPillLabel('status', 'published', getStatusStyle('published').label, '#8b5cf6');
+
+  const frameworkBox = document.querySelector('.sidebar section:last-child > div');
+  if (frameworkBox) frameworkBox.innerHTML = t('frameworkBody');
+
+  const banner = document.querySelector('.framework-banner > div');
+  if (banner) banner.innerHTML = t('bannerBody');
+
+  const legend = document.querySelector('.legend');
+  if (legend) {
+    legend.innerHTML = `
+      <span class="legend-item"><span class="legend-dot" style="background:var(--szl)"></span>${t('legendSilesian')}</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--wym)"></span>${t('legendWilamowian')}</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--ukr)"></span>${t('legendUkrainian')}</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--shared)"></span>${t('legendShared')}</span>
+      <span class="legend-divider">|</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#dc2626"></span>${getStatusStyle('vetoed').label}</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#15803d"></span>${getStatusStyle('passed').label}</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#d97706"></span>${getStatusStyle('pending').label}</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#0f766e"></span>${getStatusStyle('binding_international').label}</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#7c3aed"></span>${getStatusStyle('soft_law').label}</span>
+      <span class="legend-divider">|</span>
+      <span class="legend-item" style="font-weight:600;color:#d97706;background:#fef3c7;padding:2px 7px;border-radius:4px;border:1px solid #fcd34d;font-size:.65rem;">${t('legendKeyEvent')}</span>`;
+  }
+
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+  if (modalCloseBtn) modalCloseBtn.setAttribute('aria-label', t('modalClose'));
+
+  updateLanguageToggle();
+}
 
 function renderMatrix() {
   const container = document.getElementById('matrix-container');
   container.innerHTML = '';
 
-  const allItems = getAllItems();
-  const filtered = applyFilters(allItems);
-
+  const filtered = applyFilters(getAllItems());
   const levels = ['MACRO', 'MESO', 'MICRO'];
   const directions = ['TOP_DOWN', 'BOTTOM_UP'];
 
-  // Column headers
   container.appendChild(makeEl('div', { className: 'axis-label' }));
 
   directions.forEach(dir => {
-    const el = makeEl('div', { className: `col-header ${dir === 'TOP_DOWN' ? 'top-down' : 'bottom-up'}` });
+    const el = makeEl('div', {
+      className: `col-header ${dir === 'TOP_DOWN' ? 'top-down' : 'bottom-up'}`,
+    });
     const arrow = dir === 'TOP_DOWN' ? '↓' : '↑';
-    el.innerHTML = `<span>${arrow}</span><span>${dir === 'TOP_DOWN' ? 'Top-Down' : 'Bottom-Up'}</span>`;
+    const text = dir === 'TOP_DOWN'
+      ? t('directionTopDown').replace(' ↓', '')
+      : t('directionBottomUp').replace(' ↑', '');
+    el.innerHTML = `<span>${arrow}</span><span>${text}</span>`;
     container.appendChild(el);
   });
 
-  // Rows
   levels.forEach(level => {
     const rowHeader = makeEl('div', { className: 'row-header' });
     rowHeader.textContent = level;
@@ -107,19 +387,17 @@ function renderMatrix() {
 
     directions.forEach(dir => {
       const cell = makeEl('div', {
-        className: `matrix-cell col-${dir === 'TOP_DOWN' ? 'top-down' : 'bottom-up'}`
+        className: `matrix-cell col-${dir === 'TOP_DOWN' ? 'top-down' : 'bottom-up'}`,
       });
 
-      const cellItems = filtered.filter(i => i.level === level && i.direction === dir);
+      const cellItems = filtered.filter(item => item.level === level && item.direction === dir);
 
       if (cellItems.length === 0) {
         const empty = makeEl('div', { className: 'cell-empty' });
-        empty.textContent = 'No items match filters';
+        empty.textContent = t('noItems');
         cell.appendChild(empty);
       } else {
-        cellItems.forEach(item => {
-          cell.appendChild(makeDocCard(item));
-        });
+        cellItems.forEach(item => cell.appendChild(makeDocCard(item)));
       }
 
       container.appendChild(cell);
@@ -130,7 +408,6 @@ function renderMatrix() {
 function makeDocCard(item) {
   const card = makeEl('div', { className: `doc-card lang-${item._lang}` });
 
-  // Significance flag
   if (item.significance) {
     const flag = makeEl('div', { className: 'significance-flag' });
     flag.textContent = item.significance;
@@ -138,15 +415,13 @@ function makeDocCard(item) {
   }
 
   const header = makeEl('div', { className: 'card-header' });
-
   const label = makeEl('div', { className: 'card-label' });
   label.textContent = item.label;
   header.appendChild(label);
 
   const badge = makeEl('span', { className: `lang-badge ${item._lang}` });
-  badge.textContent = item._lang === 'shared' ? 'SHARED' : item._lang.toUpperCase();
+  badge.textContent = getBadgeLabel(item._lang);
   header.appendChild(badge);
-
   card.appendChild(header);
 
   const type = makeEl('div', { className: 'card-type' });
@@ -154,11 +429,10 @@ function makeDocCard(item) {
   card.appendChild(type);
 
   const footer = makeEl('div', { className: 'card-footer' });
-
   const st = getStatusStyle(item.status);
   const statusEl = makeEl('span', {
     className: 'status-badge',
-    style: `background:${st.color}22; color:${st.color};`
+    style: `background:${st.color}22; color:${st.color};`,
   });
   statusEl.textContent = st.label;
   footer.appendChild(statusEl);
@@ -176,21 +450,16 @@ function makeDocCard(item) {
   }
 
   card.appendChild(footer);
-
   card.addEventListener('click', () => openModal(item));
-
   return card;
 }
 
-// ─── Render: List ────────────────────────────────────────────────────────────
-
 function renderList() {
   const container = document.getElementById('list-container');
-  const allItems = getAllItems();
-  const filtered = applyFilters(allItems);
+  const filtered = applyFilters(getAllItems());
 
   if (filtered.length === 0) {
-    container.innerHTML = '<div class="empty-state">No items match the current filters.</div>';
+    container.innerHTML = `<div class="empty-state">${t('noItemsCurrent')}</div>`;
     return;
   }
 
@@ -198,13 +467,13 @@ function renderList() {
   const thead = makeEl('thead');
   thead.innerHTML = `
     <tr>
-      <th>Label</th>
-      <th>Language</th>
-      <th>Level</th>
-      <th>Direction</th>
-      <th>Type</th>
-      <th>Status</th>
-      <th>Date</th>
+      <th>${t('tableLabel')}</th>
+      <th>${t('tableLanguage')}</th>
+      <th>${t('tableLevel')}</th>
+      <th>${t('tableDirection')}</th>
+      <th>${t('tableType')}</th>
+      <th>${t('tableStatus')}</th>
+      <th>${t('tableDate')}</th>
     </tr>`;
   table.appendChild(thead);
 
@@ -215,16 +484,14 @@ function renderList() {
     tr.addEventListener('click', () => openModal(item));
 
     const st = getStatusStyle(item.status);
-
     tr.innerHTML = `
       <td style="font-weight:600;">${item.label}</td>
-      <td><span class="lang-badge ${item._lang}">${item._lang === 'shared' ? 'SHARED' : item._lang.toUpperCase()}</span></td>
+      <td><span class="lang-badge ${item._lang}">${getBadgeLabel(item._lang)}</span></td>
       <td>${item.level}</td>
-      <td style="color:${item.direction === 'TOP_DOWN' ? '#fca5a5' : '#86efac'};font-size:.75rem;">${item.direction.replace('_', '-')}</td>
+      <td style="color:${item.direction === 'TOP_DOWN' ? '#fca5a5' : '#86efac'};font-size:.75rem;">${getDirectionLabel(item.direction).replace(' ↓', '').replace(' ↑', '')}</td>
       <td style="color:var(--text-muted);">${item.type}</td>
       <td><span class="status-badge" style="background:${st.color}22;color:${st.color};">${st.label}</span></td>
-      <td style="font-family:monospace;color:var(--text-muted);">${item.date || '—'}</td>
-    `;
+      <td style="font-family:monospace;color:var(--text-muted);">${item.date || '—'}</td>`;
     tbody.appendChild(tr);
   });
   table.appendChild(tbody);
@@ -233,35 +500,32 @@ function renderList() {
   container.appendChild(table);
 }
 
-// ─── Render: Timeline ────────────────────────────────────────────────────────
-
 function renderTimeline() {
   const container = document.getElementById('timeline-container');
   container.innerHTML = '';
 
   const langs = [
-    { key: 'szl', label: 'Silesian (Język Śląski)', color: 'var(--szl)', data: FTM_DATA.silesian.timeline },
-    { key: 'wym', label: 'Wilamowian (Język Wilamowski)', color: 'var(--wym)', data: FTM_DATA.wilamowian.timeline },
-    { key: 'ukr', label: 'Ukrainian (Język Ukraiński)', color: 'var(--ukr)', data: FTM_DATA.ukrainian.timeline }
+    { key: 'szl', label: `${t('langSilesian')} (SZL)`, color: 'var(--szl)', data: FTM_DATA.silesian.timeline },
+    { key: 'wym', label: `${t('langWilamowian')} (WYM)`, color: 'var(--wym)', data: FTM_DATA.wilamowian.timeline },
+    { key: 'ukr', label: `${t('langUkrainian')} (UKR)`, color: 'var(--ukr)', data: FTM_DATA.ukrainian.timeline },
   ];
 
-  // Add shared timeline items (RPO interventions)
   const sharedTimeline = [
-    { date: "2021-01-29", event: "RPO: list do Premiera (Ślązacy i Wilamowianie)", status: "historical" },
-    { date: "2021-03-08", event: "MSWiA: odpowiedź na RPO",                        status: "institutional_response" },
-    { date: "2023-01-01", event: "RPO: Raport dot. mniejszości 2020–2022",         status: "published" }
+    { date: '2021-01-29', event: 'RPO: list do Premiera (Ślązacy i Wilamowianie)', status: 'historical' },
+    { date: '2021-03-08', event: 'MSWiA: odpowiedź na RPO', status: 'institutional_response' },
+    { date: '2023-01-01', event: 'RPO: Raport dot. mniejszości 2020–2022', status: 'published' },
   ];
 
-  // Shared events
   const sharedSection = makeEl('div', { className: 'timeline-section' });
   const sharedTitle = makeEl('div', { className: 'timeline-section-title' });
-  sharedTitle.innerHTML = `<span style="color:var(--shared)">●</span> Shared events (Silesian + Wilamowian)`;
+  sharedTitle.innerHTML = `<span style="color:var(--shared)">●</span> ${t('timelineShared')}`;
   sharedSection.appendChild(sharedTitle);
   sharedSection.appendChild(buildTimeline(sharedTimeline, 'var(--shared)'));
   container.appendChild(sharedSection);
 
   langs.forEach(lang => {
     if (state.filters.language !== 'all' && state.filters.language !== lang.key) return;
+
     const section = makeEl('div', { className: 'timeline-section' });
     const title = makeEl('div', { className: 'timeline-section-title' });
     title.innerHTML = `<span style="color:${lang.color}">●</span> ${lang.label}`;
@@ -273,11 +537,9 @@ function renderTimeline() {
 
 function buildTimeline(events, color) {
   const tl = makeEl('div', { className: 'timeline' });
+
   events.forEach(ev => {
     const item = makeEl('div', { className: 'timeline-item' });
-    item.style.setProperty('--dot-color', color);
-
-    const dot = item.querySelector('::before');
     item.style.cssText += `--dot-bg:${color};`;
     item.setAttribute('data-color', color);
 
@@ -288,7 +550,10 @@ function buildTimeline(events, color) {
     eventEl.textContent = ev.event;
 
     const st = getStatusStyle(ev.status);
-    const badge = makeEl('span', { className: 'status-badge', style: `background:${st.color}22;color:${st.color};margin-top:3px;display:inline-flex;` });
+    const badge = makeEl('span', {
+      className: 'status-badge',
+      style: `background:${st.color}22;color:${st.color};margin-top:3px;display:inline-flex;`,
+    });
     badge.textContent = st.label;
 
     item.appendChild(dateEl);
@@ -296,10 +561,10 @@ function buildTimeline(events, color) {
     item.appendChild(badge);
     tl.appendChild(item);
   });
+
   return tl;
 }
 
-// Apply dot color via JS (CSS custom properties don't work on ::before easily)
 function applyTimelineDots() {
   document.querySelectorAll('.timeline-item').forEach(el => {
     const color = el.getAttribute('data-color') || 'var(--border)';
@@ -307,19 +572,14 @@ function applyTimelineDots() {
   });
 }
 
-// ─── Modal ────────────────────────────────────────────────────────────────────
-
 function openModal(item) {
-  const modal = document.getElementById('modal');
-  const backdrop = document.getElementById('modal-backdrop');
-
+  state.activeCard = item;
   document.getElementById('modal-title').textContent = item.label;
 
   const metaEl = document.getElementById('modal-meta');
   const st = getStatusStyle(item.status);
-
   const chips = [
-    { label: item._langLabel || item._lang, extra: `lang-badge ${item._lang}` },
+    { label: getLanguageLabel(item._lang), extra: `lang-badge ${item._lang}` },
     { label: item.level, extra: '' },
     { label: item.direction.replace('_', '-'), extra: '' },
     { label: item.type, extra: '' },
@@ -327,108 +587,102 @@ function openModal(item) {
     item.date ? { label: item.date, extra: '', mono: true } : null,
   ].filter(Boolean);
 
-  metaEl.innerHTML = chips.map(c =>
-    c.extra?.startsWith('lang-badge')
-      ? `<span class="${c.extra}">${c.label}</span>`
-      : `<span class="meta-chip" style="${c.style || ''}${c.mono ? 'font-family:monospace;' : ''}">${c.label}</span>`
+  metaEl.innerHTML = chips.map(chip =>
+    chip.extra?.startsWith('lang-badge')
+      ? `<span class="${chip.extra}">${chip.label}</span>`
+      : `<span class="meta-chip" style="${chip.style || ''}${chip.mono ? 'font-family:monospace;' : ''}">${chip.label}</span>`
   ).join('');
 
-  const descEl = document.getElementById('modal-description');
   const labelEnEl = document.getElementById('modal-label-en');
-  const noteEl = document.getElementById('modal-note');
-  const linksEl = document.getElementById('modal-links');
-
   labelEnEl.textContent = item.labelEN || '';
   labelEnEl.style.display = item.labelEN ? '' : 'none';
 
+  const descEl = document.getElementById('modal-description');
   descEl.textContent = item.description || '';
   descEl.style.display = item.description ? '' : 'none';
 
+  const noteEl = document.getElementById('modal-note');
   if (item.note) {
     noteEl.textContent = item.note;
     noteEl.style.display = '';
   } else if (item.microImplementation) {
-    noteEl.textContent = 'Note: This instrument also operates at the MICRO level, where its provisions are implemented directly in schools and classrooms.';
+    noteEl.textContent = t('modalMicroNote');
     noteEl.style.display = '';
   } else {
     noteEl.style.display = 'none';
   }
 
-  // Build links
   const allUrls = [];
-  if (item.urls && Array.isArray(item.urls)) {
+  if (Array.isArray(item.urls)) {
     allUrls.push(...item.urls);
   } else if (item.urls && typeof item.urls === 'object') {
-    Object.entries(item.urls).forEach(([k, v]) => allUrls.push({ label: k, href: v }));
+    Object.entries(item.urls).forEach(([label, href]) => allUrls.push({ label, href }));
   } else if (item.url) {
     allUrls.push({ label: 'Link', href: item.url });
   }
 
-  // Also handle rounds/cycles
   if (item.rounds) item.rounds.forEach(r => allUrls.push({ label: `Runda ${r.round} (${r.year})`, href: r.url }));
   if (item.cycles) item.cycles.forEach(c => allUrls.push({ label: `Cykl ${c.cycle} – ACFC Opinion (${c.year})`, href: c.opinionUrl }));
   if (item.amendments) item.amendments.forEach(a => allUrls.push({ label: `Zmiana ${a.date}`, href: a.url }));
 
+  const linksEl = document.getElementById('modal-links');
   if (allUrls.length > 0) {
-    linksEl.innerHTML = `<div class="modal-links-label">Source documents</div>
+    linksEl.innerHTML = `<div class="modal-links-label">${t('modalSources')}</div>
       <div class="modal-links">
-        ${allUrls.map(u => `<a class="modal-link" href="${u.href}" target="_blank" rel="noopener">${u.label}</a>`).join('')}
+        ${allUrls.map(url => `<a class="modal-link" href="${url.href}" target="_blank" rel="noopener">${url.label}</a>`).join('')}
       </div>`;
     linksEl.style.display = '';
   } else {
     linksEl.style.display = 'none';
   }
 
-  backdrop.classList.add('open');
+  document.getElementById('modal-backdrop').classList.add('open');
 }
 
 function closeModal() {
+  state.activeCard = null;
   document.getElementById('modal-backdrop').classList.remove('open');
 }
 
-// ─── Stats update ─────────────────────────────────────────────────────────────
-
 function updateStats() {
-  const all = getAllItems();
-  const filtered = applyFilters(all);
-
+  const filtered = applyFilters(getAllItems());
   document.getElementById('stat-total').textContent = filtered.length;
-  document.getElementById('stat-szl').textContent = filtered.filter(i => i._lang === 'szl').length;
-  document.getElementById('stat-wym').textContent = filtered.filter(i => i._lang === 'wym').length;
-  document.getElementById('stat-ukr').textContent = filtered.filter(i => i._lang === 'ukr').length;
-  document.getElementById('stat-shared').textContent = filtered.filter(i => i._lang === 'shared').length;
+  document.getElementById('stat-szl').textContent = filtered.filter(item => item._lang === 'szl').length;
+  document.getElementById('stat-wym').textContent = filtered.filter(item => item._lang === 'wym').length;
+  document.getElementById('stat-ukr').textContent = filtered.filter(item => item._lang === 'ukr').length;
+  document.getElementById('stat-shared').textContent = filtered.filter(item => item._lang === 'shared').length;
 }
-
-// ─── Render dispatch ──────────────────────────────────────────────────────────
 
 function render() {
   updateStats();
 
   document.getElementById('matrix-view').style.display = state.view === 'matrix' ? 'block' : 'none';
-  document.getElementById('list-view').style.display    = state.view === 'list'   ? 'block' : 'none';
+  document.getElementById('list-view').style.display = state.view === 'list' ? 'block' : 'none';
   document.getElementById('timeline-view').style.display = state.view === 'timeline' ? 'block' : 'none';
 
-  if (state.view === 'matrix')   renderMatrix();
-  if (state.view === 'list')     renderList();
-  if (state.view === 'timeline') { renderTimeline(); setTimeout(applyTimelineDots, 0); }
+  if (state.view === 'matrix') renderMatrix();
+  if (state.view === 'list') renderList();
+  if (state.view === 'timeline') {
+    renderTimeline();
+    setTimeout(applyTimelineDots, 0);
+  }
 
-  // Update active filter pills
   document.querySelectorAll('.filter-pill').forEach(pill => {
-    const f = pill.dataset.filter;
-    const v = pill.dataset.value;
-    pill.classList.toggle('active', state.filters[f] === v);
+    const filter = pill.dataset.filter;
+    const value = pill.dataset.value;
+    pill.classList.toggle('active', state.filters[filter] === value);
   });
 
-  // Update view buttons
   document.querySelectorAll('.view-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.view === state.view);
   });
+
+  if (state.activeCard) {
+    openModal(state.activeCard);
+  }
 }
 
-// ─── Event handlers ───────────────────────────────────────────────────────────
-
 function initEventHandlers() {
-  // View toggle
   document.querySelectorAll('.view-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       state.view = btn.dataset.view;
@@ -436,45 +690,42 @@ function initEventHandlers() {
     });
   });
 
-  // Filter pills
   document.querySelectorAll('.filter-pill').forEach(pill => {
     pill.addEventListener('click', () => {
-      const f = pill.dataset.filter;
-      const v = pill.dataset.value;
-      state.filters[f] = state.filters[f] === v ? 'all' : v;
+      const filter = pill.dataset.filter;
+      const value = pill.dataset.value;
+      state.filters[filter] = state.filters[filter] === value ? 'all' : value;
       render();
     });
   });
 
-  // Search
-  document.getElementById('search-input').addEventListener('input', e => {
-    state.search = e.target.value.trim();
+  document.getElementById('search-input').addEventListener('input', event => {
+    state.search = event.target.value.trim();
     render();
   });
 
-  // Modal close
   document.getElementById('modal-close-btn').addEventListener('click', closeModal);
-  document.getElementById('modal-backdrop').addEventListener('click', e => {
-    if (e.target === document.getElementById('modal-backdrop')) closeModal();
+  document.getElementById('modal-backdrop').addEventListener('click', event => {
+    if (event.target === document.getElementById('modal-backdrop')) closeModal();
   });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeModal();
+  });
 }
-
-// ─── Utilities ────────────────────────────────────────────────────────────────
 
 function makeEl(tag, props = {}) {
   const el = document.createElement(tag);
-  Object.entries(props).forEach(([k, v]) => {
-    if (k === 'className') el.className = v;
-    else if (k === 'style') el.style.cssText = v;
-    else el[k] = v;
+  Object.entries(props).forEach(([key, value]) => {
+    if (key === 'className') el.className = value;
+    else if (key === 'style') el.style.cssText = value;
+    else el[key] = value;
   });
   return el;
 }
 
-// ─── Init ─────────────────────────────────────────────────────────────────────
-
 document.addEventListener('DOMContentLoaded', () => {
+  ensureLanguageToggle();
+  updateStaticText();
   initEventHandlers();
   render();
 });

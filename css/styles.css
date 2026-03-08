@@ -1,4 +1,4 @@
-/* ─── Reset & Base ──────────────────────────────────────────────────────── */
+﻿/* â”€â”€â”€ Reset & Base â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -7,7 +7,8 @@
   --blue-mid:     #0693e3;   /* vivid cyan-blue */
   --blue-navy:    #01012f;   /* deep navy */
   --blue-light:   #dbeafe;   /* light blue tint */
-  --blue-lighter: #eff6ff;   /* very pale blue */
+  
+  --accent:     #1c5599;
 
   /* Light theme surfaces */
   --bg:         #f8fafc;
@@ -61,13 +62,13 @@ body {
   min-height: 100vh;
 }
 
-/* ─── Typography ────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Typography â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 h1 { font-size: 1.2rem; font-weight: 700; letter-spacing: -.02em; }
 h2 { font-size: 1.05rem; font-weight: 600; }
 h3 { font-size: .95rem; font-weight: 600; }
 a  { color: inherit; text-decoration: none; }
 
-/* ─── Header ────────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .site-header {
   background: var(--blue-dark);
   border-bottom: 3px solid var(--blue-mid);
@@ -119,14 +120,14 @@ a  { color: inherit; text-decoration: none; }
   border: 1px solid rgba(255,255,255,.2);
 }
 
-/* ─── Layout ────────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .app-layout {
   display: grid;
   grid-template-columns: 240px 1fr;
   min-height: calc(100vh - 54px);
 }
 
-/* ─── Sidebar ───────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .sidebar {
   background: var(--surface);
   border-right: 1px solid var(--border);
@@ -222,13 +223,13 @@ a  { color: inherit; text-decoration: none; }
   font-weight: 600;
 }
 
-/* ─── Main content ──────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Main content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .main {
   padding: 24px;
   overflow: auto;
 }
 
-/* ─── Matrix view ───────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Matrix view â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 #matrix-view { display: block; }
 #list-view, #timeline-view { display: none; }
 
@@ -320,7 +321,7 @@ a  { color: inherit; text-decoration: none; }
   height: 80px;
 }
 
-/* ─── Document Cards ────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Document Cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .doc-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -437,7 +438,7 @@ a  { color: inherit; text-decoration: none; }
   font-style: italic;
 }
 
-/* ─── Modal ─────────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Modal â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .modal-backdrop {
   display: none;
   position: fixed;
@@ -565,13 +566,13 @@ a  { color: inherit; text-decoration: none; }
   color: var(--blue-navy);
 }
 .modal-link::after {
-  content: '↗';
+  content: 'â†—';
   margin-left: auto;
   color: var(--blue-mid);
   font-size: .8rem;
 }
 
-/* ─── List view ─────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ List view â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 #list-view .list-table {
   width: 100%;
   border-collapse: collapse;
@@ -601,7 +602,7 @@ a  { color: inherit; text-decoration: none; }
 }
 #list-view .list-table tr:hover td { background: var(--blue-lighter); }
 
-/* ─── Timeline view ─────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Timeline view â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .timeline-section { margin-bottom: 40px; }
 .timeline-section-title {
   font-size: .78rem;
@@ -655,7 +656,7 @@ a  { color: inherit; text-decoration: none; }
   color: var(--text);
 }
 
-/* ─── Search bar ────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Search bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .search-bar {
   width: 100%;
   background: var(--surface);
@@ -674,7 +675,7 @@ a  { color: inherit; text-decoration: none; }
 }
 .search-bar::placeholder { color: var(--text-light); }
 
-/* ─── Framework info banner ─────────────────────────────────────────────── */
+/* â”€â”€â”€ Framework info banner â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .framework-banner {
   background: var(--blue-lighter);
   border: 1px solid var(--blue-light);
@@ -688,7 +689,7 @@ a  { color: inherit; text-decoration: none; }
 }
 .framework-banner strong { color: var(--blue-dark); }
 
-/* ─── Legend ────────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Legend â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .legend {
   display: flex;
   flex-wrap: wrap;
@@ -706,7 +707,7 @@ a  { color: inherit; text-decoration: none; }
 .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
 .legend-divider { color: var(--border-mid); }
 
-/* ─── Empty state ───────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Empty state â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .empty-state {
   text-align: center;
   padding: 40px;
@@ -714,15 +715,67 @@ a  { color: inherit; text-decoration: none; }
   font-size: .85rem;
 }
 
-/* ─── Scrollbar ─────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Scrollbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--surface2); }
 ::-webkit-scrollbar-thumb { background: var(--blue-light); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--szl-light); }
 
-/* ─── Responsive ────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 900px) {
   .app-layout { grid-template-columns: 1fr; }
   .sidebar { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
   .main { padding: 16px; }
 }
+
+.ui-lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.22);
+}
+
+.ui-lang-btn {
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,.74);
+  font: inherit;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, transform .15s ease;
+}
+
+.ui-lang-btn:hover {
+  color: #ffffff;
+  background: rgba(255,255,255,.12);
+}
+
+.ui-lang-btn.active {
+  color: var(--blue-dark);
+  background: #ffffff;
+}
+
+@media (max-width: 980px) {
+  .site-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .site-header h1 {
+    min-width: 100%;
+    order: -1;
+  }
+
+  .ui-lang-toggle {
+    margin-left: 0;
+  }
+}
+
