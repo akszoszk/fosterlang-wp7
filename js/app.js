@@ -533,9 +533,9 @@ function renderTimeline() {
   ];
 
   const sharedTimeline = [
-    { date: '2021-01-29', event: 'RPO: list do Premiera (Ślązacy i Wilamowianie)', status: 'historical' },
-    { date: '2021-03-08', event: 'MSWiA: odpowiedź na RPO', status: 'institutional_response' },
-    { date: '2023-01-01', event: 'RPO: Raport dot. mniejszości 2020–2022', status: 'published' },
+    { date: '2021-01-29', event: 'RPO: list do Premiera (Ślązacy i Wilamowianie)', eventEN: 'RPO: Letter to the Prime Minister (Silesians & Wilamowians)', status: 'historical' },
+    { date: '2021-03-08', event: 'MSWiA: odpowiedź na RPO', eventEN: 'MSWiA: Response to the Ombudsman (RPO)', status: 'institutional_response' },
+    { date: '2023-01-01', event: 'RPO: Raport dot. mniejszości 2020–2022', eventEN: 'RPO: Minorities Report 2020\u20132022', status: 'published' },
   ];
 
   const sharedSection = makeEl('div', { className: 'timeline-section' });
@@ -569,7 +569,8 @@ function buildTimeline(events, color) {
     dateEl.textContent = ev.date;
 
     const eventEl = makeEl('div', { className: 'timeline-event' });
-    eventEl.textContent = ev.event;
+    const eventText = state.uiLang === 'en' ? (ev.eventEN || ev.event) : ev.event;
+    eventEl.textContent = eventText;
 
     const st = getStatusStyle(ev.status);
     const badge = makeEl('span', {

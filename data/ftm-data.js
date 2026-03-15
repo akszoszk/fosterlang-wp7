@@ -521,15 +521,15 @@ const FTM_DATA = {
 
     // Key events timeline for SZL
     timeline: [
-      { date: "2023",       event: "Druk 233 złożony w Sejmie",              status: "passed_committee" },
-      { date: "2024-04-09", event: "Posiedzenie komisji sejmowej",            status: "procedural"       },
-      { date: "2024-05-14", event: "Klub Jagielloński: komentarz ekspercki",  status: "published"        },
-      { date: "2024-05-29", event: "WETO – Prezydent Duda",                   status: "vetoed"           },
-      { date: "2024-05-30", event: "Media: krytyka uzasadnienia weta",        status: "published"        },
-      { date: "2026-01-09", event: "Sejm re-uchwala ustawę (druk 1346)",     status: "passed"           },
-      { date: "2026-01-21", event: "Senat zatwierdza (druk 598)",             status: "passed"           },
-      { date: "2026-01-30", event: "Kohut pisze do Nawrockiego",              status: "active"           },
-      { date: "2026-02",    event: "Sygnał weta – Nawrocki",                  status: "pending"          }
+      { date: "2023",       event: "Druk 233 złożony w Sejmie",              eventEN: "Bill Print 233 submitted to Sejm",                status: "passed_committee" },
+      { date: "2024-04-09", event: "Posiedzenie komisji sejmowej",            eventEN: "Sejm committee session",                          status: "procedural"       },
+      { date: "2024-05-14", event: "Klub Jagielloński: komentarz ekspercki",  eventEN: "Jagiellonian Club: expert commentary",             status: "published"        },
+      { date: "2024-05-29", event: "WETO – Prezydent Duda",                   eventEN: "VETO \u2013 President Duda",                             status: "vetoed"           },
+      { date: "2024-05-30", event: "Media: krytyka uzasadnienia weta",        eventEN: "Media: criticism of veto justification",           status: "published"        },
+      { date: "2026-01-09", event: "Sejm re-uchwala ustawę (druk 1346)",     eventEN: "Sejm re-passes the bill (Print 1346)",            status: "passed"           },
+      { date: "2026-01-21", event: "Senat zatwierdza (druk 598)",             eventEN: "Senate approves (Print 598)",                      status: "passed"           },
+      { date: "2026-01-30", event: "Kohut pisze do Nawrockiego",              eventEN: "Kohut writes to Nawrocki",                         status: "active"           },
+      { date: "2026-02",    event: "Sygnał weta – Nawrocki",                  eventEN: "Veto signal \u2013 Nawrocki",                            status: "pending"          }
     ]
   },
 
@@ -761,13 +761,13 @@ const FTM_DATA = {
     ],
 
     timeline: [
-      { date: "2021-01-29", event: "RPO: list do Premiera (SZL + WYM)",      status: "historical"   },
-      { date: "2021-03-08", event: "MSWiA: odpowiedź na RPO",                status: "institutional_response" },
-      { date: "2021-05-17", event: "Komisja sejmowa (IX kadencja)",           status: "procedural"   },
-      { date: "2024",       event: "Druk 321 złożony w Sejmie",              status: "passed"       },
-      { date: "2024",       event: "Senat zatwierdza (druk 081)",             status: "passed"       },
-      { date: "2025-10",    event: "WETO – Prezydent Nawrocki",               status: "vetoed"       },
-      { date: "2025-10",    event: "Druki 1553/1848 – ponowne procedowanie", status: "processing"   }
+      { date: "2021-01-29", event: "RPO: list do Premiera (SZL + WYM)",      eventEN: "RPO: Letter to the Prime Minister (SZL + WYM)",   status: "historical"   },
+      { date: "2021-03-08", event: "MSWiA: odpowiedź na RPO",                eventEN: "MSWiA: Response to the Ombudsman (RPO)",           status: "institutional_response" },
+      { date: "2021-05-17", event: "Komisja sejmowa (IX kadencja)",           eventEN: "Sejm committee (9th term)",                       status: "procedural"   },
+      { date: "2024",       event: "Druk 321 złożony w Sejmie",              eventEN: "Bill Print 321 submitted to Sejm",                status: "passed"       },
+      { date: "2024",       event: "Senat zatwierdza (druk 081)",             eventEN: "Senate approves (Print 081)",                      status: "passed"       },
+      { date: "2025-10",    event: "WETO – Prezydent Nawrocki",               eventEN: "VETO \u2013 President Nawrocki",                         status: "vetoed"       },
+      { date: "2025-10",    event: "Druki 1553/1848 – ponowne procedowanie", eventEN: "Prints 1553/1848 \u2013 re-processing",                  status: "processing"   }
     ]
   },
 
@@ -990,15 +990,14 @@ const FTM_DATA = {
     ],
 
     timeline: [
-      { date: "2001-07-20", event: "Dyrektywa 2001/55/WE – ochrona tymczasowa (UE)",          status: "binding_international" },
-      { date: "2003-06-13", event: "Ustawa o udzielaniu ochrony na terytorium RP",             status: "ongoing"               },
-      { date: "2013-12-12", event: "Ustawa o cudzoziemcach",                                    status: "ongoing"               },
-      { date: "2017-08-23", event: "Rozporządzenie MEN o kształceniu cudzoziemców",             status: "ongoing"               },
-      { date: "2022-02-24", event: "Inwazja Rosji na Ukrainę",                                  status: "historical"            },
-      { date: "2022-03-04", event: "Decyzja UE 2022/382 – aktywacja ochrony tymczasowej",      status: "binding_international" },
-      { date: "2022-03-12", event: "Ustawa specjalna o pomocy obywatelom Ukrainy",              status: "ongoing"               },
-      { date: "2025",       event: "Nowelizacja – przedłużenie do 4 marca 2026",                status: "ongoing"               },
-      { date: "2026-03-04", event: "Wygaśnięcie obecnego przedłużenia",                         status: "pending"               }
+      { date: "2001-07-20", event: "Dyrektywa 2001/55/WE – ochrona tymczasowa (UE)",          eventEN: "EU Directive 2001/55/EC \u2013 Temporary Protection",                   status: "binding_international" },
+      { date: "2003-06-13", event: "Ustawa o udzielaniu ochrony na terytorium RP",             eventEN: "Act on Granting Protection to Foreigners in Poland",              status: "ongoing"               },
+      { date: "2013-12-12", event: "Ustawa o cudzoziemcach",                                    eventEN: "Act on Foreigners",                                               status: "ongoing"               },
+      { date: "2017-08-23", event: "Rozporządzenie MEN o kształceniu cudzoziemców",             eventEN: "MEN Regulation on Education of Foreigners",                       status: "ongoing"               },
+      { date: "2022-03-04", event: "Decyzja UE 2022/382 – aktywacja ochrony tymczasowej",      eventEN: "EU Decision 2022/382 \u2013 Activation of Temporary Protection",         status: "binding_international" },
+      { date: "2022-03-12", event: "Ustawa specjalna o pomocy obywatelom Ukrainy",              eventEN: "Special Act on Assistance to Citizens of Ukraine",                status: "ongoing"               },
+      { date: "2025",       event: "Nowelizacja – przedłużenie do 4 marca 2026",                eventEN: "Amendment \u2013 extension until 4 March 2026",                          status: "ongoing"               },
+      { date: "2026-03-04", event: "Wygaśnięcie obecnego przedłużenia",                         eventEN: "Current extension expires",                                       status: "pending"               }
     ]
   },
 
