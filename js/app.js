@@ -4,7 +4,7 @@ const UI_TEXT = {
   en: {
     docTitle: 'Language Policy Repository — FOSTERLANG WP7',
     siteTitle: 'Language Policy Repository',
-    headerTeam: 'AMU · Task Leader',
+    headerTeam: 'AMU & UiO · Task Leader',
     headerLanguages: 'Silesian & Wilamowian & Ukrainian',
     headerMatrix: 'Ferguson-Tollefson Matrix',
     uiLangAria: 'Interface language',
@@ -44,7 +44,7 @@ const UI_TEXT = {
     bannerBody:
       `<strong>Ferguson-Tollefson Matrix Analysis</strong> — Silesian, Wilamowian &amp; Ukrainian Language Policies, Poland<br>
        Data sources: Sejm, Senat, KPRP, RPO, CoE (FCNM · ECRML), EU law, OSCE soft law, Polish national press 2021–2026.<br>
-       <span style="font-size:.72rem;">Click any document card to view full details and access source links. Use sidebar filters to explore the matrix by language, level, direction, or status.</span>`,
+       <span style="font-size:.72rem;">Click any document card to view full details and access source links. Use the Filters button to explore by language, level, direction, or status.</span>`,
     legendSilesian: 'Silesian (SZL)',
     legendWilamowian: 'Wilamowian (WYM)',
     legendUkrainian: 'Ukrainian (UKR)',
@@ -75,7 +75,7 @@ const UI_TEXT = {
   wym: {
     docTitle: 'Archiv d Śpröchpolitik — FOSTERLANG WP7',
     siteTitle: 'Archiv d Śpröchpolitik',
-    headerTeam: 'AMU · Task Leader',
+    headerTeam: 'AMU & UiO · Task Leader',
     headerLanguages: 'Ślůnski, Wymysiöeryś yn Ukraiński',
     headerMatrix: 'Ferguson-Tollefson Matrix',
     uiLangAria: 'Śpröch d yntyrfejs',
@@ -115,7 +115,7 @@ const UI_TEXT = {
     bannerBody:
       `<strong>Analiza d Ferguson-Tollefson Matrix</strong> — śpröchpolitika fu Ślůnski, Wymysiöeryś yn Ukraiński, Polska<br>
        Kwaoła: Sejm, Senat, KPRP, RPO, CoE (FCNM · ECRML), EU law, OSCE soft law, polnische press 2021–2026.<br>
-       <span style="font-size:.72rem;">Klik uf dokument-karta, u zyjn detale yn kwaoła. Nüz filtrow, u obejrzyć matrix bez śpröch, niveau, richtung abo status.</span>`,
+       <span style="font-size:.72rem;">Klik uf dokument-karta, u zyjn detale yn kwaoła. Nüz d Filters-knopf, u obejrzyć matrix bez śpröch, niveau, richtung abo status.</span>`,
     legendSilesian: 'Ślůnski (SZL)',
     legendWilamowian: 'Wymysiöeryś (WYM)',
     legendUkrainian: 'Ukraiński (UKR)',
@@ -288,29 +288,53 @@ function updateStaticText() {
   if (metaTags[1]) metaTags[1].textContent = t('headerLanguages');
   if (metaTags[2]) metaTags[2].textContent = t('headerMatrix');
 
-  const sidebarLabels = document.querySelectorAll('.sidebar .sidebar-label');
-  if (sidebarLabels[0]) sidebarLabels[0].textContent = t('viewLabel');
-  if (sidebarLabels[1]) sidebarLabels[1].textContent = t('searchLabel');
-  if (sidebarLabels[2]) sidebarLabels[2].textContent = t('statsLabel');
-  if (sidebarLabels[3]) sidebarLabels[3].textContent = t('languageLabel');
-  if (sidebarLabels[4]) sidebarLabels[4].textContent = t('levelLabel');
-  if (sidebarLabels[5]) sidebarLabels[5].textContent = t('directionLabel');
-  if (sidebarLabels[6]) sidebarLabels[6].textContent = t('statusLabel');
-  if (sidebarLabels[7]) sidebarLabels[7].textContent = t('frameworkLabel');
+  // Hero section
+  const heroTitle = document.getElementById('hero-title');
+  if (heroTitle) {
+    heroTitle.textContent = state.uiLang === 'wym'
+      ? 'Analiza d Ferguson-Tollefson Matrix'
+      : 'Ferguson-Tollefson Matrix Analysis';
+  }
+  const heroSub = document.getElementById('hero-subtitle');
+  if (heroSub) {
+    heroSub.textContent = state.uiLang === 'wym'
+      ? 'Sprachpolitika fu Sluski, Wymysiöeryś yn Ukraiński, Polska'
+      : 'Silesian, Wilamowian & Ukrainian Language Policies, Poland';
+  }
+  const heroDesc = document.getElementById('hero-description');
+  if (heroDesc) {
+    heroDesc.textContent = state.uiLang === 'wym'
+      ? 'Analizyrt sprachpolitik uf 3 niwoa (MACRO · MESO · MICRO) × 2 richtunga (Top-Down · Bottom-Up). To je czesc FOSTERLANG WP7 — Effective Multilingualism Policies.'
+      : 'Evaluating language policy at 3 levels (MACRO · MESO · MICRO) \u00d7 2 directions (Top-Down · Bottom-Up). Part of FOSTERLANG WP7 \u2014 Effective Multilingualism Policies.';
+  }
 
+  // View buttons
   document.querySelector('[data-view="matrix"]').textContent = t('viewMatrix');
   document.querySelector('[data-view="list"]').textContent = t('viewList');
   document.querySelector('[data-view="timeline"]').textContent = t('viewTimeline');
 
+  // Search
   const searchInput = document.getElementById('search-input');
   if (searchInput) searchInput.placeholder = t('searchPlaceholder');
 
+  // Stats in hero
   document.querySelector('#stat-total + .lbl').textContent = t('statTotal');
   document.querySelector('#stat-szl + .lbl').textContent = t('statSilesian');
   document.querySelector('#stat-wym + .lbl').textContent = t('statWilamowian');
   document.querySelector('#stat-ukr + .lbl').textContent = t('statUkrainian');
   document.querySelector('#stat-shared + .lbl').textContent = t('statShared');
 
+  // Filter labels
+  const filterLabels = document.querySelectorAll('.filter-label');
+  filterLabels.forEach(el => {
+    const key = el.dataset.label;
+    if (key === 'language') el.textContent = t('languageLabel');
+    else if (key === 'level') el.textContent = t('levelLabel');
+    else if (key === 'direction') el.textContent = t('directionLabel');
+    else if (key === 'status') el.textContent = t('statusLabel');
+  });
+
+  // Filter pills
   setPillLabel('language', 'szl', t('languageSilesian'), 'var(--szl)');
   setPillLabel('language', 'wym', t('languageWilamowian'), 'var(--wym)');
   setPillLabel('language', 'ukr', t('languageUkrainian'), 'var(--ukr)');
@@ -332,12 +356,7 @@ function updateStaticText() {
   setPillLabel('status', 'ongoing', getStatusStyle('ongoing').label, '#3b82f6');
   setPillLabel('status', 'published', getStatusStyle('published').label, '#8b5cf6');
 
-  const frameworkBox = document.querySelector('.sidebar section:last-child > div');
-  if (frameworkBox) frameworkBox.innerHTML = t('frameworkBody');
-
-  const banner = document.querySelector('.framework-banner > div');
-  if (banner) banner.innerHTML = t('bannerBody');
-
+  // Legend
   const legend = document.querySelector('.legend');
   if (legend) {
     legend.innerHTML = `
@@ -419,7 +438,7 @@ function makeDocCard(item) {
 
   const header = makeEl('div', { className: 'card-header' });
   const label = makeEl('div', { className: 'card-label' });
-  label.textContent = item.label;
+  label.textContent = item.labelEN || item.label;
   header.appendChild(label);
 
   const badge = makeEl('span', { className: `lang-badge ${item._lang}` });
@@ -488,7 +507,7 @@ function renderList() {
 
     const st = getStatusStyle(item.status);
     tr.innerHTML = `
-      <td style="font-weight:600;">${item.label}</td>
+      <td style="font-weight:600;">${item.labelEN || item.label}</td>
       <td><span class="lang-badge ${item._lang}">${getBadgeLabel(item._lang)}</span></td>
       <td>${item.level}</td>
       <td style="color:${item.direction === 'TOP_DOWN' ? '#fca5a5' : '#86efac'};font-size:.75rem;">${getDirectionLabel(item.direction).replace(' ↓', '').replace(' ↑', '')}</td>
@@ -685,6 +704,13 @@ function render() {
   }
 }
 
+function toggleFilterPanel() {
+  const panel = document.getElementById('filter-panel');
+  const btn = document.getElementById('filter-toggle-btn');
+  if (panel) panel.classList.toggle('open');
+  if (btn) btn.classList.toggle('active');
+}
+
 function initEventHandlers() {
   document.querySelectorAll('.view-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -706,6 +732,10 @@ function initEventHandlers() {
     state.search = event.target.value.trim();
     render();
   });
+
+  // Filter panel toggle
+  const filterBtn = document.getElementById('filter-toggle-btn');
+  if (filterBtn) filterBtn.addEventListener('click', toggleFilterPanel);
 
   document.getElementById('modal-close-btn').addEventListener('click', closeModal);
   document.getElementById('modal-backdrop').addEventListener('click', event => {
