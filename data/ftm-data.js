@@ -728,7 +728,7 @@ const FTM_DATA = {
       {
         id: "wym_dgp_senate",
         label: "Dziennik Gazeta Prawna – Senat za językiem wilamowskim",
-        labelEN: "Daily Gazette of Law (DGP) – Senate supports Wilamowian",
+        labelEN: "Daily Legal Newspaper (DGP) – Senate supports Wilamowian",
         level: "MESO", direction: "TOP_DOWN",
         type: "National newspaper",
         status: "published",
