@@ -384,7 +384,7 @@ const FTM_DATA = {
       {
         id: "szl_dziennik_zachodni_2026",
         label: "Dziennik Zachodni – seria (01–02.2026)",
-        labelEN: "Dziennik Zachodni – series Jan–Feb 2026",
+        labelEN: "Western Daily (Dziennik Zachodni) – series Jan-Feb 2026",
         level: "MESO", direction: "TOP_DOWN",
         type: "Regional newspaper",
         status: "published",
@@ -399,7 +399,7 @@ const FTM_DATA = {
       {
         id: "szl_slazag",
         label: "Ślązag – relacje (2024–2026)",
-        labelEN: "Ślązag – coverage 2024–2026",
+        labelEN: "Slazag (Silesian media portal) – coverage 2024-2026",
         level: "MESO", direction: "BOTTOM_UP",
         type: "Silesian-identity media (PL/SZL)",
         status: "ongoing",
@@ -414,7 +414,7 @@ const FTM_DATA = {
       {
         id: "szl_pap_media",
         label: "PAP – relacje (maj 2024)",
-        labelEN: "PAP – reports (May 2024)",
+        labelEN: "Polish Press Agency (PAP) – reports (May 2024)",
         level: "MESO", direction: "TOP_DOWN",
         type: "National news agency",
         status: "published",
@@ -462,7 +462,7 @@ const FTM_DATA = {
       {
         id: "szl_klub_jagiellonski",
         label: "Klub Jagielloński – komentarz (14.05.2024)",
-        labelEN: "Klub Jagielloński – commentary before veto (14 May 2024)",
+        labelEN: "Jagiellonian Club – commentary before veto (14 May 2024)",
         level: "MESO", direction: "BOTTOM_UP",
         type: "Think-tank advocacy",
         status: "published",
@@ -475,7 +475,7 @@ const FTM_DATA = {
       {
         id: "szl_polityka_blog",
         label: "Polityka (blog) – komentarz po wecie (30.05.2024)",
-        labelEN: "Polityka blog – commentary post-veto",
+        labelEN: "Polityka (weekly magazine) blog – commentary post-veto",
         level: "MESO", direction: "BOTTOM_UP",
         type: "Opinion media",
         status: "published",
@@ -695,7 +695,7 @@ const FTM_DATA = {
       {
         id: "wym_expert_media",
         label: "Media eksperckie – Prof. Olko, O-jezyku.pl",
-        labelEN: "Expert media – Prof. Olko (Nauka w Polsce), O-jezyku.pl",
+        labelEN: "Expert media – Prof. Olko (Science in Poland), O-jezyku.pl",
         level: "MESO", direction: "BOTTOM_UP",
         type: "Expert commentary",
         status: "published",
@@ -715,7 +715,7 @@ const FTM_DATA = {
       {
         id: "wym_polskie_radio",
         label: "Polskie Radio 24 – prace w Sejmie (2024)",
-        labelEN: "Polskie Radio 24 – Sejm work on new regional language",
+        labelEN: "Polish Radio 24 – Sejm work on new regional language",
         level: "MESO", direction: "TOP_DOWN",
         type: "National public radio",
         status: "published",
@@ -728,7 +728,7 @@ const FTM_DATA = {
       {
         id: "wym_dgp_senate",
         label: "Dziennik Gazeta Prawna – Senat za językiem wilamowskim",
-        labelEN: "Dziennik Gazeta Prawna – Senate supports Wilamowian",
+        labelEN: "Daily Gazette of Law (DGP) – Senate supports Wilamowian",
         level: "MESO", direction: "TOP_DOWN",
         type: "National newspaper",
         status: "published",
