@@ -1000,5 +1000,43 @@ const FTM_DATA = {
       { date: "2025",       event: "Nowelizacja – przedłużenie do 4 marca 2026",                status: "ongoing"               },
       { date: "2026-03-04", event: "Wygaśnięcie obecnego przedłużenia",                         status: "pending"               }
     ]
-  }
+  },
+
+  // ─── FOSTERLANG WP7 PROJECT ACTIVITIES ──────────────────────────────────────
+
+  projectTimeline: [
+    {
+      date: "2025-09-25",
+      dateEnd: "2025-09-27",
+      event: "FOSTERLANG inaugural project opening and conference in Wilamowice — home of the endangered Wymysiöeryś language. Researchers, activists, and community members working on revitalisation of Europe's endangered and minoritised languages.",
+      eventWYM: "FOSTERLANG konferencyja yn öfnung ym Wilamowicach — haojm d gefördyta Wymysiöeryś śpröch. Forśer, aktywista yn gmyjnda-lajt.",
+      type: "conference"
+    },
+    {
+      date: "2025-10-23",
+      event: "Online meeting between researchers from Adam Mickiewicz University and University of Oslo. Discussion focused on evaluation methods for multilingual policies and their assessment in minority-language contexts.",
+      eventWYM: "Online-treffa cwiśa forśer fum Adam Mickiewicz Uniwersytet yn Uniwersytet Oslo. Dyskusja iwa evaluacjons-metoda fia fiłśpröchige politika.",
+      type: "meeting"
+    },
+    {
+      date: "2026-03-12",
+      event: "Tomasz Wicherkiewicz participated in an event in Kartuzy: workshop and discussion of educational materials for Kashubian-language and regional teaching. Educators and activists involved in developing resources for the Kashubian language.",
+      eventWYM: "Tomasz Wicherkiewicz hot tajłganuma ym Kartuzy: werksztot yn dyskusja iwa edukacjons-materiała fia Kashubiś śpröch yn regionala lernung.",
+      type: "workshop"
+    },
+    {
+      date: "2026-03",
+      dateEnd: "2026-04",
+      event: "Online interviews with Kashubian language policy makers and activists, focusing on language policy, revitalisation strategies, and educational initiatives.",
+      eventWYM: "Online-yntyrwjus myt Kashubiśe śpröchpolitik-maher yn aktywista — śpröchpolitik, revitalizacjons-strategja yn edukacjons-inicjatywa.",
+      type: "interviews"
+    },
+    {
+      date: "2026-04-15",
+      dateEnd: "2026-04-19",
+      event: "Fieldwork in Lemkovyna: interviews and consultations with members of the Lemko community on language practices, revitalisation initiatives, and community perspectives regarding the Lemko language.",
+      eventWYM: "Feldforśung ym Lemkowyna: yntyrwjus yn konsultacja myt Lemko-gmyjnda iwa śpröchpraktika, revitalizacjons-inicjatywa yn gmyjnda-perspektywa.",
+      type: "fieldwork"
+    }
+  ]
 };

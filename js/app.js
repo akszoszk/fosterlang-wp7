@@ -60,6 +60,7 @@ const UI_TEXT = {
     tableStatus: 'Status',
     tableDate: 'Date',
     timelineShared: 'Shared events (Silesian + Wilamowian)',
+    timelineProject: 'FOSTERLANG WP7 — Project Activities',
     modalSources: 'Source documents',
     modalClose: 'Close',
     modalMicroNote:
@@ -130,6 +131,7 @@ const UI_TEXT = {
     tableStatus: 'Status',
     tableDate: 'Dato',
     timelineShared: 'Gywynłiche gyšichta (Ślůnski + Wymysiöeryś)',
+    timelineProject: 'FOSTERLANG WP7 — Projekt-aktywiteta',
     modalSources: 'Kwaoł dokumenta',
     modalClose: 'Zamknij',
     modalMicroNote:
@@ -257,6 +259,7 @@ function ensureLanguageToggle() {
       localStorage.setItem(UI_LANG_STORAGE_KEY, code);
       updateStaticText();
       render();
+      renderProjectTimeline();
     });
     toggle.appendChild(btn);
   });
@@ -723,9 +726,59 @@ function makeEl(tag, props = {}) {
   return el;
 }
 
+function renderProjectTimeline() {
+  const container = document.getElementById('project-timeline-container');
+  if (!container || !FTM_DATA.projectTimeline) return;
+  container.innerHTML = '';
+
+  const typeLabels = {
+    conference: 'Conference',
+    meeting: 'Meeting',
+    workshop: 'Workshop',
+    interviews: 'Interviews',
+    fieldwork: 'Fieldwork',
+  };
+
+  FTM_DATA.projectTimeline.forEach(ev => {
+    const item = makeEl('div', { className: 'pt-item' });
+
+    const dateEl = makeEl('div', { className: 'pt-item-date' });
+    let dateStr = ev.date;
+    if (ev.dateEnd) dateStr += ' — ' + ev.dateEnd;
+    dateStr = dateStr.replace(/-/g, '.');
+
+    const dateText = document.createTextNode(dateStr + ' ');
+    dateEl.appendChild(dateText);
+
+    if (ev.type && typeLabels[ev.type]) {
+      const typeBadge = makeEl('span', { className: 'pt-item-type' });
+      typeBadge.setAttribute('data-type', ev.type);
+      typeBadge.textContent = typeLabels[ev.type];
+      dateEl.appendChild(typeBadge);
+    }
+    item.appendChild(dateEl);
+
+    const textEl = makeEl('div', { className: 'pt-item-text' });
+    const eventText = state.uiLang === 'wym' && ev.eventWYM ? ev.eventWYM : ev.event;
+    textEl.textContent = eventText;
+    item.appendChild(textEl);
+
+    container.appendChild(item);
+  });
+
+  // Update header text for WYM toggle
+  const title = document.getElementById('project-timeline-title');
+  const subtitle = document.getElementById('project-timeline-subtitle');
+  if (title) title.textContent = t('timelineProject');
+  if (subtitle) subtitle.textContent = state.uiLang === 'wym'
+    ? 'Aojsgewöłte aktywiteta fu Arbajts-paket 7: Effective Multilingualism Policies'
+    : 'Selected activities timeline for Work Package 7: Effective Multilingualism Policies';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   ensureLanguageToggle();
   updateStaticText();
   initEventHandlers();
   render();
+  renderProjectTimeline();
 });
