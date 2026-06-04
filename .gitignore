@@ -1,0 +1,10 @@
+# Claude Code local state and worktrees
+.claude/
+
+# JetBrains IDE
+.idea/
+
+# OS noise
+Thumbs.db
+.DS_Store
+desktop.ini
