@@ -128,9 +128,41 @@ Each entry below is structured for direct ingestion into `ftm-data.js`. The `lev
 | `type` | Federal statute (Land-specific) |
 | `status` | ongoing |
 | `date` | 1959-03-19 |
-| `description` | Operational statute implementing Art. 7 §2 of the 1955 State Treaty for Carinthia. Seven articles. Establishes three school types in the bilingual zone: (a) Slovene-medium primary/lower-secondary with German as compulsory subject (6 hrs/week); (b) bilingual primary schools where instruction is delivered in approximately equal measure in German and Slovene through grade 4; (c) German-medium lower-secondary with Slovene as compulsory subject (4 hrs/week). Operates on the `Anmeldeprinzip` (registration principle — parents must actively register the child for bilingual instruction). Class size in bilingual primary classes: minimum 7, maximum 20 pupils. Major 1988 amendment introduced team-teaching (Zweilehrersystem) and physical separation by instruction language. 2009 amendment: BGBl. I Nr. 35/2009. The bilingual Handelsakademie was established by Art. II of BGBl. Nr. 420/1990. StF: BGBl. Nr. 101/1959 idF BGBl. Nr. 246/1959 und BGBl. I Nr. 35/2009. |
+| `description` | Operational statute implementing Art. 7 §2 of the 1955 State Treaty for Carinthia. Seven articles. Establishes three school types in the bilingual zone: (a) Slovene-medium primary/lower-secondary with German as compulsory subject (6 hrs/week); (b) bilingual primary schools where instruction is delivered in approximately equal measure in German and Slovene through grade 4; (c) German-medium lower-secondary with Slovene as compulsory subject (4 hrs/week). Operates on the `Anmeldeprinzip` (registration principle — parents must actively register the child for bilingual instruction). Class size in bilingual primary classes: minimum 7, maximum 20 pupils. Major 1988 amendment introduced team-teaching (Zweilehrersystem) and physical separation by instruction language. 2009 amendment: BGBl. I Nr. 35/2009. The bilingual Handelsakademie was established by Art. II of BGBl. Nr. 420/1990. StF: BGBl. Nr. 101/1959 idF BGBl. Nr. 246/1959 und BGBl. I Nr. 35/2009. Canonical consolidated text (Fassung vom 22.05.2025) archived at `carinthian/Minderheiten-Schulgesetz für Kärnten, Fassung vom 22.05.2025.pdf`. |
 | `urls` | RIS: https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009343 |
 | `tags` | bilingual-education, carinthia, anmeldeprinzip, team-teaching |
+
+#### B5. Slovene Volksschule Curriculum — Lehrplan Slowenisch (BGBl. II Nr. 1/2023)
+
+| Field | Value |
+|---|---|
+| `id` | `slv_at_lehrplan_volksschule_2023` |
+| `label` | Lehrplan Slowenisch (Volksschule) — BGBl. II Nr. 1/2023 |
+| `labelEN` | Slovene Subject Curriculum for Primary School (Volksschule) |
+| `level` | MACRO |
+| `direction` | TOP_DOWN |
+| `type` | Ministerial regulation (Verordnung) |
+| `status` | ongoing |
+| `date` | 2023-01-04 |
+| `description` | BMBWF subject curriculum for Slovene as a `Volksgruppensprache` at primary level (grades 1–4) in Carinthia. Promulgated as part of the new `Lehrpläne NEU` Volksschule framework — Federal Ordinance BGBl. II Nr. 1/2023. The curriculum specifies (i) `Bildungs- und Lehraufgabe` (educational mission), (ii) didactic principles for the four competence areas — Listening/Speaking, Reading, Text Production, Orthography/Language Reflection — (iii) three central subject concepts (`Inhalt und Form`, `Norm und Wandel`, `Diversität und Identität`), and (iv) explicit per-grade competence descriptions for grades 1–4. Crucially, the curriculum explicitly acknowledges that Slovene may be the pupil's first language, second language, *or* `Umgebungssprache` (ambient/environmental language) and instructs teachers to adapt to these different starting points. References the Common European Framework of Reference for Languages (CEFR) and the regional `Kompetenzbeschreibungen für den Unterrichtsgegenstand Slowenisch` in Carinthia. This is the *operational pedagogical translation* of the Minderheiten-Schulgesetz für Kärnten — the curriculum without which the statutory right to Slovene-medium instruction would lack concrete content. Archived at `carinthian/Slowenisch-Volksgruppen_27.10.2025.pdf`. |
+| `urls` | RIS (BGBl. II Nr. 1/2023): https://www.ris.bka.gv.at/Dokumente/BgblAuth/BGBLA_2023_II_1/BGBLA_2023_II_1.html — BMBWF Lehrpläne portal: https://www.bmbwf.gv.at/Themen/schule/schulpraxis/lp.html |
+| `tags` | curriculum, lehrplan, volksschule, primary, lehrpläne-neu, cefr-aligned |
+
+#### B6. Cross-minority Competency Framework — Kompetenzraster Volksgruppensprachen (Grades 3–4)
+
+| Field | Value |
+|---|---|
+| `id` | `slv_at_kompetenzraster_3-4_2023` |
+| `label` | Kompetenzraster "Volksgruppensprachen Kroatisch/Slowenisch/Ungarisch", 3. und 4. Schulstufe |
+| `labelEN` | Competency Framework for Ethnic-Group Languages (Croatian/Slovene/Hungarian), Grades 3 and 4 |
+| `level` | MESO |
+| `direction` | TOP_DOWN |
+| `type` | Pedagogical assessment instrument |
+| `status` | ongoing |
+| `date` | 2023-02-01 |
+| `description` | BMBWF `Pädagogik-Paket` competency-assessment grid (Stand 02/2023) covering all three official Austrian `Volksgruppensprachen` taught at bilingual primary level: Croatian (Burgenland), Slovene (Carinthia/Styria), and Hungarian (Burgenland). For each sub-competency (Teilkompetenz) the grid specifies three attainment levels (Niveau 1–3), each cross-referenced to the relevant section of the underlying curriculum (Lehrplanbezug: BGBl. II Nr. 1/2023). Competence areas: Listening (Hören), Speaking (Sprechen), Reading (Lesen), Text Production (Verfassen von Texten), and Orthography/Language Reflection ((Recht-)Schreiben und Sprachbetrachtung). Six pages total, three per grade. Pedagogically significant for two reasons: (a) it is the operational teacher-facing instrument that makes the BGBl. II Nr. 1/2023 curriculum classroom-actionable; (b) it treats minority-language education as a **single shared policy domain across three languages** — the Austrian state consciously develops one assessment framework that scales across all three Volksgruppensprachen rather than three bespoke per-language programmes. Directly relevant comparative artifact for any future operationalisation of Polish minority-language education across Silesian, Wilamowian, and potential additional cases. Archived at `carinthian/Volksgruppensprachen_3-4-Schulstufe-Kompetenzraster_27.10.2025.pdf`. |
+| `urls` | BMBWF Pädagogik-Paket: https://www.bmbwf.gv.at/Themen/schule/schulpraxis/lp/pp.html — Underlying Lehrplan (BGBl. II Nr. 1/2023): https://www.ris.bka.gv.at/Dokumente/BgblAuth/BGBLA_2023_II_1/BGBLA_2023_II_1.html |
+| `tags` | kompetenzraster, assessment, primary, cross-minority, croatian, slovene, hungarian |
 
 ### C. Implementing institutions (MESO, TOP-DOWN, ongoing)
 
@@ -373,11 +405,12 @@ Adding the Carinthian case requires extending the tag vocabulary with the follow
 
 The following items need clarification before the Carinthian case is added to a v1.0 release:
 
-1. **Source PDFs not yet collected.** The deck cites consolidated RIS versions (e.g., `B-VG, Fassung vom 06.12.2023.pdf`). These should be downloaded to `carinthian/sources/` for offline citation stability.
+1. ~~**Source PDFs not yet collected.** The deck cites consolidated RIS versions (e.g., `B-VG, Fassung vom 06.12.2023.pdf`). These should be downloaded to `carinthian/sources/` for offline citation stability.~~ **Partially resolved (Dec 2025):** consolidated RIS texts of `VoGrG` (Fassung 17.09.2023) and `Minderheiten-Schulgesetz für Kärnten` (Fassung 22.05.2025) are now archived in `carinthian/`. The Volksschule Slovene curriculum (BGBl. II Nr. 1/2023) and the cross-minority Kompetenzraster (Stand 02/2023) were also collected and catalogued as new entries B5 and B6. Still missing: canonical PDFs of `B-VG` Art. 8 and `Staatsvertrag 1955` Art. 7.
 2. **Date verification for media articles** (F1, F2, F3) — exact publication dates need to be pulled from the actual URLs.
 3. **HLW St. Peter institutional URL** — multiple bilingual institutions cluster in this geography; need to verify the correct school.
 4. **2011 Ortstafel-Lösung** itself is not a single document but a political settlement implemented through amendments to the VoGrG and Land-level resolutions; needs a dedicated catalogue entry once the implementing instruments are identified.
 5. **Survey data (deck §15ff)** — the 2023 HAK-TAK student survey by Glušič is referenced via a Microsoft Forms link in the deck. This is primary fieldwork data; would need permission to cite in any published version.
+6. **Verify exact promulgation date of BGBl. II Nr. 1/2023.** Entry B5 currently uses 2023-01-04 as a best-guess based on the BGBl. citation order; the actual publication date in the Bundesgesetzblatt should be confirmed and corrected.
 
 ---
 
