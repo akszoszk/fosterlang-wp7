@@ -1001,6 +1001,333 @@ const FTM_DATA = {
     ]
   },
 
+  // ─── CARINTHIAN SLOVENE (Koroški Slovenci) — Austrian autochthonous minority ─
+
+  carinthian: {
+    code: "slv",
+    name: "Carinthian Slovene",
+    namePL: "Słoweński w Karyntii (mniejszość autochtoniczna w Austrii)",
+    color: "#ea580c",
+    description: "Autochthonous Slovene-speaking minority in the Austrian Land of Carinthia, protected by Article 7 of the 1955 State Treaty (Staatsvertrag). Settled but contested mature-regime case for FTM comparison alongside the recognition-seeking (Silesian, Wilamowian) and emergency-displacement (Ukrainian) Polish cases.",
+    items: [
+      // ─── A. International / supranational instruments (MACRO, TOP-DOWN) ────
+
+      {
+        id: "slv_at_stgermain_1919",
+        label: "Staatsvertrag von Saint-Germain-en-Laye (1919)",
+        labelEN: "Treaty of Saint-Germain-en-Laye",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Binding treaty",
+        status: "ongoing",
+        date: "1919-09-10",
+        description: "Post-WWI peace treaty between Austria and the Allied & Associated Powers. Articles 62–69 establish minority-protection obligations: equality before the law (Art. 66), guarantees for minorities by race/religion/language (Art. 67), and minority-language primary education where a significant non-German-speaking population resides (Art. 68). Art. 69 placed these obligations under League of Nations guarantee. Still cited as the foundational layer of Austrian minority law.",
+        urls: [
+          { label: "RIS (consolidated)", href: "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10000044" }
+        ],
+        tags: ["foundational", "minority_rights", "peace_treaty", "education"]
+      },
+      {
+        id: "slv_at_staatsvertrag_1955_art7",
+        label: "Österreichischer Staatsvertrag 1955, Art. 7",
+        labelEN: "Austrian State Treaty 1955, Article 7 (Rights of Slovene and Croat minorities)",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Binding treaty",
+        status: "binding_international",
+        date: "1955-05-15",
+        description: "Foundational anchor of Carinthian Slovene minority rights. §1 grants equal rights including own organisations, assemblies, press in their own language. §2 guarantees elementary education in Slovene and a proportional number of secondary schools. §3 establishes Slovene as an additional official language (alongside German) in mixed-population districts, with bilingual topographic signage. Article 26 protects property/rights/interests of minority groups. Signed 15 May 1955, ratified 8 June 1955, in force 27 July 1955. BGBl. Nr. 152/1955.",
+        urls: [
+          { label: "BGBl. PDF", href: "https://www.ris.bka.gv.at/Dokumente/BgblPdf/1955_152_0/1955_152_0.pdf" },
+          { label: "RIS (consolidated)", href: "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10000265" }
+        ],
+        significance: "KEY EVENT",
+        tags: ["foundational", "minority_rights", "state_treaty", "education", "official_language", "signage"]
+      },
+      {
+        id: "slv_at_ecrml_1992",
+        label: "Europäische Charta der Regional- oder Minderheitensprachen (ECRML)",
+        labelEN: "European Charter for Regional or Minority Languages",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Binding treaty",
+        status: "binding_international",
+        date: "1992-11-05",
+        description: "Council of Europe treaty (Strasbourg, 5 Nov 1992). Defines 'regional or minority languages' (excludes dialects of official languages and immigrant languages — significant contrast with the Silesian case). Article 7 sets principles (recognition, protection, education provision). Article 8 covers education obligations from pre-school through tertiary. Austria signed 5 Nov 1992 and ratified 28 June 2001 (in force 1 Oct 2001), with Part III commitments for Slovene in Carinthia, Burgenland-Croat, and Hungarian.",
+        urls: [
+          { label: "Council of Europe", href: "https://www.coe.int/en/web/european-charter-regional-or-minority-languages" },
+          { label: "Austrian ratification details", href: "https://www.coe.int/en/web/conventions/full-list?module=signatures-by-treaty&treatynum=148" }
+        ],
+        tags: ["binding_international", "ecrml", "education"]
+      },
+
+      // ─── B. Austrian federal-level instruments (MACRO, TOP-DOWN) ───────────
+
+      {
+        id: "slv_at_bvg_art8",
+        label: "Bundes-Verfassungsgesetz (B-VG), Art. 8",
+        labelEN: "Federal Constitutional Law, Article 8",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Constitutional provision",
+        status: "ongoing",
+        date: "2000-08-01",
+        description: "Constitutional anchor of Austrian language policy. §1: German is the state language 'without prejudice to the rights granted to linguistic minorities by federal law'. §2 (added 2000): the Republic professes its grown linguistic and cultural diversity, expressed in the autochthonous ethnic groups; their language, culture, existence and preservation are to be respected, secured and promoted. §3 (added 2005): Austrian Sign Language recognised. The 2000 addition is the key constitutional moment for minority recognition.",
+        urls: [
+          { label: "RIS (consolidated)", href: "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10000138" }
+        ],
+        tags: ["constitutional", "minority_rights", "autochthonous_volksgruppen"]
+      },
+      {
+        id: "slv_at_vogrg_1976",
+        label: "Volksgruppengesetz (VoGrG)",
+        labelEN: "Federal Act on the Legal Status of Ethnic Groups in Austria",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Federal statute",
+        status: "ongoing",
+        date: "1976-07-07",
+        description: "Federal statute implementing constitutional and treaty obligations toward Austria's autochthonous ethnic groups. Recognises six autochthonous Volksgruppen: Croat, Slovene, Hungarian, Czech, Slovak, Roma. Defines a Volksgruppe as Austrian citizens with non-German mother tongue and own ethnic identity, indigenous to part of the federal territory. Annex 1 lists bilingual topographic place names (including Slovene-German names in Carinthia). Annex 2 lists offices in which Slovene may be used additionally as official language. StF: BGBl. Nr. 396/1976; idF BGBl. I Nr. 194/1999. Consolidated text (Fassung 17.09.2023) archived in carinthian/ folder.",
+        urls: [
+          { label: "RIS (consolidated)", href: "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10000602" },
+          { label: "PDF in repo", href: "https://github.com/akszoszk/fosterlang-wp7/blob/main/carinthian/VoGrG%2C%20Fassung%20vom%2017.09.2023.pdf" }
+        ],
+        tags: ["volksgruppen", "official_language", "signage", "six_minorities"]
+      },
+      {
+        id: "slv_at_schog_1962",
+        label: "Schulorganisationsgesetz (SchOG)",
+        labelEN: "School Organisation Act",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Federal statute",
+        status: "ongoing",
+        date: "1962-07-25",
+        description: "General federal framework for the structure of Austrian schooling (primary, secondary general/vocational, higher). Provides the systemic backdrop against which the Minderheiten-Schulgesetz für Kärnten operates as lex specialis. StF: BGBl. Nr. 242/1962 idF BGBl. Nr. 267/1963.",
+        urls: [
+          { label: "RIS (consolidated)", href: "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009265" }
+        ],
+        tags: ["framework", "school_organisation"]
+      },
+      {
+        id: "slv_at_minschulg_kt_1959",
+        label: "Minderheiten-Schulgesetz für Kärnten",
+        labelEN: "Carinthian Minority Schools Act",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Federal statute (Land-specific)",
+        status: "ongoing",
+        date: "1959-03-19",
+        description: "Operational statute implementing Art. 7 §2 of the 1955 State Treaty for Carinthia. Seven articles. Three school types: (a) Slovene-medium primary/lower-secondary; (b) bilingual primary schools with German and Slovene in approximately equal measure through grade 4; (c) German-medium lower-secondary with Slovene as compulsory subject. Operates on the Anmeldeprinzip (parents must actively register children for bilingual instruction). 1988 reform introduced team-teaching (Zweilehrersystem). 1990 amendment (BGBl. Nr. 420/1990) established the bilingual Handelsakademie. Consolidated text (Fassung 22.05.2025) archived in carinthian/ folder.",
+        urls: [
+          { label: "RIS (consolidated)", href: "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009343" },
+          { label: "PDF in repo", href: "https://github.com/akszoszk/fosterlang-wp7/blob/main/carinthian/Minderheiten-Schulgesetz%20f%C3%BCr%20K%C3%A4rnten%2C%20Fassung%20vom%2022.05.2025.pdf" }
+        ],
+        significance: "KEY EVENT",
+        tags: ["bilingual_education", "carinthia", "anmeldeprinzip", "team_teaching"]
+      },
+      {
+        id: "slv_at_lehrplan_volksschule_2023",
+        label: "Lehrplan Slowenisch (Volksschule) — BGBl. II Nr. 1/2023",
+        labelEN: "Slovene Subject Curriculum for Primary School (Volksschule)",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Ministerial regulation (Verordnung)",
+        status: "ongoing",
+        date: "2023-01-04",
+        description: "BMBWF subject curriculum for Slovene as a Volksgruppensprache at primary level (grades 1–4), part of the new 'Lehrpläne NEU' Volksschule framework — Federal Ordinance BGBl. II Nr. 1/2023. Specifies educational mission, didactic principles for four competence areas (Listening/Speaking, Reading, Text Production, Orthography/Language Reflection), three central concepts (Content & Form, Norm & Change, Diversity & Identity), and per-grade competences. Explicitly recognises that Slovene may be the pupil's first language, second language, OR Umgebungssprache (ambient language) — a triple framing relevant for L2-learner minority situations.",
+        urls: [
+          { label: "RIS (BGBl. II Nr. 1/2023)", href: "https://www.ris.bka.gv.at/Dokumente/BgblAuth/BGBLA_2023_II_1/BGBLA_2023_II_1.html" },
+          { label: "BMBWF Lehrpläne portal", href: "https://www.bmbwf.gv.at/Themen/schule/schulpraxis/lp.html" },
+          { label: "PDF in repo", href: "https://github.com/akszoszk/fosterlang-wp7/blob/main/carinthian/Slowenisch-Volksgruppen_27.10.2025.pdf" }
+        ],
+        tags: ["curriculum", "lehrplan", "volksschule", "primary", "cefr_aligned"]
+      },
+      {
+        id: "slv_at_kompetenzraster_3_4_2023",
+        label: "Kompetenzraster Volksgruppensprachen (3. & 4. Schulstufe)",
+        labelEN: "Competency Framework for Ethnic-Group Languages (Croatian/Slovene/Hungarian), Grades 3 and 4",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Pedagogical assessment instrument",
+        status: "ongoing",
+        date: "2023-02-01",
+        description: "BMBWF 'Pädagogik-Paket' competency-assessment grid (Stand 02/2023) covering all three official Austrian Volksgruppensprachen taught at bilingual primary level: Croatian (Burgenland), Slovene (Carinthia/Styria), and Hungarian (Burgenland). For each sub-competency three attainment levels (Niveau 1–3) are specified, keyed to BGBl. II Nr. 1/2023. Pedagogically significant as a SHARED framework across three minority languages — Austria treats minority-language education as one shared policy domain rather than three bespoke programmes.",
+        urls: [
+          { label: "BMBWF Pädagogik-Paket", href: "https://www.bmbwf.gv.at/Themen/schule/schulpraxis/lp/pp.html" },
+          { label: "Underlying Lehrplan (BGBl. II Nr. 1/2023)", href: "https://www.ris.bka.gv.at/Dokumente/BgblAuth/BGBLA_2023_II_1/BGBLA_2023_II_1.html" },
+          { label: "PDF in repo", href: "https://github.com/akszoszk/fosterlang-wp7/blob/main/carinthian/Volksgruppensprachen_3-4-Schulstufe-Kompetenzraster_27.10.2025.pdf" }
+        ],
+        tags: ["kompetenzraster", "assessment", "primary", "cross_minority"]
+      },
+
+      // ─── C. Implementing institutions (MESO) ───────────────────────────────
+
+      {
+        id: "slv_at_bgbrg_slo_1957",
+        label: "BG/BRG für Slowenen — Zvezna gimnazija za Slovence (Klagenfurt)",
+        labelEN: "Federal Gymnasium and Realgymnasium for Slovenes, Klagenfurt",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Institutional foundation",
+        status: "ongoing",
+        date: "1957-09-01",
+        description: "Federal secondary school established for Austrian citizens of the Slovene minority. Operates under both gymnasium and Realgymnasium curricula. Instruction in Slovene; German taught as compulsory subject and mandatory Matura examination. Confers university-entrance qualification equivalent to German-medium Bundesmittelschule. Class-by-class build-up after founding; operating continuously.",
+        urls: [
+          { label: "School website", href: "https://www.slog.at/" }
+        ],
+        tags: ["secondary", "slovene_medium", "klagenfurt"]
+      },
+      {
+        id: "slv_at_haktak_1990",
+        label: "Zweisprachige Bundeshandelsakademie (HAK-TAK) — Dvojezična trgovska akademija",
+        labelEN: "Bilingual Federal Commercial Academy, Klagenfurt",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Institutional foundation",
+        status: "ongoing",
+        date: "1990-09-01",
+        description: "Vocational upper-secondary school established by BGBl. Nr. 420/1990 as Art. II amendment to the Minderheiten-Schulgesetz für Kärnten. Instruction in approximately equal measure in Slovene and German across all five years. Compulsory languages: German, Slovene, English plus one further modern language. Confers vocational matura with university-entrance equivalence. Distinguishes the Austrian model from pure gymnasium-based minority education.",
+        urls: [
+          { label: "School website", href: "https://www.hak-tak.at/" }
+        ],
+        tags: ["vocational", "bilingual", "klagenfurt"]
+      },
+      {
+        id: "slv_at_hlw_stpeter_1989",
+        label: "Zweisprachige private HLW St. Peter (St. Jakob im Rosental)",
+        labelEN: "Bilingual Private Higher School for Commercial Professions, St. Peter / St. Jakob im Rosental",
+        level: "MESO", direction: "BOTTOM_UP",
+        type: "Institutional foundation",
+        status: "ongoing",
+        date: "1989-09-01",
+        description: "Private bilingual upper-secondary school in the Carinthian bilingual zone. Established 1989 as a community-led extension of bilingual schooling beyond the federally-mandated framework. Significant as a BOTTOM-UP institutional response — community initiative rather than purely state action.",
+        urls: [
+          { label: "Slovenska gimnazija", href: "https://www.slovenskagimnazija.at/" }
+        ],
+        tags: ["private", "bilingual", "community_initiative"]
+      },
+      {
+        id: "slv_at_phk_teacher_training",
+        label: "Pädagogische Hochschule Kärnten — Viktor Frankl Hochschule",
+        labelEN: "University College of Teacher Education Carinthia",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Institutional",
+        status: "ongoing",
+        date: "2007-10-01",
+        description: "Trains bilingual teachers (Lehrpersonen) and team-teachers (Teamlehrer:innen) for the Carinthian bilingual school system, under the Minderheiten-Schulgesetz für Kärnten. The long-term sustainability of bilingual education depends entirely on this institution's output. The author of the foundational source presentation (Prof. Dr. Pamela Glušič) is affiliated here.",
+        urls: [
+          { label: "PH Kärnten", href: "https://www.ph-kaernten.ac.at/" }
+        ],
+        tags: ["teacher_training", "sustainability"]
+      },
+
+      // ─── D. Historical / diachronic context ────────────────────────────────
+
+      {
+        id: "slv_at_schulordnung_1774",
+        label: "Allgemeine Schulordnung Maria Theresias (1774)",
+        labelEN: "General School Ordinance of Maria Theresia",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Imperial decree",
+        status: "historical",
+        date: "1774-12-06",
+        description: "Origin of the so-called utraquistische Schulen — schools transmitting German to children entering with only Slovene dialect competence. The earliest formal state framing of Slovene-speaking children as a population to be linguistically incorporated rather than served in their own language. Foundational document of the German-dominant school model that Article 7 of the 1955 State Treaty had to overturn.",
+        urls: [],
+        tags: ["historical", "imperial", "utraquismus"]
+      },
+      {
+        id: "slv_at_ns_suppression_1938",
+        label: "Verbot des Slowenischen im NS-Regime (1938–1945)",
+        labelEN: "NS-era prohibition of Slovene in schools and public life",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Historical regime measure",
+        status: "historical",
+        date: "1938-03-13",
+        description: "During the 1938–1945 annexation into the Third Reich, Slovene was banned in compulsory schools and public life in Carinthia. Mass deportation of Carinthian Slovene families took place in April 1942. This is the negative reference point against which the post-1945 restoration of bilingual schooling and the 1955 State Treaty guarantees must be read.",
+        urls: [],
+        tags: ["historical", "ns_era", "suppression"]
+      },
+      {
+        id: "slv_at_abmeldung_1958",
+        label: "Verordnung des Kärntner Landeshauptmannes 1958",
+        labelEN: "1958 Decree of the Carinthian Governor — Opt-out from bilingual instruction",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Ministerial regulation",
+        status: "historical",
+        date: "1958-09-01",
+        description: "Decree introducing parental opt-out (Abmeldung) from bilingual instruction in the formerly compulsory-bilingual zone. A politically motivated retreat from the inclusive bilingual model and the proximate cause of the 1959 reform that switched the system to the Anmeldeprinzip (positive registration required). Critical for understanding the current structure of Carinthian bilingual education.",
+        urls: [],
+        tags: ["historical", "abmeldung", "policy_retreat"]
+      },
+
+      // ─── E. Community / civil-society sources (BOTTOM-UP) ──────────────────
+
+      {
+        id: "slv_at_nsks",
+        label: "Narodni svet koroških Slovencev (NSKS)",
+        labelEN: "National Council of Carinthian Slovenes",
+        level: "MESO", direction: "BOTTOM_UP",
+        type: "Community organisation",
+        status: "active",
+        date: "1949-04-29",
+        description: "Apex representative organisation of the Carinthian Slovene community, founded 1949. Publishes population figures, advocates for community interests, and is a primary BOTTOM-UP voice in Austrian minority-policy discourse. Counts 13,109 Carinthian Slovenes at the 2001 census (versus the 24,855 self-reporting Slovene as colloquial language).",
+        urls: [
+          { label: "NSKS", href: "https://www.nsks.at/" }
+        ],
+        tags: ["community_organisation", "advocacy"]
+      },
+      {
+        id: "slv_at_volkszaehlung_2001",
+        label: "Volkszählung 2001 — Hauptergebnisse Kärnten",
+        labelEN: "Census 2001 — Carinthia main results",
+        level: "MACRO", direction: "TOP_DOWN",
+        type: "Statistical publication",
+        status: "historical",
+        date: "2001-05-15",
+        description: "Last Austrian census to ask the Umgangssprache (colloquial language) question. 24,855 persons reported Slovene as their colloquial language. Subsequent register-based censuses do not capture mother tongue, so all subsequent estimates of community size are extrapolations. This methodological gap is itself policy-relevant: statutory thresholds keyed to demographic share become difficult to apply consistently.",
+        urls: [
+          { label: "Statistik Austria", href: "https://www.statistik.at/" }
+        ],
+        tags: ["demographic", "census", "mother_tongue"]
+      },
+
+      // ─── F. Media / commentary ─────────────────────────────────────────────
+
+      {
+        id: "slv_at_standard_shrinking_volksgruppe",
+        label: "derStandard.at — Kärntner Slowenen: schrumpfende Volksgruppe",
+        labelEN: "derStandard: Visit to a shrinking minority",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Mainstream media article",
+        status: "published",
+        date: "2022-01-01",
+        description: "Long-form mainstream-media reporting on the demographic and policy situation of Carinthian Slovenes. Cited in the source deck as the contemporary framing of the community's situation in mainstream Austrian discourse.",
+        urls: [
+          { label: "derStandard.at", href: "https://www.derstandard.at/" }
+        ],
+        tags: ["media", "demographic", "framing"]
+      },
+      {
+        id: "slv_at_krone_ortstafeln_beschmiert",
+        label: "krone.at — Ortstafeln beschmiert: 5000 Euro für Hinweise",
+        labelEN: "Vandalism of bilingual place-name signs (police appeal)",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Mainstream media article",
+        status: "published",
+        date: "2023-01-01",
+        description: "Reporting on ongoing vandalism of bilingual German-Slovene place-name signs, with police search for perpetrators. The Ortstafelstreit (bilingual signage dispute) is the most visible contested element of Austrian minority policy in Carinthia and a recurring source of political incident — illustrating that TOP-DOWN MACRO settlement (1955 Treaty) does not automatically resolve MICRO-level conflict.",
+        urls: [
+          { label: "krone.at", href: "https://www.krone.at/" }
+        ],
+        tags: ["media", "ortstafelstreit", "vandalism"]
+      },
+      {
+        id: "slv_at_kurier_10yr_ortstafel",
+        label: "kurier.at — 10 Jahre Ortstafellösung: Gestürmt, verrückt, beschmiert, normal",
+        labelEN: "Ten years of the bilingual-signage compromise",
+        level: "MESO", direction: "TOP_DOWN",
+        type: "Mainstream media article",
+        status: "published",
+        date: "2021-04-26",
+        description: "Retrospective coverage of the 2011 Ortstafel-Kompromiss (compromise on bilingual place-name signs) ten years on. The 2011 settlement followed decades of dispute including the 1972 Ortstafelsturm (sign-storm) in which German-Austrian activists tore down newly-erected Slovene-language signs. Useful diachronic anchor and direct precedent for predicting Polish minority-signage trajectories.",
+        urls: [
+          { label: "kurier.at", href: "https://kurier.at/" }
+        ],
+        tags: ["media", "ortstafelstreit", "anniversary"]
+      }
+    ]
+  },
+
   // ─── FOSTERLANG WP7 PROJECT ACTIVITIES ──────────────────────────────────────
 
   projectTimeline: [
