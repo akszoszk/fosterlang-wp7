@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c5599'/%3E%3Cpath d='M18 20h28v6H24v10h18v6H24v14h-6V20Z' fill='white'/%3E%3C/svg%3E">
+  <title>Language Policy Repository &#8212; FOSTERLANG WP7</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- *** Header *** -->
+<header class="site-header">
+  <span class="logo">FOSTERLANG &#183; WP7</span>
+  <h1>Language Policy Repository</h1>
+  <!-- EN/WYM toggle inserted by JS here -->
+  <span class="meta-tag">AMU &amp; UiO &#183; Task Leader</span>
+  <span class="meta-tag">Silesian &amp; Wilamowian &amp; Ukrainian</span>
+  <span class="meta-tag">Ferguson-Tollefson Matrix</span>
+</header>
+
+<!-- *** Hero Section *** -->
+<section class="hero-section">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h2 id="hero-title">Ferguson-Tollefson Matrix Analysis</h2>
+      <p id="hero-subtitle">Silesian, Wilamowian &amp; Ukrainian Language Policies, Poland</p>
+      <p id="hero-description" class="hero-desc">
+        Evaluating language policy at 3 levels (MACRO &#183; MESO &#183; MICRO) &#215; 2 directions (Top-Down &#183; Bottom-Up).
+        Part of FOSTERLANG WP7 &#8212; Effective Multilingualism Policies.
+      </p>
+    </div>
+    <div class="hero-stats" id="hero-stats">
+      <div class="stat-card stat-card-total">
+        <div class="num" id="stat-total">&#8212;</div>
+        <div class="lbl">Total</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" id="stat-szl" style="color:var(--szl)">&#8212;</div>
+        <div class="lbl">Silesian</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" id="stat-wym" style="color:var(--wym)">&#8212;</div>
+        <div class="lbl">Wilamowian</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" id="stat-ukr" style="color:var(--ukr)">&#8212;</div>
+        <div class="lbl">Ukrainian</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" id="stat-shared" style="color:var(--shared)">&#8212;</div>
+        <div class="lbl">Shared</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- *** Project Activities Timeline *** -->
+<section id="project-timeline-section" class="project-timeline-section">
+  <div class="project-timeline-inner">
+    <div class="project-timeline-header">
+      <div class="project-timeline-icon">
+        <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>
+      </div>
+      <div>
+        <h2 id="project-timeline-title">FOSTERLANG WP7 &#8212; Project Activities</h2>
+        <p id="project-timeline-subtitle">Selected activities timeline for Work Package 7: Effective Multilingualism Policies</p>
+      </div>
+    </div>
+    <div id="project-timeline-container" class="project-timeline-container">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- *** Document Analysis Section *** -->
+<section class="analysis-section" id="analysis-section">
+
+  <!-- Sticky Toolbar -->
+  <div class="analysis-toolbar" id="analysis-toolbar">
+    <div class="toolbar-inner">
+      <div class="toolbar-left">
+        <div class="view-toggle">
+          <button class="view-btn active" data-view="matrix">Matrix</button>
+          <button class="view-btn" data-view="list">List</button>
+          <button class="view-btn" data-view="timeline">Timeline</button>
+        </div>
+      </div>
+      <div class="toolbar-center">
+        <input type="text" id="search-input" class="search-bar" placeholder="Search documents&#8230;">
+      </div>
+      <div class="toolbar-right">
+        <button class="filter-toggle-btn" id="filter-toggle-btn" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+          <span>Filters</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Collapsible Filter Panel -->
+  <div class="filter-panel" id="filter-panel">
+    <div class="filter-panel-inner">
+
+      <!-- Language -->
+      <div class="filter-group-row">
+        <span class="filter-label" data-label="language">Language</span>
+        <div class="filter-pills-row">
+          <div class="filter-pill" data-filter="language" data-value="szl">
+            <span class="dot" style="background:var(--szl)"></span>Silesian (SZL)
+          </div>
+          <div class="filter-pill" data-filter="language" data-value="wym">
+            <span class="dot" style="background:var(--wym)"></span>Wilamowian (WYM)
+          </div>
+          <div class="filter-pill" data-filter="language" data-value="ukr">
+            <span class="dot" style="background:var(--ukr)"></span>Ukrainian (UKR)
+          </div>
+          <div class="filter-pill" data-filter="language" data-value="shared">
+            <span class="dot" style="background:var(--shared)"></span>Shared instruments
+          </div>
+        </div>
+      </div>
+
+      <!-- FTM Level -->
+      <div class="filter-group-row">
+        <span class="filter-label" data-label="level">FTM Level</span>
+        <div class="filter-pills-row">
+          <div class="filter-pill" data-filter="level" data-value="MACRO">
+            <span class="dot" style="background:#f59e0b"></span>MACRO (EU/state)
+          </div>
+          <div class="filter-pill" data-filter="level" data-value="MESO">
+            <span class="dot" style="background:#06b6d4"></span>MESO (regional/institutional)
+          </div>
+          <div class="filter-pill" data-filter="level" data-value="MICRO">
+            <span class="dot" style="background:#ec4899"></span>MICRO (community/individual)
+          </div>
+        </div>
+      </div>
+
+      <!-- Direction -->
+      <div class="filter-group-row">
+        <span class="filter-label" data-label="direction">Direction</span>
+        <div class="filter-pills-row">
+          <div class="filter-pill" data-filter="direction" data-value="TOP_DOWN">
+            <span class="dot" style="background:#ef4444"></span>Top-Down &#8595;
+          </div>
+          <div class="filter-pill" data-filter="direction" data-value="BOTTOM_UP">
+            <span class="dot" style="background:#22c55e"></span>Bottom-Up &#8593;
+          </div>
+        </div>
+      </div>
+
+      <!-- Status -->
+      <div class="filter-group-row">
+        <span class="filter-label" data-label="status">Status</span>
+        <div class="filter-pills-row">
+          <div class="filter-pill" data-filter="status" data-value="vetoed">
+            <span class="dot" style="background:#ef4444"></span>Vetoed
+          </div>
+          <div class="filter-pill" data-filter="status" data-value="pending">
+            <span class="dot" style="background:#f97316"></span>Pending
+          </div>
+          <div class="filter-pill" data-filter="status" data-value="passed">
+            <span class="dot" style="background:#22c55e"></span>Passed
+          </div>
+          <div class="filter-pill" data-filter="status" data-value="binding_international">
+            <span class="dot" style="background:#10b981"></span>Binding (intl.)
+          </div>
+          <div class="filter-pill" data-filter="status" data-value="soft_law">
+            <span class="dot" style="background:#a78bfa"></span>Soft law
+          </div>
+          <div class="filter-pill" data-filter="status" data-value="processing">
+            <span class="dot" style="background:#eab308"></span>Processing
+          </div>
+          <div class="filter-pill" data-filter="status" data-value="ongoing">
+            <span class="dot" style="background:#3b82f6"></span>Ongoing
+          </div>
+          <div class="filter-pill" data-filter="status" data-value="published">
+            <span class="dot" style="background:#8b5cf6"></span>Published
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Content Area -->
+  <div class="analysis-content">
+
+    <!-- Legend -->
+    <div class="legend">
+      <span class="legend-item"><span class="legend-dot" style="background:var(--szl)"></span>Silesian (SZL)</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--wym)"></span>Wilamowian (WYM)</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--ukr)"></span>Ukrainian (UKR)</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--shared)"></span>Shared</span>
+      <span class="legend-divider">|</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#dc2626"></span>Vetoed</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#15803d"></span>Passed</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#d97706"></span>Pending</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#0f766e"></span>Binding (intl.)</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#7c3aed"></span>Soft law</span>
+      <span class="legend-divider">|</span>
+      <span class="legend-item" style="font-weight:600;color:#d97706;background:#fef3c7;padding:2px 7px;border-radius:4px;border:1px solid #fcd34d;font-size:.65rem;">&#9733; KEY EVENT</span>
+    </div>
+
+    <!-- Matrix View -->
+    <div id="matrix-view">
+      <div class="matrix-container" id="matrix-container">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- List View -->
+    <div id="list-view">
+      <div id="list-container">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- Timeline View -->
+    <div id="timeline-view">
+      <div id="timeline-container">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- *** Modal *** -->
+<div id="modal-backdrop" class="modal-backdrop">
+  <div id="modal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-header">
+      <h3 id="modal-title"></h3>
+      <button id="modal-close-btn" class="modal-close" aria-label="Close">&#215;</button>
+    </div>
+    <div class="modal-body">
+      <div id="modal-meta" class="modal-meta"></div>
+      <div id="modal-label-en" style="font-size:.8rem;color:var(--text-muted);margin-bottom:10px;font-style:italic;"></div>
+      <div id="modal-description" class="modal-description"></div>
+      <div id="modal-note" class="modal-note" style="display:none;"></div>
+      <div id="modal-links"></div>
+    </div>
+  </div>
+</div>
+
+<script src="data/ftm-data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
