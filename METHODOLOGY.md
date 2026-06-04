@@ -15,7 +15,9 @@
 
 ## Abstract
 
-This document describes the methodology behind the FOSTERLANG WP7 Language Policy Repository, a structured corpus of 41 legislative, monitoring, media and civil-society documents pertaining to three minority and emergency language situations in Poland (2020–2026): Silesian, Wilamowian, and Ukrainian. The corpus is mapped onto the Ferguson–Tollefson Matrix (FTM) framework introduced by Kan (2011) and refined in Kan & Adamson (2016), with documents classified along two axes: (i) sociolinguistic level (MACRO / MESO / MICRO) and (ii) directionality (TOP-DOWN / BOTTOM-UP). The repository is intended both as a citable scholarly dataset and as an analytical instrument for comparative minority-language policy research.
+This document describes the methodology behind the FOSTERLANG WP7 Language Policy Repository, a structured corpus of legislative, monitoring, media and civil-society documents pertaining to four minority and emergency language situations: three within Poland (2020–2026) — Silesian, Wilamowian, and Ukrainian-of-Poland — and one comparative case from Austria — Carinthian Slovene (autochthonous minority under the 1955 *Staatsvertrag*). The corpus is mapped onto the Ferguson–Tollefson Matrix (FTM) framework introduced by Kan (2011) and refined in Kan & Adamson (2016), with documents classified along two axes: (i) sociolinguistic level (MACRO / MESO / MICRO) and (ii) directionality (TOP-DOWN / BOTTOM-UP). The repository is intended both as a citable scholarly dataset and as an analytical instrument for comparative minority-language policy research.
+
+> **v0.2 scope addition.** The Carinthian Slovene case was added in v0.2 to provide a "mature regime" comparison anchored by a binding international treaty (Art. 7 of the 1955 Austrian State Treaty). It contrasts methodologically with the three Polish cases by representing a *settled, contested-but-stable* framework — useful both for predicting what may happen if recognition-seeking Polish cases (Silesian, Wilamowian) succeed, and as an independent test of the FTM coding scheme on a different jurisdiction. See `carinthian/SOURCES.md` for the full inventory.
 
 ---
 
@@ -29,6 +31,7 @@ This document describes the methodology behind the FOSTERLANG WP7 Language Polic
   - **Silesian (szl)** — Glottolog `sile1253`, ISO 639-3 `szl`
   - **Wilamowian / Wymysorys (wym)** — Glottolog `wymy1235`, ISO 639-3 `wym`
   - **Ukrainian (uk) in Poland** — Glottolog `ukra1253`, ISO 639-3 `ukr` (here treated specifically as the language of post-2022 displaced persons, not as a recognised national/ethnic minority of Poland under the 2005 Act).
+  - **Carinthian Slovene (slv-AT)** — Glottolog `slov1268`, ISO 639-3 `slv` (the variety used by the autochthonous Slovene *Volksgruppe* in the Austrian Land of Carinthia, protected under Art. 7 of the 1955 Austrian State Treaty and the Carinthian Minority Schools Act 1959/1988).
 - **Document types:** legislative prints (Sejm/Senate), parliamentary committee bulletins, vetoes and presidential signals, ministerial regulations, ombudsman (RPO) correspondence and reports, ECRML/FCNM monitoring outputs, mainstream and regional media coverage, expert commentary, and community petitions.
 
 ### 1.2 What is out of scope
@@ -37,13 +40,14 @@ This document describes the methodology behind the FOSTERLANG WP7 Language Polic
 - Pre-2020 instruments are included only when they remain the active legal anchor (e.g., the 2005 Act on National and Ethnic Minorities and on the Regional Language; Article 35 of the 1997 Constitution).
 - Academic literature about the languages (this is a **policy** repository, not a sociolinguistics bibliography). Selected scholarly sources (e.g., Wąsikiewicz-Firlej 2021) are referenced as evidentiary documents only when they enter the policy discourse.
 
-### 1.3 Why these three languages together
+### 1.3 Why these four languages together
 
-The pairing of two **recognition-seeking** cases (Silesian, Wilamowian) with one **emergency-displacement** case (Ukrainian) is deliberate. It enables a comparison between:
-- Languages whose speakers are seeking *upward* movement from MICRO/MESO toward MACRO (statutory recognition), and
-- A language whose speakers received rapid TOP-DOWN MACRO accommodation that has subsequently degraded through serial extensions.
+The combination of two **recognition-seeking** cases (Silesian, Wilamowian), one **emergency-displacement** case (Ukrainian), and one **mature-regime** case (Carinthian Slovene) is deliberate. It enables a comparison between:
+- Languages whose speakers are seeking *upward* movement from MICRO/MESO toward MACRO (statutory recognition);
+- A language whose speakers received rapid TOP-DOWN MACRO accommodation that has subsequently degraded through serial extensions;
+- A language whose framework has been settled at the MACRO level for seventy years but where MESO/MICRO contestation (signage disputes, opt-out behaviour, demographic decline) continues to shape outcomes.
 
-This juxtaposition is the analytical anchor of the dataset and is what distinguishes it from a generic minority-language bibliography.
+This juxtaposition is the analytical anchor of the dataset and is what distinguishes it from a generic minority-language bibliography. It also subjects the FTM coding scheme to a cross-jurisdictional stress test (Poland vs. Austria, two legal systems, two minority frameworks), strengthening the dataset's reuse value.
 
 ---
 
