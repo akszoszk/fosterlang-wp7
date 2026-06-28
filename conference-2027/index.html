@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOSTERLANG Forum on Multilingualism — 7–10 April 2027, Poznań</title>
+  <meta name="description" content="FOSTERLANG Forum on Multilingualism — Adam Mickiewicz University, Poznań, 7–10 April 2027. Part of the FOSTERLANG project (Horizon Europe).">
+
+  <!-- Open Graph / social sharing (edit URL once hosted) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FOSTERLANG Forum on Multilingualism — 7–10 April 2027">
+  <meta property="og:description" content="International forum on multilingualism and language policy — Adam Mickiewicz University, Poznań, 7–10 April 2027.">
+  <meta property="og:image" content="assets/img/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Inline SVG favicon (AMU navy) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23002d69'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='34' font-weight='700' fill='white' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="skipToContent">Skip to content</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header">
+  <a class="brand" href="#home"><span id="brand-name">Conf 2027</span></a>
+
+  <button id="nav-toggle" class="nav-toggle" aria-controls="site-nav"
+          aria-expanded="false" data-i18n-aria="navInfo">
+    <span class="burger" aria-hidden="true"></span>
+  </button>
+
+  <nav id="site-nav" class="site-nav" aria-label="Main">
+    <ul class="nav-list">
+      <li><a href="#home" data-i18n="navHome">Home</a></li>
+      <li><a href="#programme" data-i18n="navProgramme">Programme</a></li>
+      <li><a href="#speakers" data-i18n="navSpeakers">Speakers</a></li>
+      <li class="dropdown" id="info-dropdown">
+        <button class="nav-link dropdown-toggle" id="info-toggle"
+                aria-expanded="false" aria-haspopup="true">
+          <span data-i18n="navInfo">Info</span><span class="caret" aria-hidden="true">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="#about" data-i18n="navAbout">About</a>
+          <a href="#venue" data-i18n="navVenue">Venue &amp; Travel</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <button class="lang-btn" data-lang="pl" type="button">PL</button>
+      </div>
+      <a class="btn btn-primary register-link" href="#contact" data-i18n="register">Register</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============================ HERO ============================ -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <p class="hero-dates"><span id="hero-dates">7–10 April 2027</span> · <span id="hero-city">Poznań</span></p>
+      <h1 id="hero-name" class="hero-name">Conference 2027</h1>
+      <p id="hero-tagline" class="hero-tagline">Tagline</p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg register-link" id="cta-register" href="#registration" data-i18n="heroCtaPrimary">Register now</a>
+        <a class="btn btn-ghost btn-lg" id="cta-programme" href="#programme" data-i18n="heroCtaSecondary">View programme</a>
+      </div>
+
+      <!-- Countdown -->
+      <div id="countdown" class="countdown" aria-hidden="true">
+        <div class="cd-unit"><span id="cd-days" class="cd-num">—</span><span class="cd-lbl" data-i18n="days">days</span></div>
+        <div class="cd-unit"><span id="cd-hours" class="cd-num">—</span><span class="cd-lbl" data-i18n="hours">hrs</span></div>
+        <div class="cd-unit"><span id="cd-min" class="cd-num">—</span><span class="cd-lbl" data-i18n="minutes">min</span></div>
+        <div class="cd-unit"><span id="cd-sec" class="cd-num">—</span><span class="cd-lbl" data-i18n="seconds">sec</span></div>
+        <span class="cd-caption" data-i18n="countdownLabel">until the conference</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== KEY DEADLINES STRIP ===================== -->
+  <section class="deadlines-strip" aria-labelledby="deadlines-h">
+    <div class="container">
+      <h2 id="deadlines-h" class="strip-title" data-i18n="keyDeadlines">Key deadlines</h2>
+      <ul id="deadline-list" class="deadline-list"></ul>
+    </div>
+  </section>
+
+  <!-- ============================ ABOUT ============================ -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="aboutHeading">About the conference</h2>
+      <div class="about-grid has-poster">
+        <div class="about-left">
+          <div id="about-text" class="prose"></div>
+          <aside class="committees">
+            <h3 class="sub-title" data-i18n="committeeScientificHeading">Scientific committee</h3>
+            <ul id="committee-scientific" class="people-list"></ul>
+            <h3 class="sub-title" data-i18n="committeeOrganisingHeading">Organising committee</h3>
+            <ul id="committee-organising" class="people-list"></ul>
+          </aside>
+        </div>
+        <figure class="poster-figure">
+          <img id="poster-img" alt="">
+          <a class="btn btn-ghost btn-sm" id="poster-download" href="#" target="_blank" rel="noopener" hidden data-i18n="downloadPoster">Download poster</a>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= PROGRAMME ========================= -->
+  <section id="programme" class="section section-alt">
+    <div class="container">
+      <div class="section-head-row">
+        <h2 class="section-title" data-i18n="programmeHeading">Programme</h2>
+        <a class="btn btn-ghost btn-sm" id="programme-download" href="#" hidden data-i18n="downloadProgramme">Download programme (PDF)</a>
+      </div>
+      <p class="muted" data-i18n="programmeNote">Click a session with a ▸ marker to read its abstract.</p>
+      <div id="programme-tabs" class="tabs" role="tablist"></div>
+      <div id="programme-body" class="programme-body"></div>
+    </div>
+  </section>
+
+  <!-- ========================= SPEAKERS ========================= -->
+  <section id="speakers" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="speakersHeading">Speakers</h2>
+      <div id="speakers-grid" class="speakers-grid"></div>
+    </div>
+  </section>
+
+  <!-- ========================= VENUE & TRAVEL ========================= -->
+  <section id="venue" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-i18n="venueHeading">Venue &amp; Travel</h2>
+      <p id="venue-intro" class="prose"></p>
+      <div class="venue-grid">
+        <div class="venue-info">
+          <h3 id="venue-name" class="sub-title"></h3>
+          <p id="venue-address" class="muted"></p>
+          <a class="btn btn-ghost btn-sm" id="map-link" href="#" target="_blank" rel="noopener" data-i18n="openInMaps">Open in maps</a>
+
+          <h3 class="sub-title" data-i18n="gettingThere">Getting there</h3>
+          <div id="travel-text" class="prose"></div>
+
+          <h3 class="sub-title" data-i18n="accommodation">Accommodation</h3>
+          <div id="accommodation-text" class="prose"></div>
+        </div>
+        <div class="venue-map">
+          <iframe id="map-frame" title="Venue map" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= CONTACT ========================= -->
+  <section id="contact" class="section">
+    <div class="container contact-block">
+      <h2 class="section-title" data-i18n="contactHeading">Contact</h2>
+      <p data-i18n="contactIntro">Questions? Reach the organising team:</p>
+      <p><a id="contact-email" class="contact-email" href="#">email</a></p>
+      <div id="social-links" class="social-links"></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <p id="footer-name" class="footer-name"></p>
+      <p class="footer-where"><span id="footer-venue"></span> · <span id="footer-dates"></span></p>
+      <p><span data-i18n="organisedBy">Organised by</span> <strong id="footer-host"></strong></p>
+    </div>
+    <div class="footer-col">
+      <p><span data-i18n="partOf">Part of the</span>
+         <a id="project-link" href="#" target="_blank" rel="noopener">FOSTERLANG</a>
+         <span data-i18n="projectWord">project</span></p>
+      <div class="eu-funding">
+        <svg class="eu-emblem" viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flag of the European Union">
+          <rect width="90" height="60" fill="#003399"/>
+          <g fill="#FFCC00">
+            <polygon id="eu-star" points="45,6.6 45.80,8.90 48.23,8.95 46.29,10.42 47.00,12.75 45,11.36 43.00,12.75 43.71,10.42 41.77,8.95 44.20,8.90"/>
+            <use href="#eu-star" transform="rotate(30 45 30)"/>
+            <use href="#eu-star" transform="rotate(60 45 30)"/>
+            <use href="#eu-star" transform="rotate(90 45 30)"/>
+            <use href="#eu-star" transform="rotate(120 45 30)"/>
+            <use href="#eu-star" transform="rotate(150 45 30)"/>
+            <use href="#eu-star" transform="rotate(180 45 30)"/>
+            <use href="#eu-star" transform="rotate(210 45 30)"/>
+            <use href="#eu-star" transform="rotate(240 45 30)"/>
+            <use href="#eu-star" transform="rotate(270 45 30)"/>
+            <use href="#eu-star" transform="rotate(300 45 30)"/>
+            <use href="#eu-star" transform="rotate(330 45 30)"/>
+          </g>
+        </svg>
+        <p class="eu-text"><strong data-i18n="fundedBy">Funded by the European Union</strong><span id="funding-note"></span></p>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p class="footer-meta">© <span id="year">2027</span> · <a href="#home" data-i18n="backToTop">Back to top</a></p>
+  </div>
+</footer>
+
+<!-- ============================ MODAL ============================ -->
+<div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-name">
+  <div id="modal-backdrop" class="modal-backdrop"></div>
+  <div class="modal-card" role="document">
+    <button id="modal-close" class="modal-close" data-i18n-aria="close" type="button">✕</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- Data first, then logic (plain scripts, no build step) -->
+<script src="data/config.js"></script>
+<script src="data/content.js"></script>
+<script src="data/programme.js"></script>
+<script src="data/speakers.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
