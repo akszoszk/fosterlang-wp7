@@ -143,25 +143,33 @@ a:hover { text-decoration: underline; }
 /* === Hero ================================================================ */
 .hero {
   scroll-margin-top: var(--header-h);
-  background:
-    radial-gradient(900px 380px at 80% -8%, var(--primary-100), transparent 70%),
-    radial-gradient(700px 320px at 0% 0%, #fff0b677, transparent 70%);
-  padding: clamp(3rem, 8vw, 6rem) 1.25rem clamp(2.5rem, 6vw, 4rem);
+  position: relative; isolation: isolate;
+  background: #06163f url("../assets/img/hero-bg.svg") center/cover no-repeat;
+  padding: clamp(3.5rem, 9vw, 7rem) 1.25rem clamp(3rem, 6vw, 4.5rem);
+}
+.hero::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(4,18,52,.15) 0%, rgba(4,18,52,.45) 100%);
 }
 .hero-inner { max-width: var(--maxw); margin-inline: auto; text-align: center; }
 .hero-dates {
   font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
-  color: var(--primary-700); font-size: .9rem; margin-bottom: 1rem;
+  color: var(--accent); font-size: .9rem; margin-bottom: 1rem;
 }
 .hero-name {
   font-family: var(--serif); font-weight: 600; letter-spacing: -.02em;
-  font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.05; color: var(--text);
+  font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.05; color: #ffffff;
   max-width: 18ch; margin-inline: auto;
+  text-shadow: 0 2px 24px rgba(4,18,52,.5);
 }
 .hero-tagline {
-  font-size: clamp(1.05rem, 2.2vw, 1.3rem); color: var(--muted);
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem); color: #d8e3fb;
   max-width: 52ch; margin: 1.1rem auto 0;
 }
+.hero .btn-ghost { background: rgba(255,255,255,.08); color: #fff; border-color: rgba(255,255,255,.5); }
+.hero .btn-ghost:hover { background: rgba(255,255,255,.16); border-color: #fff; }
+.hero .cd-num { color: #ffffff; }
+.hero .cd-lbl, .hero .cd-caption { color: #cbd8f4; }
 .hero-cta { display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap; margin-top: 1.9rem; }
 
 /* Countdown */
@@ -319,6 +327,18 @@ details.session[open] .expand-marker { transform: rotate(90deg); }
 .eu-text strong { display: block; font-size: .85rem; opacity: 1; margin-bottom: .15rem; }
 
 .footer-bottom { margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.15); }
+
+/* Partner logos (footer) */
+.partner-logos { display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+  gap: 1.5rem 2.5rem; margin-top: 2rem; padding-top: 1.75rem; border-top: 1px solid rgba(255,255,255,.15); }
+.partner-logo { display: inline-flex; align-items: center; gap: .7rem; opacity: .9; transition: opacity .15s; }
+.partner-logo:hover { opacity: 1; text-decoration: none; }
+.partner-logo img { height: 40px; width: auto; }
+.partner-logo img.amu-logo { height: 54px; }
+.logo-uam { font-family: var(--serif); font-weight: 700; font-size: 1.9rem; letter-spacing: .04em;
+  color: #fff; line-height: 1; }
+.logo-uam-sub { font-size: .72rem; line-height: 1.25; color: #cbd8f4; text-align: left; }
+.partner-sep { width: 1px; height: 38px; background: rgba(255,255,255,.2); }
 .footer-meta { font-size: .85rem; opacity: .8; }
 .footer-meta a { color: #fff; text-decoration: underline; }
 
