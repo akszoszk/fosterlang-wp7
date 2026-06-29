@@ -5,7 +5,7 @@ const UI_TEXT = {
     docTitle: 'Language Policy Repository — FOSTERLANG WP7',
     siteTitle: 'Language Policy Repository',
     headerTeam: 'AMU & UiO · Task Leader',
-    headerLanguages: 'Silesian & Wilamowian & Ukrainian',
+    headerLanguages: 'Silesian · Wilamowian · Ukrainian · Carinthian Slovene',
     headerMatrix: 'Ferguson-Tollefson Matrix',
     uiLangAria: 'Interface language',
     viewLabel: 'View',
@@ -19,11 +19,13 @@ const UI_TEXT = {
     statSilesian: 'Silesian',
     statWilamowian: 'Wilamowian',
     statUkrainian: 'Ukrainian',
+    statCarinthian: 'Carinthian Slovene',
     statShared: 'Shared',
     languageLabel: 'Language',
     languageSilesian: 'Silesian (SZL)',
     languageWilamowian: 'Wilamowian (WYM)',
     languageUkrainian: 'Ukrainian (UKR)',
+    languageCarinthian: 'Carinthian Slovene (SLV)',
     languageShared: 'Shared instruments',
     levelLabel: 'FTM Level',
     levelMacro: 'MACRO (EU/state)',
@@ -42,12 +44,13 @@ const UI_TEXT = {
        Top-Down · Bottom-Up<br><br>
        <span style="color:var(--text-muted);font-style:italic;">Part of FOSTERLANG WP7 — Effective Multilingualism Policies</span>`,
     bannerBody:
-      `<strong>Ferguson-Tollefson Matrix Analysis</strong> — Silesian, Wilamowian &amp; Ukrainian Language Policies, Poland<br>
-       Data sources: Sejm, Senat, KPRP, RPO, CoE (FCNM · ECRML), EU law, OSCE soft law, Polish national press 2021–2026.<br>
+      `<strong>Ferguson-Tollefson Matrix Analysis</strong> — Silesian, Wilamowian, Ukrainian (Poland) &amp; Carinthian Slovene (Austria)<br>
+       Data sources: Sejm, Senat, KPRP, RPO, CoE (FCNM · ECRML), EU law, OSCE soft law, Polish national press 2021–2026, BMBWF, RIS (Austria).<br>
        <span style="font-size:.72rem;">Click any document card to view full details and access source links. Use the Filters button to explore by language, level, direction, or status.</span>`,
     legendSilesian: 'Silesian (SZL)',
     legendWilamowian: 'Wilamowian (WYM)',
     legendUkrainian: 'Ukrainian (UKR)',
+    legendCarinthian: 'Carinthian Slovene (SLV)',
     legendShared: 'Shared',
     legendKeyEvent: '★ KEY EVENT',
     noItems: 'No items match filters',
@@ -69,6 +72,7 @@ const UI_TEXT = {
     langSilesian: 'Silesian',
     langWilamowian: 'Wilamowian',
     langUkrainian: 'Ukrainian',
+    langCarinthian: 'Carinthian Slovene',
     badgeShared: 'SHARED',
     statusLabels: {},
   },
@@ -76,7 +80,7 @@ const UI_TEXT = {
     docTitle: 'Archiv d Śpröchpolitik — FOSTERLANG WP7',
     siteTitle: 'Archiv d Śpröchpolitik',
     headerTeam: 'AMU & UiO · Task Leader',
-    headerLanguages: 'Ślůnski, Wymysiöeryś yn Ukraiński',
+    headerLanguages: 'Ślůnski · Wymysiöeryś · Ukraiński · Słoweński (Kärnten)',
     headerMatrix: 'Ferguson-Tollefson Matrix',
     uiLangAria: 'Śpröch d yntyrfejs',
     viewLabel: 'Aojssicht',
@@ -95,6 +99,7 @@ const UI_TEXT = {
     languageSilesian: 'Ślůnski (SZL)',
     languageWilamowian: 'Wymysiöeryś (WYM)',
     languageUkrainian: 'Ukraiński (UKR)',
+    languageCarinthian: 'Słoweński Kärnten (SLV)',
     languageShared: 'Gywynłiche instrumenta',
     levelLabel: 'Niveau FTM',
     levelMacro: 'MACRO (EU/końtry)',
@@ -119,6 +124,7 @@ const UI_TEXT = {
     legendSilesian: 'Ślůnski (SZL)',
     legendWilamowian: 'Wymysiöeryś (WYM)',
     legendUkrainian: 'Ukraiński (UKR)',
+    legendCarinthian: 'Słoweński Kärnten (SLV)',
     legendShared: 'Gywynłich',
     legendKeyEvent: '★ KEY GYŠICHT',
     noItems: 'No itema pasyn do filtrów',
@@ -140,6 +146,7 @@ const UI_TEXT = {
     langSilesian: 'Ślůnski',
     langWilamowian: 'Wymysiöeryś',
     langUkrainian: 'Ukraiński',
+    langCarinthian: 'Słoweński Kärnten',
     badgeShared: 'GYW.',
     statusLabels: {
       soft_law: 'Łynt racht',
@@ -180,6 +187,7 @@ function getLanguageLabel(lang) {
   if (lang === 'szl') return t('langSilesian');
   if (lang === 'wym') return t('langWilamowian');
   if (lang === 'ukr') return t('langUkrainian');
+  if (lang === 'slv') return t('langCarinthian');
   return lang;
 }
 
@@ -197,6 +205,9 @@ function getAllItems() {
   FTM_DATA.silesian.items.forEach(item => items.push({ ...item, _lang: 'szl' }));
   FTM_DATA.wilamowian.items.forEach(item => items.push({ ...item, _lang: 'wym' }));
   FTM_DATA.ukrainian.items.forEach(item => items.push({ ...item, _lang: 'ukr' }));
+  if (FTM_DATA.carinthian) {
+    FTM_DATA.carinthian.items.forEach(item => items.push({ ...item, _lang: 'slv' }));
+  }
   return items;
 }
 
@@ -322,6 +333,8 @@ function updateStaticText() {
   document.querySelector('#stat-szl + .lbl').textContent = t('statSilesian');
   document.querySelector('#stat-wym + .lbl').textContent = t('statWilamowian');
   document.querySelector('#stat-ukr + .lbl').textContent = t('statUkrainian');
+  const statSlvLbl = document.querySelector('#stat-slv + .lbl');
+  if (statSlvLbl) statSlvLbl.textContent = t('statCarinthian');
   document.querySelector('#stat-shared + .lbl').textContent = t('statShared');
 
   // Filter labels
@@ -338,6 +351,7 @@ function updateStaticText() {
   setPillLabel('language', 'szl', t('languageSilesian'), 'var(--szl)');
   setPillLabel('language', 'wym', t('languageWilamowian'), 'var(--wym)');
   setPillLabel('language', 'ukr', t('languageUkrainian'), 'var(--ukr)');
+  setPillLabel('language', 'slv', t('languageCarinthian'), 'var(--slv)');
   setPillLabel('language', 'shared', t('languageShared'), 'var(--shared)');
 
   setPillLabel('level', 'MACRO', t('levelMacro'), '#f59e0b');
@@ -673,6 +687,8 @@ function updateStats() {
   document.getElementById('stat-szl').textContent = filtered.filter(item => item._lang === 'szl').length;
   document.getElementById('stat-wym').textContent = filtered.filter(item => item._lang === 'wym').length;
   document.getElementById('stat-ukr').textContent = filtered.filter(item => item._lang === 'ukr').length;
+  const statSlv = document.getElementById('stat-slv');
+  if (statSlv) statSlv.textContent = filtered.filter(item => item._lang === 'slv').length;
   document.getElementById('stat-shared').textContent = filtered.filter(item => item._lang === 'shared').length;
 }
 

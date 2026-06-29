@@ -1,0 +1,12 @@
+# Claude Code local state and worktrees — ignore everything in .claude/ ...
+.claude/*
+# ... except the project-level launch config referenced in INSTRUCTIONS.md
+!.claude/launch.json
+
+# JetBrains IDE
+.idea/
+
+# OS noise
+Thumbs.db
+.DS_Store
+desktop.ini

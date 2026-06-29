@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 850" role="img"
+     aria-label="FOSTERLANG Forum on Multilingualism — Adam Mickiewicz University, Poznań, 7–10 April 2027">
+  <!-- Interim recreation of the official poster. Replace with the real artwork:
+       save it as assets/img/poster.jpg and set posterImage in data/config.js. -->
+  <defs>
+    <radialGradient id="navy" cx="50%" cy="38%" r="80%">
+      <stop offset="0" stop-color="#16306e"/>
+      <stop offset="1" stop-color="#06122e"/>
+    </radialGradient>
+    <g id="poster-eu-star">
+      <polygon points="45,6.6 45.8,8.9 48.23,8.95 46.29,10.42 47,12.75 45,11.36 43,12.75 43.71,10.42 41.77,8.95 44.2,8.9"/>
+    </g>
+  </defs>
+
+  <rect width="600" height="850" fill="url(#navy)"/>
+
+  <!-- faint collegium silhouette -->
+  <g fill="#ffffff" opacity="0.05">
+    <rect x="170" y="600" width="260" height="120"/>
+    <rect x="250" y="560" width="100" height="160"/>
+    <polygon points="300,520 255,562 345,562"/>
+    <rect x="296" y="498" width="8" height="26"/>
+  </g>
+
+  <!-- UAM wordmark -->
+  <text x="300" y="98" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="44" font-weight="700" letter-spacing="6" fill="#ffffff">UAM</text>
+  <rect x="150" y="132" width="300" height="2" fill="#c9a227"/>
+
+  <!-- title -->
+  <text x="300" y="258" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="66" font-weight="700" letter-spacing="2" fill="#ffffff">FOSTERLANG</text>
+  <text x="300" y="320" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="40" letter-spacing="3" fill="#eef3fb">FORUM ON</text>
+  <text x="300" y="372" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="40" letter-spacing="3" fill="#eef3fb">MULTILINGUALISM</text>
+  <rect x="150" y="408" width="300" height="2" fill="#c9a227"/>
+
+  <!-- where / when -->
+  <text x="300" y="470" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#dfe8f7">Adam Mickiewicz University</text>
+  <text x="300" y="512" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#dfe8f7">Poznań, Poland</text>
+  <text x="300" y="556" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#d8b53f">7–10 April 2027</text>
+
+  <!-- footer brand row -->
+  <text x="300" y="752" text-anchor="middle" font-family="Inter, Arial, sans-serif"
+        font-size="17" letter-spacing="3" fill="#ffffff">ADAM MICKIEWICZ UNIVERSITY</text>
+
+  <text x="150" y="812" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700"
+        letter-spacing="1" fill="#ffffff">FOSTERLANG</text>
+
+  <!-- EU flag + funded note -->
+  <svg x="360" y="790" width="48" height="32" viewBox="0 0 90 60">
+    <rect width="90" height="60" fill="#003399"/>
+    <g fill="#FFCC00">
+      <use href="#poster-eu-star"/>
+      <use href="#poster-eu-star" transform="rotate(30 45 30)"/>
+      <use href="#poster-eu-star" transform="rotate(60 45 30)"/>
+      <use href="#poster-eu-star" transform="rotate(90 45 30)"/>
+      <use href="#poster-eu-star" transform="rotate(120 45 30)"/>
+      <use href="#poster-eu-star" transform="rotate(150 45 30)"/>
+      <use href="#poster-eu-star" transform="rotate(180 45 30)"/>
+      <use href="#poster-eu-star" transform="rotate(210 45 30)"/>
+      <use href="#poster-eu-star" transform="rotate(240 45 30)"/>
+      <use href="#poster-eu-star" transform="rotate(270 45 30)"/>
+      <use href="#poster-eu-star" transform="rotate(300 45 30)"/>
+      <use href="#poster-eu-star" transform="rotate(330 45 30)"/>
+    </g>
+  </svg>
+  <text x="416" y="803" font-family="Inter, Arial, sans-serif" font-size="11" fill="#cdd8ec">Funded by the</text>
+  <text x="416" y="817" font-family="Inter, Arial, sans-serif" font-size="11" fill="#cdd8ec">European Union</text>
+</svg>
