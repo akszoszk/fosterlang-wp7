@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstract woven threads">
+  <defs>
+    <radialGradient id="sky2" cx="60%" cy="12%" r="110%">
+      <stop offset="0" stop-color="#1a3f8c"></stop>
+      <stop offset="45%" stop-color="#0b2160"></stop>
+      <stop offset="100%" stop-color="#04123a"></stop>
+    </radialGradient>
+    <linearGradient id="goldline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c9a227" stop-opacity="0"></stop>
+      <stop offset="50%" stop-color="#e7c45a" stop-opacity="0.9"></stop>
+      <stop offset="100%" stop-color="#c9a227" stop-opacity="0"></stop>
+    </linearGradient>
+    <linearGradient id="blueline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9cc0ff" stop-opacity="0"></stop>
+      <stop offset="50%" stop-color="#9cc0ff" stop-opacity="0.8"></stop>
+      <stop offset="100%" stop-color="#9cc0ff" stop-opacity="0"></stop>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky2)"></rect>
+
+  
+  <g fill="none" stroke="url(#blueline)" stroke-width="1.4">
+    <path d="M-50,180 C 350,60 700,300 1050,160 S 1650,120 1700,220" opacity="0.5"></path>
+    <path d="M-50,300 C 300,200 720,420 1080,280 S 1620,260 1700,340" opacity="0.45"></path>
+    <path d="M-50,430 C 380,320 760,560 1120,410 S 1640,400 1700,470" opacity="0.5"></path>
+    <path d="M-50,560 C 320,470 700,700 1100,560 S 1630,540 1700,600" opacity="0.4"></path>
+    <path d="M-50,690 C 360,600 740,820 1140,690 S 1650,680 1700,720" opacity="0.45"></path>
+    <path d="M-50,250 C 420,150 820,360 1180,230 S 1660,200 1700,280" opacity="0.3"></path>
+    <path d="M-50,500 C 300,400 760,640 1160,500 S 1640,470 1700,540" opacity="0.3"></path>
+  </g>
+
+  
+  <g fill="none" stroke="url(#goldline)" stroke-width="1.8">
+    <path d="M-50,360 C 360,250 780,500 1140,340 S 1640,330 1700,400" opacity="0.85"></path>
+    <path d="M-50,620 C 340,520 720,760 1120,620 S 1640,600 1700,660" opacity="0.7"></path>
+  </g>
+
+  
+  <circle cx="1180" cy="200" r="260" fill="#e7c45a" opacity="0.06"></circle>
+  <circle cx="360" cy="560" r="300" fill="#9cc0ff" opacity="0.06"></circle>
+
+  
+  <g fill="#e7c45a" opacity="0.8">
+    <circle cx="1140" cy="340" r="3.5"></circle>
+    <circle cx="360" cy="250" r="3"></circle>
+  </g>
+  <g fill="#bcd4ff" opacity="0.7">
+    <circle cx="700" cy="300" r="2.5"></circle>
+    <circle cx="1080" cy="280" r="2.5"></circle>
+    <circle cx="760" cy="560" r="2.5"></circle>
+  </g>
+</svg>

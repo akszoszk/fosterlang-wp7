@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Placeholder social-sharing card. Replace with a real 1200x630 image (e.g. the poster). -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#13245f"/>
+      <stop offset="1" stop-color="#001b45"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="80" y="150" width="1040" height="2" fill="#c9a227"/>
+  <rect x="80" y="470" width="1040" height="2" fill="#c9a227"/>
+  <text x="600" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700" fill="#ffffff" letter-spacing="2">FOSTERLANG</text>
+  <text x="600" y="330" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="#ebf1fc" letter-spacing="3">FORUM ON MULTILINGUALISM</text>
+  <text x="600" y="540" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" fill="#c9a227">Adam Mickiewicz University · Poznań · 7–10 April 2027</text>
+</svg>
