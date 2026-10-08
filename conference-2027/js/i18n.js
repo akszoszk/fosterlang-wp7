@@ -17,6 +17,7 @@ const UI_TEXT = {
     navSpeakers: "Speakers",
     navInfo: "Info",
     navAbout: "About",
+    navThemes: "Themes",
     navVenue: "Venue & Travel",
     navContact: "Contact",
     register: "Register",
@@ -33,8 +34,9 @@ const UI_TEXT = {
     aboutHeading: "About the conference",
     committeeScientificHeading: "Scientific committee",
     committeeOrganisingHeading: "Organising committee",
+    themesHeading: "Themes",
     programmeHeading: "Programme",
-    programmeNote: "Click a session with a ▸ marker to read its abstract.",
+    programmeSoon: "Full programme — coming soon",
     downloadProgramme: "Download programme (PDF)",
     speakersHeading: "Speakers",
     keynoteBadge: "Keynote",
@@ -64,6 +66,7 @@ const UI_TEXT = {
     navSpeakers: "Prelegenci",
     navInfo: "Informacje",
     navAbout: "O konferencji",
+    navThemes: "Tematyka",
     navVenue: "Miejsce i dojazd",
     navContact: "Kontakt",
     register: "Rejestracja",
@@ -78,8 +81,9 @@ const UI_TEXT = {
     aboutHeading: "O konferencji",
     committeeScientificHeading: "Komitet naukowy",
     committeeOrganisingHeading: "Komitet organizacyjny",
+    themesHeading: "Tematyka",
     programmeHeading: "Program",
-    programmeNote: "Kliknij sesję oznaczoną ▸, aby przeczytać abstrakt.",
+    programmeSoon: "Pełny program — wkrótce",
     downloadProgramme: "Pobierz program (PDF)",
     speakersHeading: "Prelegenci",
     keynoteBadge: "Wykład plenarny",
@@ -105,12 +109,8 @@ const UI_TEXT = {
 const LANG_STORAGE_KEY = "conf2027.lang";
 
 const I18N = {
-  // Default to a stored choice, else browser language if Polish, else English.
-  lang: (function () {
-    const saved = localStorage.getItem(LANG_STORAGE_KEY);
-    if (saved === "pl" || saved === "en") return saved;
-    return (navigator.language || "").toLowerCase().startsWith("pl") ? "pl" : "en";
-  })(),
+  // The site is English-only.
+  lang: "en",
 
   // Look up an interface label.
   t(key) {

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FOSTERLANG Forum on Multilingualism — 7–10 April 2027, Poznań</title>
-  <meta name="description" content="FOSTERLANG Forum on Multilingualism — Adam Mickiewicz University, Poznań, 7–10 April 2027. Part of the FOSTERLANG project (Horizon Europe).">
+  <title>FOSTERLANG Forum on Multilingual Policies — 6–10 April 2027, Poznań</title>
+  <meta name="description" content="FOSTERLANG Forum on Multilingual Policies — Adam Mickiewicz University, Poznań, 6–10 April 2027. Part of the FOSTERLANG project (Horizon Europe).">
 
   <!-- Open Graph / social sharing (edit URL once hosted) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="FOSTERLANG Forum on Multilingualism — 7–10 April 2027">
-  <meta property="og:description" content="International forum on multilingualism and language policy — Adam Mickiewicz University, Poznań, 7–10 April 2027.">
+  <meta property="og:title" content="FOSTERLANG Forum on Multilingual Policies — 6–10 April 2027">
+  <meta property="og:description" content="International forum on multilingualism and language policy — Adam Mickiewicz University, Poznań, 6–10 April 2027.">
   <meta property="og:image" content="assets/img/og-image.svg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -46,6 +46,7 @@
         </button>
         <div class="dropdown-menu">
           <a href="#about" data-i18n="navAbout">About</a>
+          <a href="#themes" data-i18n="navThemes">Themes</a>
           <a href="#venue" data-i18n="navVenue">Venue &amp; Travel</a>
           <a href="#contact" data-i18n="navContact">Contact</a>
         </div>
@@ -53,10 +54,6 @@
     </ul>
 
     <div class="nav-actions">
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button class="lang-btn" data-lang="en" type="button">EN</button>
-        <button class="lang-btn" data-lang="pl" type="button">PL</button>
-      </div>
       <a class="btn btn-primary register-link" href="#contact" data-i18n="register">Register</a>
     </div>
   </nav>
@@ -67,7 +64,7 @@
   <!-- ============================ HERO ============================ -->
   <section id="home" class="hero">
     <div class="hero-inner">
-      <p class="hero-dates"><span id="hero-dates">7–10 April 2027</span> · <span id="hero-city">Poznań</span></p>
+      <p class="hero-dates"><span id="hero-dates">6–10 April 2027</span> · <span id="hero-city">Poznań</span></p>
       <h1 id="hero-name" class="hero-name">Conference 2027</h1>
       <p id="hero-tagline" class="hero-tagline">Tagline</p>
 
@@ -117,21 +114,40 @@
     </div>
   </section>
 
-  <!-- ========================= PROGRAMME ========================= -->
-  <section id="programme" class="section section-alt">
+  <!-- ========================= THEMES ========================= -->
+  <section id="themes" class="section section-alt">
     <div class="container">
-      <div class="section-head-row">
-        <h2 class="section-title" data-i18n="programmeHeading">Programme</h2>
-        <a class="btn btn-ghost btn-sm" id="programme-download" href="#" hidden data-i18n="downloadProgramme">Download programme (PDF)</a>
+      <h2 class="section-title" data-i18n="themesHeading">Themes</h2>
+      <p id="themes-intro" class="prose"></p>
+      <div id="themes-grid" class="themes-grid"></div>
+    </div>
+  </section>
+
+  <!-- ========================= PROGRAMME ========================= -->
+  <section id="programme" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="programmeHeading">Programme</h2>
+      <div class="programme-card">
+        <div class="programme-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+            <path d="M14 3v5h5"/><path d="M8.5 13h7M8.5 16.5h7"/>
+          </svg>
+        </div>
+        <div class="programme-card-body">
+          <p id="programme-intro" class="programme-intro"></p>
+          <ul id="programme-days" class="programme-days"></ul>
+          <div class="programme-actions">
+            <a class="btn btn-primary btn-lg" id="programme-download" href="#" target="_blank" rel="noopener" hidden data-i18n="downloadProgramme">Download programme (PDF)</a>
+            <span class="programme-soon" id="programme-soon" data-i18n="programmeSoon">Full programme — coming soon</span>
+          </div>
+        </div>
       </div>
-      <p class="muted" data-i18n="programmeNote">Click a session with a ▸ marker to read its abstract.</p>
-      <div id="programme-tabs" class="tabs" role="tablist"></div>
-      <div id="programme-body" class="programme-body"></div>
     </div>
   </section>
 
   <!-- ========================= SPEAKERS ========================= -->
-  <section id="speakers" class="section">
+  <section id="speakers" class="section section-alt">
     <div class="container">
       <h2 class="section-title" data-i18n="speakersHeading">Speakers</h2>
       <div id="speakers-grid" class="speakers-grid"></div>
@@ -139,7 +155,7 @@
   </section>
 
   <!-- ========================= VENUE & TRAVEL ========================= -->
-  <section id="venue" class="section section-alt">
+  <section id="venue" class="section">
     <div class="container">
       <h2 class="section-title" data-i18n="venueHeading">Venue &amp; Travel</h2>
       <p id="venue-intro" class="prose"></p>
@@ -164,7 +180,7 @@
   </section>
 
   <!-- ========================= CONTACT ========================= -->
-  <section id="contact" class="section">
+  <section id="contact" class="section section-alt">
     <div class="container contact-block">
       <h2 class="section-title" data-i18n="contactHeading">Contact</h2>
       <p data-i18n="contactIntro">Questions? Reach the organising team:</p>
@@ -181,7 +197,6 @@
     <div class="footer-col">
       <p id="footer-name" class="footer-name"></p>
       <p class="footer-where"><span id="footer-venue"></span> · <span id="footer-dates"></span></p>
-      <p><span data-i18n="organisedBy">Organised by</span> <strong id="footer-host"></strong></p>
     </div>
     <div class="footer-col">
       <p><span data-i18n="partOf">Part of the</span>
