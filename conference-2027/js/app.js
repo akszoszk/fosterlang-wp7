@@ -121,61 +121,60 @@
     else { btn.hidden = true; }
   }
 
+  // Programme is presented as a downloadable PDF (published closer to the event).
   function renderProgramme() {
-    // Tabs
-    const tabs = $("#programme-tabs");
-    tabs.innerHTML = "";
-    CONF_PROGRAMME.forEach((day, i) => {
-      const b = el("button", "tab" + (i === state.day ? " active" : ""), I18N.pick(day, "label"));
-      b.type = "button";
-      b.setAttribute("role", "tab");
-      b.setAttribute("aria-selected", i === state.day ? "true" : "false");
-      b.addEventListener("click", () => { state.day = i; renderProgramme(); });
-      tabs.appendChild(b);
-    });
+    const intro = $("#programme-intro");
+    if (intro) intro.textContent = I18N.content().programmeIntro || "";
 
-    // Body: sessions for the active day
-    const body = $("#programme-body");
-    body.innerHTML = "";
-    const day = CONF_PROGRAMME[state.day];
-    if (!day) return;
-
-    day.sessions.forEach((s) => {
-      const type = s.type || "session";
-      const abstract = I18N.pick(s, "abstract");
-      const title = I18N.pick(s, "title");
-
-      if (abstract) {
-        // Expandable row (progressive disclosure) via native <details>.
-        const d = el("details", "session expandable type-" + type);
-        const sm = el("summary", "session-row");
-        sm.appendChild(buildSessionMain(s, title, true));
-        d.appendChild(sm);
-        const ab = el("div", "session-abstract");
-        ab.appendChild(el("p", null, abstract));
-        d.appendChild(ab);
-        body.appendChild(d);
-      } else {
-        const row = el("div", "session type-" + type);
-        row.appendChild(buildSessionMain(s, title, false));
-        body.appendChild(row);
+    // Day chips, generated from the configured date range (auto-updates with dates).
+    const daysBox = $("#programme-days");
+    if (daysBox) {
+      daysBox.innerHTML = "";
+      const locale = I18N.lang === "pl" ? "pl-PL" : "en-GB";
+      const start = new Date(CONF_CONFIG.startISO + "T00:00:00");
+      const end = new Date(CONF_CONFIG.endISO + "T00:00:00");
+      for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+        const chip = el("li", "day-chip");
+        chip.appendChild(el("span", "day-dow", d.toLocaleDateString(locale, { weekday: "short" })));
+        chip.appendChild(el("span", "day-date", d.toLocaleDateString(locale, { day: "numeric", month: "short" })));
+        daysBox.appendChild(chip);
       }
-    });
+    }
+
+    // Download button if a PDF is configured, otherwise a "coming soon" note.
+    const dl = $("#programme-download");
+    const soon = $("#programme-soon");
+    const pdf = CONF_CONFIG.programmePdf;
+    if (dl) { if (pdf) { dl.href = pdf; dl.hidden = false; } else { dl.hidden = true; } }
+    if (soon) soon.hidden = !!pdf;
   }
 
-  function buildSessionMain(s, title, expandable) {
-    const wrap = el("div", "session-row");
-    wrap.appendChild(el("span", "session-time", s.time || ""));
-    const main = el("div", "session-main");
-    const h = el("span", "session-title", title);
-    if (expandable) h.appendChild(el("span", "expand-marker", " ▸"));
-    main.appendChild(h);
-    const metaBits = [];
-    if (s.speaker) metaBits.push(s.speaker);
-    if (s.room) metaBits.push(s.room);
-    if (metaBits.length) main.appendChild(el("span", "session-meta", metaBits.join(" · ")));
-    wrap.appendChild(main);
-    return wrap;
+  // Line icons for the Themes cards (cycled by index).
+  const THEME_ICONS = [
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>',
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7h14M5 7l-2.5 6a3 3 0 0 0 5 0L5 7zM19 7l-2.5 6a3 3 0 0 0 5 0L19 7z"/></svg>',
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 4 2 9l10 5 10-5-10-5zM6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>',
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg>',
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>',
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M15.5 5.3A3 3 0 0 1 18 10M15.5 14.5A6 6 0 0 1 21 20"/></svg>'
+  ];
+
+  function renderThemes() {
+    const grid = $("#themes-grid");
+    if (!grid) return;
+    const c = I18N.content();
+    const intro = $("#themes-intro");
+    if (intro) intro.textContent = c.themesIntro || "";
+    grid.innerHTML = "";
+    (c.themes || []).forEach((t, i) => {
+      const card = el("div", "theme-card");
+      const icon = el("div", "theme-icon");
+      icon.innerHTML = THEME_ICONS[i % THEME_ICONS.length];
+      card.appendChild(icon);
+      card.appendChild(el("h3", "theme-title", t.title));
+      card.appendChild(el("p", "theme-desc", t.desc));
+      grid.appendChild(card);
+    });
   }
 
   function renderSpeakers() {
@@ -240,7 +239,6 @@
     $("#footer-name").textContent = I18N.pick(CONF_CONFIG, "name");
     $("#footer-venue").textContent = I18N.pick(CONF_CONFIG, "city");
     $("#footer-dates").textContent = I18N.pick(CONF_CONFIG, "datesLabel");
-    $("#footer-host").textContent = I18N.pick(CONF_CONFIG, "venueName");
     $("#year").textContent = new Date().getFullYear();
 
     // Parent project + EU funding
@@ -261,11 +259,11 @@
     renderHeaderHero();
     renderDeadlines();
     renderAbout();
+    renderThemes();
     renderProgramme();
     renderSpeakers();
     renderVenue();
     renderContact();
-    toggleDownload("#programme-download", CONF_CONFIG.programmePdf);
     markLangButtons();
   }
 
@@ -391,6 +389,23 @@
   }
 
   /* =========================================================================
+   * Scroll reveal — subtle fade-up. Respects reduced-motion; without JS the
+   * page stays fully visible (styles apply only under body.js-reveal).
+   * =======================================================================*/
+  function setupReveal() {
+    if (!("IntersectionObserver" in window)) return;
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    document.body.classList.add("js-reveal");
+    const targets = $$("#main .section .section-title, .about-grid, .themes-grid, .programme-card, .speakers-grid, .venue-grid, .contact-block > *");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+    targets.forEach((t) => { t.classList.add("reveal"); io.observe(t); });
+  }
+
+  /* =========================================================================
    * Init
    * =======================================================================*/
   function init() {
@@ -399,6 +414,7 @@
     wireLangToggle();
     wireNav();
     startCountdown();
+    setupReveal();
 
     // Modal close handlers
     $("#modal-close").addEventListener("click", closeModal);

@@ -11,15 +11,15 @@ const CONF_CONFIG = {
   // Short name shown in the header logo and browser tab.
   shortName: "FOSTERLANG Forum",
   // Full name (bilingual) shown in the hero.
-  name_en: "FOSTERLANG Forum on Multilingualism",
-  name_pl: "Forum Wielojęzyczności FOSTERLANG",
+  name_en: "FOSTERLANG Forum on Multilingual Policies",
+  name_pl: "FOSTERLANG Forum on Multilingual Policies",
 
   /* --- Dates ---------------------------------------------------------------*/
   // The conference runs 7–10 April 2027. The countdown counts down to startISO.
-  startISO: "2027-04-07",
+  startISO: "2027-04-06",
   endISO:   "2027-04-10",
-  datesLabel_en: "7–10 April 2027",
-  datesLabel_pl: "7–10 kwietnia 2027",
+  datesLabel_en: "6–10 April 2027",
+  datesLabel_pl: "6–10 kwietnia 2027",
 
   /* --- Place ---------------------------------------------------------------*/
   city_en: "Poznań, Poland",
@@ -34,7 +34,7 @@ const CONF_CONFIG = {
   mapLink: "https://www.openstreetmap.org/?mlat=52.4082&mlon=16.9245#map=16/52.4082/16.9245",
 
   /* --- Contact -------------------------------------------------------------*/
-  email: "conference2027@amu.edu.pl",  // TODO real inbox
+  email: "fosterlang_2027@amu.edu.pl",
   // Footer social/links — remove any you don't use (set to "").
   social: {
     twitter: "",                       // e.g. "https://x.com/yourconf"
@@ -59,10 +59,10 @@ const CONF_CONFIG = {
   },
 
   /* --- Poster --------------------------------------------------------------*/
-  // Currently an interim SVG recreation of the poster. To use the official
-  // artwork, save it as assets/img/poster.jpg and change this to that path.
-  posterImage: "assets/img/poster.svg",
-  // Optional higher-res / PDF download; leave "" to offer the image itself.
+  // Official conference poster (replace the file to update it).
+  posterImage: "assets/img/poster.png",
+  // Optional higher-res / PDF download; "" makes the "Download poster" button
+  // offer the image above.
   posterDownload: "",
 
   /* --- Registration link (external form; no backend) -----------------------*/
@@ -79,6 +79,6 @@ const CONF_CONFIG = {
   // Edit, add, or remove rows freely.
   deadlines: [
     { date_en: "28 Feb 2027", date_pl: "28 lut 2027", label_en: "Registration deadline",  label_pl: "Termin rejestracji",   status: "upcoming" },
-    { date_en: "7 Apr 2027",  date_pl: "7 kwi 2027",  label_en: "Conference begins",       label_pl: "Początek konferencji", status: "upcoming" }
+    { date_en: "6 Apr 2027",  date_pl: "6 kwi 2027",  label_en: "Conference begins",       label_pl: "Początek konferencji", status: "upcoming" }
   ]
 };
